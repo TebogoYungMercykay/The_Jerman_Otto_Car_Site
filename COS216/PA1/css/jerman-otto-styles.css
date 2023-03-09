@@ -22,6 +22,8 @@ a {
 .topnav a {
     float: left;
     color: #f2f2f2;
+    border: 0.1px solid transparent;
+    border-color: rgba(230, 230, 230, 0.576) transparent rgba(230, 230, 230, 0.576) transparent;
     text-align: center;
     font-weight: 400;
     padding: 14px 16px;
@@ -96,6 +98,7 @@ footer {
 #findCarResults {
     display: none;
 }
+
 .btnFindCarResults {
     display: inline-block;
     margin-bottom: 50px;
@@ -111,10 +114,12 @@ footer {
     background-image: linear-gradient(to bottom, #adadad, #2d2c2c);
     line-height: 30px;
 }
+
 .btnFindCarResults:hover {
     color: white !important;
     background-image: linear-gradient(to bottom, #504f4f, #000000);
 }
+
 .col-12 {
     text-align: center;
 }
@@ -145,7 +150,7 @@ body {
 h1, hr {
     margin-left: 55px;
     margin-right: 55px;
-    border-radius: 2%;
+    border-radius: 9px;
 }
 
 hr {
@@ -181,7 +186,8 @@ hr {
 }
 
 .about .card{
-    background-color: rgba(35, 37, 34, 0.923);
+    background-color: rgba(0, 0, 0, 0.829);
+    border: 2px solid rgb(59, 59, 59);
     align-content: center;
     display: flex;
 }
@@ -238,6 +244,11 @@ h2, .about .card .card-body h3 {
     -o-background-size: cover;
     background-size: cover;
 }
+
+#page-name-cars{
+    color:rgb(254, 218, 218);
+}
+
 /* listing cars */
 .class-cars-listings
 {
@@ -245,20 +256,29 @@ h2, .about .card .card-body h3 {
     grid-template-columns: repeat(auto-fit, minmax(350px, auto));
     grid-gap: 50px;
     margin: 50px auto;
-    color: rgb(196, 196, 196);
+    color: rgb(254, 218, 218);
     max-width: 1240px;
     padding: 20px;
-    border-radius: 0.9%;
-    background-color: rgba(20, 20, 20, 0.76);
+    border-radius: 15px;
+    background-color: rgba(0, 0, 0, 0.75);
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
 }
 
 .class-cars-listing
 {
     padding: 10px;
-    border-radius: 2%;
+    border-radius: 9px;
+    border: 2px solid rgb(75, 75, 75);
     background-color: rgba(0, 0, 0, 0.612);
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
     font-family: "Lucida Console", "Courier New", monospace;
+    -webkit-border-radius: 9px;
+    -moz-border-radius: 9px;
+    -ms-border-radius: 9px;
+    -o-border-radius: 9px;
 }
 
 .class-cars-listing img
@@ -266,7 +286,11 @@ h2, .about .card .card-body h3 {
     width: 100%;
     height: 300px;
     display: block;
-    border-radius: 2%;
+    border-radius: 9px;
+    -webkit-border-radius: 9px;
+    -moz-border-radius: 9px;
+    -ms-border-radius: 9px;
+    -o-border-radius: 9px;
 }
 
 .class-cars-listing .car-name
@@ -302,7 +326,8 @@ strong {
 }
 /* Compare Table CSS */
 .car-compare-container {
-    background-color: rgba(0, 0, 0, 0.612);
+    background-color: rgba(0, 0, 0, 0.846);
+    border: 2px solid rgb(234, 166, 246);
     font-family: 'Courier New', Courier, monospace;
     font-weight: 600;
     min-width: 400px;
@@ -313,8 +338,8 @@ strong {
     border-radius: 20px;
 }
 
-.car-compare-container h3 {
-    color: rgb(146, 145, 145);
+.car-compare-container h3, #page-name-compare {
+    color: rgb(234, 166, 246);
     text-transform: uppercase;
 }
 
@@ -328,7 +353,7 @@ strong {
     padding: 0.5em;
     max-width: 400px;
     max-height: 400px;
-    color: rgb(255, 255, 255);
+    color: rgb(234, 186, 255);
 }
 
 .car-compare-container .table .table-header-one div img {
@@ -338,7 +363,7 @@ strong {
 }
 
 .car-compare-container .table .table-header-one div .form-control {
-    color: rgb(255, 255, 255);
+    color: rgb(234, 186, 255);
     font-weight: 600;
     text-align: center;
     border: 0.1px solid transparent;
@@ -349,7 +374,7 @@ strong {
 .car-compare-container .table .table-header-one div .form-control:hover {
     cursor: pointer;
     color: rgba(0, 0, 0, 0.824);
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(216, 123, 255);
     border: 2px solid transparent;
     border-color: rgba(0, 0, 0, 0.978) transparent rgba(0, 0, 0, 0.978) transparent;
 }
@@ -377,6 +402,11 @@ strong {
     -o-background-size: cover;
     background-size: cover;
 }
+
+#page-name-brands{
+    color: rgb(213, 245, 255);
+}
+
 /* listing brands  */
 .class-brands-listings
 {
@@ -384,17 +414,22 @@ strong {
     grid-template-columns: repeat(auto-fit, minmax(350px, auto));
     grid-gap: 50px;
     margin: 50px auto;
-    color: rgb(196, 196, 196);
+    color: rgb(203, 242, 255);
     max-width: 1240px;
     padding: 20px;
-    border-radius: 0.9%;
-    background-color: rgba(20, 20, 20, 0.76);
+    border-radius: 15px;
+    background-color: rgba(0, 0, 0, 0.75);
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
 }
 
 .class-brands-listing
 {
     padding: 10px;
-    border-radius: 2%;
+    border-radius: 9px;
+    border: 2px solid rgb(75, 75, 75);
     background-color: rgba(0, 0, 0, 0.612);
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
     font-family: "Lucida Console", "Courier New", monospace;
@@ -443,10 +478,15 @@ strong {
     -o-background-size: cover;
     background-size: cover;
 }
+
+#page-name-find{
+    color: rgb(192, 190, 255);
+}
+
 /* Form CSS */
 .main-form h1 {
     text-align: center;
-    color: rgb(213, 212, 212);
+    color: rgb(192, 190, 255);
     font-weight: 600px;
     font-family: 'Times New Roman', Times, serif;
 }
@@ -455,12 +495,13 @@ strong {
     max-width: 700px;
     font-family: "Lucida Console", "Courier New", monospace;
     background: rgba(0, 0, 0, 0.682);
+    border: 2px solid rgb(192, 190, 255);
     border-radius: 20px;
     box-sizing: border-box;
     padding: 40px;
     margin: 10px;
     margin-bottom: 50px;
-    color: rgb(210, 210, 210);
+    color: rgb(192, 190, 255);
     display: inline-block;
 }
 
