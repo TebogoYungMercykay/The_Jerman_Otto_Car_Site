@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- Selepe Sello u20748052 -->
+<!-- Selepe Sello uXXXXXXXX -->
 <html lang="en">
 	<head>
 		<title>FindCar</title>
@@ -21,51 +21,41 @@
         <header>
             <div class="topnav">
                 <a href="../../../index.html"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
-                <a href="prac1_index.html">Cars</a>
-                <a href="Brands.html">Car Brands</a>
-                <a href="FindCar.html">Find Me A Car</a>
-                <a href="Compare.html">Compare</a>
                 <div class="topnav-right">
-                    <li>
-                        <a href="prac1_index.html" class="desktop-link">PA <i class="fa-duotone fa-1"  aria-hidden="true"></i> &#9662</a>
-                        <ul>
-                            <li><a href="prac1_index.html">Cars</a></li>
-                            <li><a href="Brands.html">Car Brands</a></li>
-                            <li><a href="#">Find Me A Car</a></li>
-                            <li><a href="Compare.html">Compare</a></li>
-                        </ul>
-                    </li>
-                    <a href="underConstruction.html">PA <i class="fa-duotone fa-2"  aria-hidden="true"></i></a>
-                    <a href="underConstruction.html">PA <i class="fa-duotone fa-3"  aria-hidden="true"></i></a>
-                    <a href="underConstruction.html">PA <i class="fa-duotone fa-4"  aria-hidden="true"></i></a>
-                    <a href="underConstruction.html">PA <i class="fa-duotone fa-5"  aria-hidden="true"></i></a>
+                    <a href="index.html">Cars</a>
+                    <a href="Brands.html">Car Brands</a>
+                    <a href="FindCar.html">Find Me A Car</a>
+                    <a href="Compare.html">Compare</a>
                 </div>
             </div>
         </header>
         <section id="logo" class="mt-5">
-            <div class="col-12">
-                <img class="logo-top-img-2" src="../img/logo.jpg" alt="Jerman Otto"/>
-                <h1 class="page-name-purpose" id="page-name-find">Find Your Perfect Car With Jerman Otto</h1>
+            <div class="name-logo-top">
+                <h1 class="page-name-purpose" id="page-name-find">Find A Perfect Car With Jerman <img class="logo-top-img-2" src="../img/logo.jpg" alt="Jerman Otto"/>tto</h1>
                 <hr>
             </div>
         </section>
         <div class="logoContainer">
             <div class="logo">
                 <form class="main-form" action="" method="post" autocomplete="off" enctype="multipart/form-data">
-                    <h1 class="login-title">Preferences</h1>
-                    <label class="form-label"><h5>Name</h5></label>
-                        <input type="text" class="login-input" id="find-car-name" name="find-car-name" placeholder="Golf 7 R" required/>
-                    <label class="form-label"><h5>Brand</h5></label>
-                        <input type="text" class="login-input" id="find-car-brand" name="find-car-brand" placeholder="VOLKSWAGEN" required />
-                    <label class="form-label"><h5>Fuel or Engine</h5></label>
-                        <input type="text" class="login-input" id="find-car-type-of-fuel" name="find-car-type-of-fuel" placeholder="Petrol/i4" required />
-                    <label class="form-label"><h5>Body Type</h5></label><br>
-                        <input type="text" class="login-input" id="find-car-body-type" name="find-car-body-type" required placeholder="Hatchback" /><br>
-                    <label class="form-label"><h5>Handling</h5></label>
-                        <input type="text" class="login-input" id="find-car-handling" name="find-car-handling" placeholder="Four wheel drive" required>
-                    <label class="form-label"><h5>Max Price</h5></label>
-                        <input type="text" class="login-input" id="find-car-price" name="find-car-price" placeholder="R987 757.00" required>
-                    <br><br>
+                    <h5 class="form-title" id="form-title-pref">Enter Your Preferences</h5>
+                    <label class="form-label"><h5>Name<label class="required">*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label></h5></label>
+                        <input type="text" class="form-input" id="find-car-name" name="find-car-name" placeholder="Golf 7 R" required/><br>
+                    <label class="form-label"><h5>Max Price<label class="required">*</label></h5></label>
+                        <input type="text" class="form-input" id="find-car-price" name="find-car-price" placeholder="R987 757.00" required><br>
+                    <label class="form-label"><h5>Brand<label class="required">*&nbsp;&nbsp;&nbsp;&nbsp;</label></h5></label>
+                        <input type="text" class="form-input" id="find-car-brand" name="find-car-brand" placeholder="VOLKSWAGEN" required /><br>
+                    <label class="form-label"><h5>Fuel Type<label class="required">*</label></h5></label>
+                        <select required name="find-car-type-of-fuel" title="select-car" class="form-input" id="find-car-type-of-fuel">
+                            <option class="select-options" value="0">--Fuel Type--</option>
+                            <option class="select-options" value="1">Diesel</option>
+                            <option class="select-options" value="2">Petrol</option>
+                        </select><br>
+                    <label class="form-label"><h5>Body Type&nbsp;</h5></label>
+                        <input type="text" class="form-input" id="find-car-body-type" name="find-car-body-type" placeholder="Hatchback" /><br>
+                    <label class="form-label"><h5>Handling&nbsp;&nbsp;</h5></label>
+                        <input type="text" class="form-input" id="find-car-handling" name="find-car-handling" placeholder="Four wheel drive"><br>
+                    <br>
                     <div class="form-buttons">
                         <input id="submit-find-car" type="reset" name="reset" value="Reset Form" class="btnFindCarResults">
                         <a href="DisplayResuts.html">
