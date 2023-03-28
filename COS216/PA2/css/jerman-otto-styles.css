@@ -1,0 +1,630 @@
+/* Selepe Sello u20748052 */
+
+/* ------------------------------------------ CSS Code Common In All Files ------------------------------------------ */
+/* Navigation Bar */
+
+.topnav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #060708fb;
+    z-index: 999;
+    padding: 2px;
+    color: #ffffff;
+}
+
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(197, 197, 196);
+}
+
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    border: 0.1px solid transparent;
+    border-color: rgba(230, 230, 230, 0.576) transparent rgba(230, 230, 230, 0.576) transparent;
+    text-align: center;
+    font-weight: 400;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: rgb(22, 18, 18);
+}
+
+.topnav-right {
+    float: right;
+}
+
+.topnav-right li {
+    list-style-type: none;
+    display: inline;
+}
+
+.topnav-right li a:hover, .topnav-right li label:hover {
+    background: #ddd;
+}
+
+.topnav-right ul {
+    background:  rgba(0, 0, 0, 0.709);
+    visibility: hidden;
+    position: fixed;
+    width: 180px;
+    padding: 0%;
+    top: 100px;
+}
+
+.topnav-right li:hover > ul {
+    top: 50px;
+    opacity: 1;
+    z-index: 1;
+    visibility: visible;
+    transition: all 0.7s ease;
+}
+
+.topnav-right ul li a, .topnav-right li label {
+    float: inline-start;
+    display: flex;
+    width: 100%;
+}
+
+.topnav-right ul li {
+    position: relative;
+    width: auto;
+}
+
+/* ---- Footer ---- */
+footer {
+    position: fixed;
+    width: 100%;
+    height: min-content;
+    left: 0;
+    bottom: 0;
+    opacity: 0.9;
+    padding: 5px;
+    color: #fff;
+    display: inline-flex;
+    font-size: 12px;
+    margin-top: 5px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    justify-content: center;
+    background-color: rgb(47, 47, 47);
+}
+/* Buttons CSS */
+#findCarResults {
+    display: none;
+}
+
+.btnFindCarResults {
+    display: inline-block;
+    margin-bottom: 50px;
+    width: 110px;
+    height: 40px;
+    color: rgb(25, 24, 24);
+    border-radius: 7px;
+    padding: 1px 3px;
+    font-weight: 600;
+    text-align: center;
+    font-family: "Lucida Console", "Courier New", monospace;
+    font-size: 13px;
+    background-image: linear-gradient(to bottom, #adadad, #2d2c2c);
+    line-height: 30px;
+}
+
+.btnFindCarResults:hover {
+    color: white !important;
+    background-image: linear-gradient(to bottom, #504f4f, #000000);
+}
+
+.col-12 {
+    text-align: center;
+}
+/* img tag CSS */
+.logo-top-img-2 {
+    opacity: 0.8;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    /* margin-right: 10px; */
+    margin-bottom: 13px;
+    border: 2px solid rgba(4, 4, 4, 0.638);
+}
+
+.name-logo-top {
+    margin-top: 100px;
+}
+/* File and Body CSS */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(193, 193, 193);
+    line-height: 1.8;
+    text-align: center;
+    text-decoration-color: rgb(190, 190, 190);
+}
+
+h1, hr {
+    margin-left: 55px;
+    margin-right: 55px;
+    border-radius: 9px;
+}
+
+hr {
+    background-color:rgb(231, 231, 231);
+}
+
+.about p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+}
+/* ------------------------------------------ Index CSS Code ------------------------------------------ */
+.logo-top-img {
+    opacity: 0.9;
+    border-radius: 50%;
+    width: 220px;
+    height: 220px;
+    margin-top: 50px;
+    border: 2px solid rgba(4, 4, 4, 0.638);
+}
+
+.background-index {
+    background: url("../img/Backround_Images/Backround\ -\ Index.png") no-repeat center center fixed;
+    background-color: rgba(26, 14, 14, 0.315);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.card-image {
+    width: 400px;
+    height: 400px;
+}
+
+.about .card{
+    background-color: rgba(0, 0, 0, 0.829);
+    border: 2px solid rgb(59, 59, 59);
+    align-content: center;
+    display: flex;
+}
+
+.about .card .card-body{
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin: 20px;
+}
+
+h2, .about .card .card-body h3 {
+    font-family: "Lucida Console", "Courier New", monospace;
+    text-transform: uppercase;
+    font-size: xx-large;
+    font-weight: 600;
+    color: rgb(197, 197, 196);
+}
+
+.page-name-purpose {
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(231, 231, 231);
+    font-weight: 600;
+    font-size: 60px;
+    -webkit-text-stroke: 1px rgb(0, 0, 0); /* width and color */
+}
+
+.horizontal-row {
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: 5em;
+    width: 86%;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;
+}
+
+
+.types-header {
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(231, 231, 231);
+    font-weight: 600;
+    font-size: 40px;
+    -webkit-text-stroke: 0.5px rgb(0, 0, 0); /* width and color */
+}
+
+/* ------------------------------------------ CARS CSS ------------------------------------------ */
+.background-cars{
+    background: url("../img/Backround_Images/Golf\ 7\ R.jpg") no-repeat center center fixed;
+    background-color: rgba(26, 14, 14, 0.315);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#page-name-cars{
+    color:rgb(254, 218, 218);
+}
+
+/* listing cars */
+.class-cars-listings
+{
+    display: grid;
+    /* grid-template-columns: repeat(auto-fit, minmax(350px, auto)); */
+    display: grid;
+    grid-gap: 1em;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+    margin: 50px auto;
+    color: rgb(254, 218, 218);
+    max-width: 1240px;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: rgba(0, 0, 0, 0.75);
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+
+.class-cars-listing
+{
+    padding: 10px;
+    border-radius: 9px;
+    border: 2px solid rgb(75, 75, 75);
+    background-color: rgba(0, 0, 0, 0.612);
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+    font-family: "Lucida Console", "Courier New", monospace;
+}
+
+.class-cars-listing img
+{
+    width: 100%;
+    height: 300px;
+    display: block;
+    border-radius: 9px;
+    border: 2px solid rgba(60, 59, 59, 0.638);
+}
+
+.class-cars-listing .car-name
+{
+	text-align: center;
+	padding-top: 30px;
+	padding-bottom: 20px;
+	font-weight: 600;
+    font-family: 'Open+Sans' +bold;
+	text-transform: uppercase;
+}
+
+.class-cars-listing p
+{
+	padding: 0 20px 20px 20px;
+	line-height: 22px;
+    text-align: center;
+    font-size: 15px;
+}
+
+strong {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.car-preferences,
+.sort-items-by,
+.seach-bar-top {
+    color: rgba(255, 255, 255, 0.824);
+    text-align: center;
+    border: none;
+    background-color: rgba(205, 37, 37, 0);
+}
+
+.car-preferences:hover,
+.sort-items-by:hover {
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.824);
+    border: none;
+    background-color: rgba(220, 39, 39, 0);
+}
+
+.car-preferences .select-options-cars,
+.sort-items-by  .select-options-cars {
+    color: rgba(255, 255, 255, 0.824);
+    font-weight: 400;
+    text-align: center;
+    border: none;
+    background-color: rgba(2, 2, 2, 0.771);
+}
+
+.car-preferences .select-options-cars:hover,
+.sort-items-by  .select-options-cars:hover {
+    cursor: pointer;
+    border: none;
+    color: rgba(255, 255, 255, 0.824);
+    background-color: rgba(2, 2, 2, 0.771);
+}
+/* ------------------------------------------ COMPARE CSS ------------------------------------------ */
+.background-compare {
+    background: url("../img/Backround_Images/Bugatti-Wallpaper.jpg") no-repeat center center fixed;
+    background-color: rgba(26, 14, 14, 0.315);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+/* Compare Table CSS */
+.car-compare-container {
+    background-color: rgba(0, 0, 0, 0.846);
+    border: 2px solid rgba(131, 95, 138, 0.57);
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 600;
+    min-width: 400px;
+    text-align: center;
+    margin: 70px;
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.car-compare-container h3, #page-name-compare {
+    color: rgb(234, 166, 246);
+    text-transform: uppercase;
+}
+
+.car-compare-container .table .table-header-one {
+    display: grid;
+    grid-gap: 1em;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.car-compare-container .table .table-header-one > div {
+    padding: 0.5em;
+    max-width: 400px;
+    max-height: 400px;
+    color: rgb(234, 186, 255);
+}
+
+.car-compare-container .table .table-header-one div img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 6px;
+}
+
+.car-compare-container .table .table-header-one div .form-control {
+    color: rgb(234, 186, 255);
+    font-weight: 600;
+    text-align: center;
+    border: 0.1px solid transparent;
+    border-color: rgba(230, 230, 230, 0.576) transparent rgba(230, 230, 230, 0.576) transparent;
+    background-color: rgba(0, 0, 0, 0.612);
+}
+
+.car-compare-container .table .table-header-one div .form-control:hover {
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.824);
+    background-color: rgb(216, 123, 255);
+    border: 2px solid transparent;
+    border-color: rgba(0, 0, 0, 0.978) transparent rgba(0, 0, 0, 0.978) transparent;
+}
+
+.car-compare-container .table .table-header-one div .form-control .select-options {
+    color: rgb(255, 255, 255);
+    font-weight: 400;
+    text-align: center;
+    border: 0.1px solid transparent;
+    background-color: rgba(0, 0, 0, 0.661);
+}
+
+.car-compare-container .table .table-header-one div .form-control .select-options:hover {
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.824);
+    background-color: rgb(255, 255, 255);
+    border: 2px solid transparent;
+}
+/* ------------------------------------------ Brands CSS ------------------------------------------ */
+.background-brands{
+    background: url("../img/Backround_Images/WallPaper\ -\ 1.jpg") no-repeat center center fixed;
+    background-color: rgba(26, 14, 14, 0.315);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#page-name-brands{
+    color: rgb(213, 245, 255);
+}
+
+/* listing brands  */
+.class-brands-listings
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, auto));
+    grid-gap: 50px;
+    margin: 50px auto;
+    color: rgb(203, 242, 255);
+    max-width: 1240px;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: rgba(0, 0, 0, 0.75);
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+
+.class-brands-listing
+{
+    padding: 10px;
+    border-radius: 9px;
+    border: 2px solid rgb(75, 75, 75);
+    background-color: rgba(0, 0, 0, 0.612);
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+    font-family: "Lucida Console", "Courier New", monospace;
+}
+
+.class-brands-listing img
+{
+    width: 100%;
+    height: 300px;
+    display: block;
+    border-radius: 3%;
+}
+
+.class-brands-listing .brand-name
+{
+	text-align: center;
+	padding-top: 30px;
+	padding-bottom: 20px;
+	font-weight: 600;
+    font-family: "Lucida Console", "Courier New", monospace;
+	text-transform: uppercase;
+}
+
+.class-brands-listing p
+{
+	padding: 0 20px 20px 20px;
+	line-height: 22px;
+    text-align: center;
+    font-size: 15px;
+}
+/* ------------------------------------------ UNDER CONSTRUCTION ------------------------------------------ */
+.background-under-construction {
+    background: url("../img/Backround_Images//UnderConstruction-1.jpg") no-repeat center center fixed;
+    background-color: rgba(26, 14, 14, 0.315);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+/* ------------------------------------------ FIND CAR CSS ------------------------------------------ */
+.background-find-car {
+    background: url("../img/Backround_Images/WallPaper\ -\ 2.jpg") no-repeat center center fixed;
+    background-color: rgba(26, 14, 14, 0.315);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#page-name-find{
+    color: rgb(192, 190, 255);
+}
+
+/* Form CSS */
+.main-form {
+    max-width: 700px;
+    min-width: 60%;
+    font-family: "Lucida Console", "Courier New", monospace;
+    background: rgba(0, 0, 0, 0.793);
+    border: 2px solid rgba(72, 71, 97, 0.849);
+    border-radius: 20px;
+    box-sizing: border-box;
+    padding: 20px;
+    margin: 10px;
+    margin-bottom: 50px;
+    color: rgb(192, 190, 255);
+    display: inline-block;
+}
+
+.main-form-label {
+    margin-top: 20px;
+    margin-bottom: 3px;
+    width: 20%;
+}
+
+#find-car-type-of-fuel .select-options {
+    color: rgb(255, 255, 255);
+    font-weight: 400;
+    text-align: center;
+    border: 0.1px solid transparent;
+    background-color: rgba(0, 0, 0, 0.661);
+}
+
+#find-car-type-of-fuel .select-options:hover {
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.824);
+    background-color: rgb(255, 255, 255);
+    border: 2px solid transparent;
+}
+
+#form-title-pref {
+    margin-bottom: 35px;
+    font-family: Georgia, serif;
+    text-transform: uppercase;
+    font-size: 40px;
+    font-weight: 600;
+    -webkit-text-stroke: 1px rgba(21, 22, 22, 0.792); /* width and color */
+}
+
+.required {
+    color: red;
+    display: inline;
+}
+
+.main-form input[type=text] {
+    min-width: 60%;
+    border-radius: 10px;
+    box-sizing: border-box;
+    background: rgba(47, 47, 47, 0.364);
+    border: none;
+    font-weight: 500;
+    text-align: center;
+    font-size: 16px;
+    outline: none;
+    border-bottom: 1px solid rgb(196, 196, 196);
+    margin: 6px;
+    color: rgb(192, 190, 255);
+    padding: 12px 5px;
+}
+
+#find-car-type-of-fuel {
+    min-width: 60%;
+    height: 55px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    background: rgba(47, 47, 47, 0.485);
+    border: none;
+    font-weight: 500;
+    text-align: center;
+    font-size: 16px;
+    outline: none;
+    border-bottom: 1px solid rgb(196, 196, 196);
+    margin: 6px;
+    color: rgb(192, 190, 255);
+    padding: 12px 5px;
+}
+
+::placeholder{
+    color: #78797c;
+}
+
+#find-car-submit, #submit-find-car{
+    margin-bottom: 20px;
+}
+
+.SearchAgainButton {
+    max-width: 60px;
+    font-family: "Lucida Console", "Courier New", monospace;
+    background: rgba(0, 0, 0, .57);
+    border-radius: 20px;
+    box-sizing: border-box;
+    padding: 10px;
+    margin-bottom: 50px;
+    color: rgb(210, 210, 210);
+    display: inline-block;
+}
