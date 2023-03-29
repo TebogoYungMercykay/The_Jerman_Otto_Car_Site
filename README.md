@@ -62,7 +62,7 @@ ________________________________________________________________________________
         - Making sure that the web works in as many browsers as possible.
         - Layout, Backrounds, Fonts, Text, Boxes, Colours, Sizes and etc.
         - #### Workflow: Only HTML and CSS with Mock Data
-              - Launch Page with Logo.
+            - Launch Page with Logo.
               - Navigation Bar on all created Pages.
               - Cars Page
                   - Searchbar.
