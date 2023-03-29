@@ -52,7 +52,7 @@ ________________________________________________________________________________
 LogoImg
 ____________________________________________________________________________________
 # Topics In Brief Per PA Sub-Folder From 1 To 5 For The Cars Site
-- #### PA1
+- ## PA1
     - Created a web page which complies to the HTML5 standards and CSS styling.
         - http://validator.w3.org/, https://jigsaw.w3.org/css-validator/
     - **Functionality:**
@@ -61,7 +61,7 @@ ________________________________________________________________________________
         - An "under construction" page which is the page displayed if the tab has not as yet been completed.
         - Making sure that the web works in as many browsers as possible.
         - Layout, Backrounds, Fonts, Text, Boxes, Colours, Sizes and etc.
-        - #### Workflow: Only HTML and CSS with Mock Data
+        - ### Workflow: Only HTML and CSS with Mock Data
             - Launch Page with Logo.
             - Navigation Bar on all created Pages.
             - Cars Page
@@ -92,8 +92,8 @@ ________________________________________________________________________________
                 background-color: rgba(0, 0, 0, 0.75);
             }
 
-- #### PA2
-    - ###### I will develop this using XAMP
+- ## PA2
+    - ### I will develop this using XAMP
     - Loading Screen.
     - JavaScript Animations.
     - JQuery for DOM manipulation.
@@ -101,7 +101,7 @@ ________________________________________________________________________________
     - Populating your templates with the retrieved API data.
     - Implementing the Find me a car page.
     - Implementing the Compare page.
-    - #### API Functionality
+    - ### API Functionality
         - AJAX.
         - JSON Manipulation.
         - Cars/Brands have the correct image pulled from the API.
@@ -162,7 +162,7 @@ ________________________________________________________________________________
         });
     }
 
-- #### PA3
+- ## PA3
   - Using a MySQL DB with PHP.
   - Create PHP API.
   - User Registration with an API.
@@ -170,18 +170,18 @@ ________________________________________________________________________________
   - I will use the PHP cURL library for the API  development.
   - Default login details (username and password) for a user I have on the API.
   - I will be using phpMyAdmin.
-  - #### Workflow Setup:
-    - ##### READMe Specifying:
+  - ### Workflow Setup:
+    - #### READMe Specifying:
       - How to use the website
       - Explanations for the password requirements, choice of hashing algorithm and generation of API keys
-    - ##### Basic setup and page constructio
+    - #### Basic setup and page constructio
       - Making use of the include function to stitch pages together.
       - config.php, header.php, footer.php, api.php
       - login.php, validate-login.php, logout.php
       - signup.php, validate-signup.php
       - Database (MySQL DB Dump)
       - User information includes the following fields:  "id", "name", "surname", ""email", "password", "API key".
-    - ##### User Registration
+    - #### User Registration
       - The goal is for the user to be able to enter in various details on a form on the signup page and register an account on the car website.
       - A signup-validation function which checks (using JavaScript and PHP)[i.e. Both client and server-side validation] whether the information is correct or not. If it is valid, the user is added to the relevant table in the database.
       - Making sure the user can easily register/login to the site.
@@ -191,18 +191,18 @@ ________________________________________________________________________________
       - The Password must also , contain Upper and Lower case Letters, at least One Digit and One Symbol (JS Regex will help).
       - Making use of POST to submit the form information to signup-validation.
       - Add user to DB if it doesn't exist, hash password, Add salt, If user already exist an error must be dispayed!!.
-    - ##### Creating a PHP API
+    - #### Creating a PHP API
       - I will make use OOP to create the API classes. File name "api.php".
       - API should only produce/consume structured JSON data.
       - I will be recreating a modified version the "Get All Cars" section of the API used for PA2 (API Documentation.html).
       - I should be able to use SQL Queries to extract data from the database dynamically.
       - In order to make server side external requests in PHP I will use the PHP cURL library.
-      - ###### Additional Resources:
-            - http://php.net/manual/en/curl.examples.php
-            - https://stackoverflow.com/questions/3062324/what-is-curl-in-php
-            - https://www.startutorial.com/articles/view/php-curl
+      - ##### Additional Resources:
+           - http://php.net/manual/en/curl.examples.php
+           - https://stackoverflow.com/questions/3062324/what-is-curl-in-php
+           - https://www.startutorial.com/articles/view/php-curl
       - The API should should be able to cater for invalid input by returning an error back that will be handled client side.
-    - ##### EXAMPLES
+    - #### EXAMPLES
         - Request:
             ```json
             {
@@ -218,7 +218,7 @@ ________________________________________________________________________________
         - Response
             ```json
             {
-                status": "success",
+                "status": "success",
                 "timestamp":"1679507636541"
                 "data": [
                     {
@@ -245,6 +245,7 @@ ________________________________________________________________________________
                 "data": "Error. Post parameters are missing"
             }
 
+____________________________________________________________________________________
 ## REQUIREMENTS BEFORE RUNNING THE CODES:
 - **A text editor**: A text editor is required to create, write and edit code. There are many free and paid text editors available online such as Visual Studio Code, Sublime Text, Notepad++, and Atom.
 - **Web server**: A web server is required to serve web pages to users. You can use an existing web server like Apache or Nginx, or you can use a package like XAMPP or WAMP which comes with an integrated web server.
@@ -255,3 +256,6 @@ ________________________________________________________________________________
 - **AJAX**: Asynchronous JavaScript and XML are used to update web content without refreshing the page. You need JavaScript and a web server that supports AJAX.
 - **jQuery**: jQuery is a JavaScript library that simplifies HTML document manipulation, event handling, and animation. You need to include jQuery in your HTML file by linking to it in your code.
 - **Web browser**: A web browser is necessary to render and display web pages. Popular web browsers include Google Chrome, Mozilla Firefox, Safari, Microsoft Edge, and Opera.
+____________________________________________________________________________________
+                             ### THE END LOADING
+____________________________________________________________________________________
