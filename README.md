@@ -110,57 +110,58 @@ ________________________________________________________________________________
         - The data from the API loads dynamically when the user views the page.
         - I used asynchronous so that the execution of one task doesn't dependent on another. Basically multiple tasks can run simultaneously.
         - #### Workflow: No Mock Data!!
-              - CARS PAGE
-                - Data Population -> Replace Mock Data from prev Cars Page.
-                - Search, Filters and Sorting works.
-                - Loading Screen.
-              - BRANDS PAGE
-                - Data Population -> Replace Mock Data from prev Brands Page.
-                - Loading Screen
-              - FIND ME A CAR
-                - Correct results are Displayed.
-                - Correct use of API parameters.
-              - COMPARE PAGE
-                - Car Selection works.
-                - Compare Stats Show.
-                ```javascript
-                    function CarListingAlgorithm(JsonObject1){
-                    var jsonObject;
-                    if(JsonObject1 == undefined){
-                        jsonObject = {
-                            "studentnum":"uXXXXXXXX",
-                            "apikey":"a9198b68355f78830054c31a39916b7f",
-                            "type":"GetAllCars",
-                            "limit":21,
-                            "return":["make","model","body_type","engine_type","transmission","max_speed_km_per_h"],
-                            "sort":"max_speed_km_per_h",
-                            "order":"DESC",
-                            "fuzzy": false
-                        }
-                        console.log("Please enter a valid request with at least one parameter");
-                        alert('Please enter a valid request with at least one parameter');
-                    }
-                    else{
-                        jsonObject = JsonObject1;
-                    }
-                    resetDiv("cars-listing");
-                    var json = JSON.stringify(jsonObject);
-                    $.ajax({
-                        url: `https://wheatley.cs.up.ac.za/api/`,
-                        method: "POST",
-                        data: json,
-                        success: function(response) {
-                            for(let k = 0; k < response.data.length; k++) {
-                            var tempVar = response.data[k].make.toLowerCase();
-                                createCars(tempVar, response.data[k]);
-                            }
-                        },
-                        error: function(jqXHR, textStatus, errorThrown) {
-                            console.log(errorThrown);
-                        }
-                    });
+          - CARS PAGE
+            - Data Population -> Replace Mock Data from prev Cars Page.
+            - Search, Filters and Sorting works.
+            - Loading Screen.
+          - BRANDS PAGE
+            - Data Population -> Replace Mock Data from prev Brands Page.
+            - Loading Screen
+          - FIND ME A CAR
+            - Correct results are Displayed.
+            - Correct use of API parameters.
+          - COMPARE PAGE
+            - Car Selection works.
+            - Compare Stats Show.
+    - Example Code
+    ```javascript
+        function CarListingAlgorithm(JsonObject1){
+            var jsonObject;
+            if(JsonObject1 == undefined){
+                jsonObject = {
+                    "studentnum":"uXXXXXXXX",
+                    "apikey":"a9198b68355f78830054c31a39916b7f",
+                    "type":"GetAllCars",
+                    "limit":21,
+                    "return":["make","model","body_type","engine_type","transmission","max_speed_km_per_h"],
+                    "sort":"max_speed_km_per_h",
+                    "order":"DESC",
+                    "fuzzy": false
                 }
-        
+                console.log("Please enter a valid request with at least one parameter");
+                alert('Please enter a valid request with at least one parameter');
+            }
+            else{
+                jsonObject = JsonObject1;
+            }
+            resetDiv("cars-listing");
+            var json = JSON.stringify(jsonObject);
+            $.ajax({
+                url: `https://wheatley.cs.up.ac.za/api/`,
+                method: "POST",
+                data: json,
+                success: function(response) {
+                for(let k = 0; k < response.data.length; k++) {
+                var tempVar = response.data[k].make.toLowerCase();
+                    createCars(tempVar, response.data[k]);
+                }
+            },
+            error: function(jqXHR, textStatus, errorThrown) {
+                console.log(errorThrown);
+            }
+        });
+    }
+
 - #### PA3
   - Using a MySQL DB with PHP.
   - Create PHP API.
