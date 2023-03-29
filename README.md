@@ -77,19 +77,19 @@ ________________________________________________________________________________
                   - 2 Optional.
               - Comapre Cars Page.
               - Under Construction.
-         ```css
-            .class-brands-listings
-            {
-                display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(210px, auto));
-                grid-gap: 50px;
-                margin: 50px auto;
-                color: rgb(203, 242, 255);
-                max-width: 1240px;
-                padding: 20px;
-                border-radius: 15px;
-                background-color: rgba(0, 0, 0, 0.75);
-            }
+            ```css
+                .class-brands-listings
+                {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(210px, auto));
+                    grid-gap: 50px;
+                    margin: 50px auto;
+                    color: rgb(203, 242, 255);
+                    max-width: 1240px;
+                    padding: 20px;
+                    border-radius: 15px;
+                    background-color: rgba(0, 0, 0, 0.75);
+                }
 
 - #### PA2
     - ###### I will develop this using XAMP
@@ -122,126 +122,126 @@ ________________________________________________________________________________
               - COMPARE PAGE
                 - Car Selection works.
                 - Compare Stats Show.
-    - ```javascript
-        function CarListingAlgorithm(JsonObject1){
-        var jsonObject;
-        if(JsonObject1 == undefined){
-            jsonObject = {
-                "studentnum":"uXXXXXXXX",
-                "apikey":"a9198b68355f78830054c31a39916b7f",
-                "type":"GetAllCars",
-                "limit":21,
-                "return":["make","model","body_type","engine_type","transmission","max_speed_km_per_h"],
-                "sort":"max_speed_km_per_h",
-                "order":"DESC",
-                "fuzzy": false
-            }
-            console.log("Please enter a valid request with at least one parameter");
-            alert('Please enter a valid request with at least one parameter');
-        }
-        else{
-            jsonObject = JsonObject1;
-        }
-        resetDiv("cars-listing");
-        var json = JSON.stringify(jsonObject);
-        $.ajax({
-            url: `https://wheatley.cs.up.ac.za/api/`,
-            method: "POST",
-            data: json,
-            success: function(response) {
-                for(let k = 0; k < response.data.length; k++) {
-                var tempVar = response.data[k].make.toLowerCase();
-                    createCars(tempVar, response.data[k]);
+                ```javascript
+                    function CarListingAlgorithm(JsonObject1){
+                    var jsonObject;
+                    if(JsonObject1 == undefined){
+                        jsonObject = {
+                            "studentnum":"uXXXXXXXX",
+                            "apikey":"a9198b68355f78830054c31a39916b7f",
+                            "type":"GetAllCars",
+                            "limit":21,
+                            "return":["make","model","body_type","engine_type","transmission","max_speed_km_per_h"],
+                            "sort":"max_speed_km_per_h",
+                            "order":"DESC",
+                            "fuzzy": false
+                        }
+                        console.log("Please enter a valid request with at least one parameter");
+                        alert('Please enter a valid request with at least one parameter');
+                    }
+                    else{
+                        jsonObject = JsonObject1;
+                    }
+                    resetDiv("cars-listing");
+                    var json = JSON.stringify(jsonObject);
+                    $.ajax({
+                        url: `https://wheatley.cs.up.ac.za/api/`,
+                        method: "POST",
+                        data: json,
+                        success: function(response) {
+                            for(let k = 0; k < response.data.length; k++) {
+                            var tempVar = response.data[k].make.toLowerCase();
+                                createCars(tempVar, response.data[k]);
+                            }
+                        },
+                        error: function(jqXHR, textStatus, errorThrown) {
+                            console.log(errorThrown);
+                        }
+                    });
                 }
-            },
-            error: function(jqXHR, textStatus, errorThrown) {
-                console.log(errorThrown);
-            }
-        });
-    }
         
 - #### PA3
-      - Using a MySQL DB with PHP.
-      - Create PHP API.
-      - User Registration with an API.
-      - API key Generation and Authorization.
-      - I will use the PHP cURL library for the API  development.
-      - Default login details (username and password) for a user I have on the API.
-      - I will be using phpMyAdmin.
-      - #### Workflow Setup:
-            - ##### READMe Specifying:
-                  - How to use the website
-                  - Explanations for the password requirements, choice of hashing algorithm and generation of API keys
-            - ##### Basic setup and page constructio
-                  - Making use of the include function to stitch pages together.
-                  - config.php, header.php, footer.php, api.php
-                  - login.php, validate-login.php, logout.php
-                  - signup.php, validate-signup.php
-                  - Database (MySQL DB Dump)
-                  - User information includes the following fields:  "id", "name", "surname", ""email", "password", "API key".
-            - ##### User Registration
-                  - The goal is for the user to be able to enter in various details on a form on the signup page and register an account on the car website.
-                  - A signup-validation function which checks (using JavaScript and PHP)[i.e. Both client and server-side validation] whether the information is correct or not. If it is valid, the user is added to the relevant table in the database.
-                  - Making sure the user can easily register/login to the site.
-                  - Signup form on the signup page (signup.php) with the following fields:  "name", "surname", "email", "password".
-                  - Using JavaScript to check that all the fields are filled out correctly.
-                  - Email address should have an '@' symbol and the Password should be longer than 8 Characters.
-                  - The Password must also , contain Upper and Lower case Letters, at least One Digit and One Symbol (JS Regex will help).
-                  - Making use of POST to submit the form information to signup-validation.
-                  - Add user to DB if it doesn't exist, hash password, Add salt, If user already exist an error must be dispayed!!.
-            - ##### Creating a PHP API
-                  - I will make use OOP to create the API classes. File name "api.php".
-                  - API should only produce/consume structured JSON data.
-                  - I will be recreating a modified version the "Get All Cars" section of the API used for PA2 (API Documentation.html).
-                  - I should be able to use SQL Queries to extract data from the database dynamically.
-                  - In order to make server side external requests in PHP I will use the PHP cURL library.
-                  - ###### Additional Resources:
-                        - http://php.net/manual/en/curl.examples.php
-                        - https://stackoverflow.com/questions/3062324/what-is-curl-in-php
-                        - https://www.startutorial.com/articles/view/php-curl
-                  - The API should should be able to cater for invalid input by returning an error back that will be handled client side.
-      - ##### EXAMPLES
-            - Request:
-                ```json
-                {
-                    "type":"GetAllCars",
-                    "apikey":"a9198b68355f78830054c31a39916b7f",
-                    "return":["id_trim", "make", "model", "max_speed_km_per_h","image"],
-                    "search":{
-                    "make":"audi",
-                    "model":"q3"
+  - Using a MySQL DB with PHP.
+  - Create PHP API.
+  - User Registration with an API.
+  - API key Generation and Authorization.
+  - I will use the PHP cURL library for the API  development.
+  - Default login details (username and password) for a user I have on the API.
+  - I will be using phpMyAdmin.
+  - #### Workflow Setup:
+        - ##### READMe Specifying:
+              - How to use the website
+              - Explanations for the password requirements, choice of hashing algorithm and generation of API keys
+        - ##### Basic setup and page constructio
+              - Making use of the include function to stitch pages together.
+              - config.php, header.php, footer.php, api.php
+              - login.php, validate-login.php, logout.php
+              - signup.php, validate-signup.php
+              - Database (MySQL DB Dump)
+              - User information includes the following fields:  "id", "name", "surname", ""email", "password", "API key".
+        - ##### User Registration
+              - The goal is for the user to be able to enter in various details on a form on the signup page and register an account on the car website.
+              - A signup-validation function which checks (using JavaScript and PHP)[i.e. Both client and server-side validation] whether the information is correct or not. If it is valid, the user is added to the relevant table in the database.
+              - Making sure the user can easily register/login to the site.
+              - Signup form on the signup page (signup.php) with the following fields:  "name", "surname", "email", "password".
+              - Using JavaScript to check that all the fields are filled out correctly.
+              - Email address should have an '@' symbol and the Password should be longer than 8 Characters.
+              - The Password must also , contain Upper and Lower case Letters, at least One Digit and One Symbol (JS Regex will help).
+              - Making use of POST to submit the form information to signup-validation.
+              - Add user to DB if it doesn't exist, hash password, Add salt, If user already exist an error must be dispayed!!.
+        - ##### Creating a PHP API
+              - I will make use OOP to create the API classes. File name "api.php".
+              - API should only produce/consume structured JSON data.
+              - I will be recreating a modified version the "Get All Cars" section of the API used for PA2 (API Documentation.html).
+              - I should be able to use SQL Queries to extract data from the database dynamically.
+              - In order to make server side external requests in PHP I will use the PHP cURL library.
+              - ###### Additional Resources:
+                    - http://php.net/manual/en/curl.examples.php
+                    - https://stackoverflow.com/questions/3062324/what-is-curl-in-php
+                    - https://www.startutorial.com/articles/view/php-curl
+              - The API should should be able to cater for invalid input by returning an error back that will be handled client side.
+  - ##### EXAMPLES
+        - Request:
+            ```json
+            {
+                "type":"GetAllCars",
+                "apikey":"a9198b68355f78830054c31a39916b7f",
+                "return":["id_trim", "make", "model", "max_speed_km_per_h","image"],
+                "search":{
+                "make":"audi",
+                "model":"q3"
+                },
+                "fuzzy":true
+            }
+        - Response
+            ```json
+            {
+                status": "success",
+                "timestamp":"1679507636541"
+                "data": [
+                    {
+                        "id_trim": 3567,
+                        "make": "Audi",
+                        "model": "RS Q3",
+                        "max_speed_km_per_h": 250,
+                        "image":"https://wheatley.cs.up.ac.za/api/images/models/audi_rsq3.jpg"
                     },
-                    "fuzzy":true
-                }
-            - Response
-                ```json
-                {
-                    status": "success",
-                    "timestamp":"1679507636541"
-                    "data": [
-                        {
-                            "id_trim": 3567,
-                            "make": "Audi",
-                            "model": "RS Q3",
-                            "max_speed_km_per_h": 250,
-                            "image":"https://wheatley.cs.up.ac.za/api/images/models/audi_rsq3.jpg"
-                        },
-                        {
-                            "id_trim": 3389,
-                            "make": "Audi",
-                            "model": "Q3",
-                            "max_speed_km_per_h": 233,
-                            "image":"https://wheatley.cs.up.ac.za/api/images/models/audi_q3.jpg"
-                        }
-                    ]
-                }
-            - Error
-                ```json
-                {
-                    "status": "error",
-                    "timestamp": 1679391940921,
-                    "data": "Error. Post parameters are missing"
-                }
+                    {
+                        "id_trim": 3389,
+                        "make": "Audi",
+                        "model": "Q3",
+                        "max_speed_km_per_h": 233,
+                        "image":"https://wheatley.cs.up.ac.za/api/images/models/audi_q3.jpg"
+                    }
+                ]
+            }
+        - Error
+            ```json
+            {
+                "status": "error",
+                "timestamp": 1679391940921,
+                "data": "Error. Post parameters are missing"
+            }
 
 ## REQUIREMENTS BEFORE RUNNING THE CODES:
       - **A text editor**: A text editor is required to create, write and edit code. There are many free and paid text editors available online such as Visual Studio Code, Sublime Text, Notepad++, and Atom.
