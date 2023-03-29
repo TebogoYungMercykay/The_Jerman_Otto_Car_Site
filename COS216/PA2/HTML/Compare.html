@@ -2,7 +2,7 @@
 <!-- Selepe Sello uXXXXXXXX -->
 <html lang="en">
 	<head>
-		<title>FindCar</title>
+		<title>Compare</title>
         <link rel="icon" href="../img/logo.jpg" type="image/icon type">
 		<meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -19,13 +19,13 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"  type="text/css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous" />
         <link rel="stylesheet" type="text/css" href="../css/jerman-otto-styles.css">
 
-    </head>
-	<body class="background-find-car">
         <!-- Preloader HTML -->
         <link rel="stylesheet" type="text/css" href="../css/loader.css">
         <div id="loading-screen" class="loader_bg">
             <div class="loader"></div>
         </div>
+    </head>
+	<body class="background-compare">
         <header>
             <div class="topnav">
                 <a href="../../../index.html"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
@@ -33,56 +33,136 @@
                     <a href="index.html">Cars</a>
                     <a href="Brands.html">Car Brands</a>
                     <a href="FindCar.html">Find Me A Car</a>
-                    <a href="Compare.html">Compare</a>
+                    <a href="#">Compare</a>
                 </div>
             </div>
         </header>
         <section id="logo" class="mt-5">
             <div class="name-logo-top">
-                <h1 class="page-name-purpose" id="page-name-find">Find A Perfect Car With Jerman <img class="logo-top-img-2" src="../img/logo.jpg" alt="Jerman Otto"/>tto</h1>
+                <h1 class="page-name-purpose" id="page-name-compare" >C<img class="logo-top-img-2" src="../img/logo.jpg" alt="Jerman Otto"/>mpare Cars Here</h1>
                 <hr>
             </div>
         </section>
-        <div class="logoContainer" id="div-with-form">
-            <div class="logo">
-                <form class="main-form" action="" method="post" autocomplete="off" enctype="multipart/form-data">
-                    <h5 class="form-title" id="form-title-pref">Enter Your Preferences</h5>
-                    <label class="form-label"><h5>Make/Brand<label class="required">&nbsp;*</label>&nbsp;&nbsp;&nbsp;&nbsp;</h5></label>
-                        <input type="text" class="form-input" id="find-brand" name="find-brand" placeholder="AC" required/><br>
-                    <label class="form-label"><h5>Engine Type<label class="required">&nbsp;*</label>&nbsp;&nbsp;&nbsp;</h5></label>
-                        <select required name="find-engine-type" title="select-car" class="form-input" id="find-engine-type">
-                            <option class="select-options" value="0">-- Engine Type --</option>
-                            <option class="select-options" value="Gasoline">Gasoline</option>
-                            <option class="select-options" value="Diesel">Diesel</option>
-                            <option class="select-options" value="Hybrid">Hybrid</option>
-                            <option class="select-options" value="Gasoline, Electric">Gasoline || Electric</option>
-                        </select><br>
-                    <label class="form-label"><h5>Transmission<label class="required">&nbsp;*</label>&nbsp;&nbsp;</h5></label>
-                        <input type="text" class="form-input" id="find-transmission" name="find-transmission" placeholder="Automatic" required><br>
-                    <label class="form-label"><h5>Body Type<label class="required">&nbsp;*</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h5></label>
-                        <input type="text" class="form-input" id="find-body-type" name="find-body-type" placeholder="Cabriolet" required><br>
-                    <label class="form-label"><h5>Model&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h5></label>
-                        <input type="text" class="form-input" id="find-model" name="find-model" placeholder="ACE"><br>
-                    <label class="form-label"><h5>Number of Seats&nbsp;</h5></label>
-                        <input type="number" class="form-input" id="find-num-of-seats" name="find-num-of-seats" placeholder="2" min="2" max="15"><br>
-                    <br>
-                    <input id="submit-find-car" type="reset" name="reset" value="Reset Form" class="btnFindCarResults">
-                    <button title="Submit" type="submit" id="find-submit" class="btnFindCarResults">Find Car</button>
-                </form>
-            </div>
-        </div>
-        <div class="about" id="div-with-cars">
-            <div id="cars-listing" class="class-cars-listings">
-            </div>
-        </div>
-        <div class="div-with-button" id="div-with-button">
-            <input id="sucess-display-results" type="button" name="submit" value="Search Again" class="btnFindCarResults">
+        <div class="car-compare-container" id="car-list-container">
+            <table class="table" id="compare-table">
+                <thead>
+                    <tr>
+                        <td>
+                            <div class="table-header-one" id="table-header-1">
+                                <div>
+                                    CHOOSE A CAR
+                                </div>
+                                <div>
+                                    <select name="car-one" title="select-car" class="form-control" id="top-select-car-1">
+                                        <option class="select-options" value="0">Audi</option>
+                                        <option class="select-options" value="1">Mini</option>
+                                        <option class="select-options" value="2">Bugatti</option>
+                                        <option class="select-options" value="3">BMW</option>
+                                        <option class="select-options" value="4">Lamborghini</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <select name="car-two" title="select-car" class="form-control" id="top-select-car-2">
+                                        <option class="select-options" value="0">Audi</option>
+                                        <option class="select-options" value="1">Mini</option>
+                                        <option class="select-options" value="2">Bugatti</option>
+                                        <option class="select-options" value="3">BMW</option>
+                                        <option class="select-options" value="4">Lamborghini</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="table-header-one" id="table-header-2">
+                                <div>
+                                    Car Image
+                                </div>
+                                <div id="car-image-1">
+                                </div>
+                                <div id="car-image-2">
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="table-header-one" id="table-header-1">
+                                <div>
+                                    Max Speed
+                                </div>
+                                <div id="max-speed-1">
+                                </div>
+                                <div id="max-speed-2">
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="table-header-one" id="table-header-3">
+                                <div>
+                                    Body Type
+                                </div>
+                                <div id="car-type-1">
+                                </div>
+                                <div id="car-type-2">
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="table-header-one" id="table-header-4">
+                                <div>
+                                    Engine
+                                </div>
+                                <div id="car-engine-1">
+                                </div>
+                                <div id="car-engine-2">
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="table-header-one" id="table-header-6">
+                                <div>
+                                    Transmission
+                                </div>
+                                <div id="car-tech-1">
+                                </div>
+                                <div id="car-tech-2">
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="table-header-one" id="table-header-7">
+                                <div>
+                                    Year From
+                                </div>
+                                <div id="year-from-1">
+                                </div>
+                                <div id="year-from-2">
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <h3 id="sucess-compare">There You Goooo!!!</h3>
         </div>
         <br>
         <footer class="footer-bottom">
             <p>Jerman Auto &copy; 2023 All Rights Reserved Sello Selepe &nbsp;&nbsp;&nbsp;&nbsp; <i class="fa-brands fa-linkedin"></i>&nbsp;&nbsp;<i class="fa-brands fa-instagram"></i>&nbsp;&nbsp;<i class="fa-brands fa-twitter"></i>&nbsp;&nbsp;<i class="fa-brands fa-telegram"></i>&nbsp;&nbsp;<i class="fa-brands fa-github"></i> &nbsp;&nbsp;&nbsp;&nbsp; <a href="mailto:sbkskhalo.kq@gmail.com">sbkskhalo.kq@gmail.com</a></p>
         </footer>
-        <script src="../js/findCar.js"></script>
+        <!-- Javascript File For Dom Mannipulation -->
+        <script src="../js/compare.js" type="text/javascript"></script>
         <!-- Preloade Script -->
         <script src="../js/loader.js" type="text/javascript"></script>
 	</body>
