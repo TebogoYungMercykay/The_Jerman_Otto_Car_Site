@@ -77,7 +77,7 @@ ________________________________________________________________________________
                     - 2 Optional.
             - Comapre Cars Page.
             - Under Construction.
-      - Example Code CSS
+      - Example Code HTML & CSS
     ```html
         <!DOCTYPE html>
         <html lang="en">
@@ -93,7 +93,7 @@ ________________________________________________________________________________
             <link rel="icon" href="#">
             <link rel="stylesheet" type="text/css" href="#" integrity="#" crossorigin="anonymous" referrerpolicy="no-referrer"/>
             <style>
-               .class-brands-listings
+               .Example-CSS-For-Listing-Cars
                 {
                     display: grid;
                     grid-template-columns: repeat(auto-fit, minmax(210px, auto));
