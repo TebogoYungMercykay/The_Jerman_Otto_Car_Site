@@ -77,7 +77,7 @@ ________________________________________________________________________________
                     - 2 Optional.
             - Comapre Cars Page.
             - Under Construction.
-      - Example Code HTML & CSS
+      - Example Code HTML & CSS (Check jerman-otto-styles.css and Brands.html, Path: COS216/PA2)
     ```html
         <!DOCTYPE html>
         <html lang="en">
@@ -166,26 +166,26 @@ ________________________________________________________________________________
           - COMPARE PAGE
             - Car Selection works.
             - Compare Stats Show.
-    - Example Code
+    - API Request Example Code (Check carListing.js, path: Path: COS216/PA2/js)
     ```javascript
-        function CarListingAlgorithm(JsonObject1){
+        function carListingAlgorithm(jsonObject1) {
             var jsonObject;
-            if(JsonObject1 == undefined){
+            if (jsonObject1 === undefined) {
                 jsonObject = {
-                    "studentnum":"uXXXXXXXX",
-                    "apikey":"a9198b68355f78830054c31a39916b7f",
-                    "type":"GetAllCars",
-                    "limit":21,
-                    "return":["make","model","body_type","engine_type","transmission","max_speed_km_per_h"],
-                    "sort":"max_speed_km_per_h",
-                    "order":"DESC",
+                    "studentnum": "uXXXXXXXX",
+                    "apikey": "a9198b68355f78830054c31a39916b7f",
+                    "type": "GetAllCars",
+                    "limit": 21,
+                    "return": ["make", "model", "body_type", "engine_type", "transmission", "max_speed_km_per_h"],
+                    "sort": "max_speed_km_per_h",
+                    "order": "DESC",
                     "fuzzy": false
-                }
+                };
                 console.log("Please enter a valid request with at least one parameter");
                 alert('Please enter a valid request with at least one parameter');
             }
-            else{
-                jsonObject = JsonObject1;
+            else {
+                jsonObject = jsonObject1;
             }
             resetDiv("cars-listing");
             var json = JSON.stringify(jsonObject);
@@ -194,16 +194,16 @@ ________________________________________________________________________________
                 method: "POST",
                 data: json,
                 success: function(response) {
-                for(let k = 0; k < response.data.length; k++) {
-                var tempVar = response.data[k].make.toLowerCase();
-                    createCars(tempVar, response.data[k]);
+                    for (let k = 0; k < response.data.length; k++) {
+                        var tempVar = response.data[k].make.toLowerCase();
+                        createCars(tempVar, response.data[k]);
+                    }
+                },
+                error: function(jqXHR, textStatus, errorThrown) {
+                    console.log(errorThrown);
                 }
-            },
-            error: function(jqXHR, textStatus, errorThrown) {
-                console.log(errorThrown);
-            }
-        });
-    }
+            });
+        }
 
 - ## PA3
   - Using a MySQL DB with PHP.
