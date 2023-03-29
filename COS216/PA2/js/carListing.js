@@ -1,13 +1,17 @@
+// * Selepe Sello uXXXXXXXX
 // I used Asynchronous so that the execution of one task doesn't dependent on another. Basically tasks can run simultaneously.
 var jsonObject = null;
 $(document).ready(function (){
+    // Making Sure that the Div is Always Empty
+    resetDiv("cars-listing");
+    // * Code Below Is For Sorting Cars
     $('#sort-items-by').on('change', function(){
         var selectedVal = $(this).val();
         if(selectedVal != "0"){
-            console.log("Value Changed Mate: " + $(this).val() + " And You Have Selected ", selectedVal);
+            console.log("Compare Input Selected, And You Have Selected ", selectedVal);
             if (selectedVal == "1") {
                 jsonObject = {
-                    "studentnum":"u20748052",
+                    "studentnum":"uXXXXXXXX",
                     "apikey":"a9198b68355f78830054c31a39916b7f",
                     "type":"GetAllCars",
                     "limit":21,
@@ -21,7 +25,7 @@ $(document).ready(function (){
             }
             else if (selectedVal == "2") {
                 jsonObject = {
-                    "studentnum":"u20748052",
+                    "studentnum":"uXXXXXXXX",
                     "apikey":"a9198b68355f78830054c31a39916b7f",
                     "type":"GetAllCars",
                     "limit":21,
@@ -35,7 +39,7 @@ $(document).ready(function (){
             }
             else if (selectedVal == "3") {
                 jsonObject = {
-                    "studentnum":"u20748052",
+                    "studentnum":"uXXXXXXXX",
                     "apikey":"a9198b68355f78830054c31a39916b7f",
                     "type":"GetAllCars",
                     "limit":21,
@@ -49,7 +53,7 @@ $(document).ready(function (){
             }
             else if (selectedVal == "4") {
                 jsonObject = {
-                    "studentnum":"u20748052",
+                    "studentnum":"uXXXXXXXX",
                     "apikey":"a9198b68355f78830054c31a39916b7f",
                     "type":"GetAllCars",
                     "limit":21,
@@ -63,7 +67,7 @@ $(document).ready(function (){
             }
             else if (selectedVal == "5") {
                 jsonObject = {
-                    "studentnum":"u20748052",
+                    "studentnum":"uXXXXXXXX",
                     "apikey":"a9198b68355f78830054c31a39916b7f",
                     "type":"GetAllCars",
                     "limit":21,
@@ -77,7 +81,7 @@ $(document).ready(function (){
             }
             else if (selectedVal == "6") {
                 jsonObject = {
-                    "studentnum":"u20748052",
+                    "studentnum":"uXXXXXXXX",
                     "apikey":"a9198b68355f78830054c31a39916b7f",
                     "type":"GetAllCars",
                     "limit":21,
@@ -91,7 +95,7 @@ $(document).ready(function (){
             }
             else if (selectedVal == "7") {
                 jsonObject = {
-                    "studentnum":"u20748052",
+                    "studentnum":"uXXXXXXXX",
                     "apikey":"a9198b68355f78830054c31a39916b7f",
                     "type":"GetAllCars",
                     "limit":21,
@@ -105,7 +109,7 @@ $(document).ready(function (){
             }
             else if (selectedVal == "8") {
                 jsonObject = {
-                    "studentnum":"u20748052",
+                    "studentnum":"uXXXXXXXX",
                     "apikey":"a9198b68355f78830054c31a39916b7f",
                     "type":"GetAllCars",
                     "limit":21,
@@ -121,7 +125,156 @@ $(document).ready(function (){
         else {
             show("cars-listing");
             jsonObject = {
-                "studentnum":"u20748052",
+                "studentnum":"uXXXXXXXX",
+                "apikey":"a9198b68355f78830054c31a39916b7f",
+                "type":"GetAllCars",
+                "limit":21,
+                "return":["make","model","body_type","engine_type","transmission","max_speed_km_per_h"],
+                "sort":"max_speed_km_per_h",
+                "order":"DESC",
+                "fuzzy":false,
+            }
+            resetDiv("cars-listing");
+            CarListingAlgorithm(jsonObject);
+        }
+    }).change();
+    // * Code Below Is For Filtering Cars
+    $('#car-preferences').on('change', function(){
+        var selectedVal = $(this).val();
+        if(selectedVal != "0"){
+            console.log("Select value changed: And You Have Selected ", selectedVal);
+            if (selectedVal == "1") {
+                jsonObject = {
+                    "studentnum":"uXXXXXXXX",
+                    "type":"GetAllCars",
+                    "limit":21,
+                    "apikey":"a9198b68355f78830054c31a39916b7f",
+                    "search":{
+                        "engine_type":"Gasoline",
+                    },
+                    "fuzzy": true,
+                    "return":"*"
+                }
+                // console.log(jsonObject);
+                resetDiv("cars-listing");
+                CarListingAlgorithm(jsonObject);
+            }
+            else if (selectedVal == "2") {
+                jsonObject = {
+                    "studentnum":"uXXXXXXXX",
+                    "type":"GetAllCars",
+                    "limit":21,
+                    "apikey":"a9198b68355f78830054c31a39916b7f",
+                    "search":{
+                        "transmission": "Automatic",
+                    },
+                    "fuzzy": true,
+                    "return":"*"
+                }
+                // console.log(jsonObject);
+                resetDiv("cars-listing");
+                CarListingAlgorithm(jsonObject);
+            }
+            else if (selectedVal == "3") {
+                jsonObject = {
+                    "studentnum":"uXXXXXXXX",
+                    "type":"GetAllCars",
+                    "limit":21,
+                    "apikey":"a9198b68355f78830054c31a39916b7f",
+                    "search":{
+                        "transmission": "Manual",
+                    },
+                    "fuzzy": true,
+                    "return":"*"
+                }
+                // console.log(jsonObject);
+                resetDiv("cars-listing");
+                CarListingAlgorithm(jsonObject);
+            }
+            else if (selectedVal == "4") {
+                jsonObject = {
+                    "studentnum":"uXXXXXXXX",
+                    "type":"GetAllCars",
+                    "limit":21,
+                    "apikey":"a9198b68355f78830054c31a39916b7f",
+                    "search":{
+                        "number_of_seats":2,
+                    },
+                    "fuzzy": true,
+                    "return":"*"
+                }
+                // console.log(jsonObject);
+                resetDiv("cars-listing");
+                CarListingAlgorithm(jsonObject);
+            }
+            else if (selectedVal == "5") {
+                jsonObject = {
+                    "studentnum":"uXXXXXXXX",
+                    "type":"GetAllCars",
+                    "limit":21,
+                    "apikey":"a9198b68355f78830054c31a39916b7f",
+                    "search":{
+                        "drive_wheels": "Rear wheel drive",
+                    },
+                    "fuzzy": true,
+                    "return":"*"
+                }
+                // console.log(jsonObject);
+                resetDiv("cars-listing");
+                CarListingAlgorithm(jsonObject);
+            }
+            else if (selectedVal == "6") {
+                jsonObject = {
+                    "studentnum":"uXXXXXXXX",
+                    "type":"GetAllCars",
+                    "limit":21,
+                    "apikey":"a9198b68355f78830054c31a39916b7f",
+                    "search":{
+                        "drive_wheels": "All wheel drive",
+                    },
+                    "fuzzy": true,
+                    "return":"*"
+                }
+                // console.log(jsonObject);
+                resetDiv("cars-listing");
+                CarListingAlgorithm(jsonObject);
+            }
+            else if (selectedVal == "7") {
+                jsonObject = {
+                    "studentnum":"uXXXXXXXX",
+                    "type":"GetAllCars",
+                    "limit":21,
+                    "apikey":"a9198b68355f78830054c31a39916b7f",
+                    "search":{
+                        "body_type":"Coupe",
+                    },
+                    "fuzzy": true,
+                    "return":"*"
+                }
+                // console.log(jsonObject);
+                resetDiv("cars-listing");
+                CarListingAlgorithm(jsonObject);
+            }
+            else if (selectedVal == "8") {
+                jsonObject = {
+                    "studentnum":"uXXXXXXXX",
+                    "type":"GetAllCars",
+                    "limit":21,
+                    "apikey":"a9198b68355f78830054c31a39916b7f",
+                    "search":{
+                        "body_type":"Cabriolet",
+                    },
+                    "fuzzy": true,
+                    "return":"*"
+                }
+                // console.log(jsonObject);
+                resetDiv("cars-listing");
+                CarListingAlgorithm(jsonObject);
+            }
+        }
+        else {
+            jsonObject = {
+                "studentnum":"uXXXXXXXX",
                 "apikey":"a9198b68355f78830054c31a39916b7f",
                 "type":"GetAllCars",
                 "limit":21,
@@ -147,9 +300,6 @@ $(document).ready(function (){
     function element(id) {
         return document.getElementById(id);
     }
-    function hide(id) {
-        element(id).style.display = "none";
-    }
     function show(id) {
         element(id).style.display = "grid";
     }
@@ -169,22 +319,22 @@ $(document).ready(function (){
                     var MaxSpeed = jsonData.max_speed_km_per_h;
                     var BodyType = jsonData.body_type;
                     element("cars-listing").innerHTML +=`<div class="class-cars-listing">
-                                                            <h3 class="car-name">${TopName}</h3>
-                                                            <img class="car-image" src="${data2}" alt="Car Picture" />
-                                                            <br>
-                                                            <div class="div-car-body-type">
-                                                                <p class="car-body-type"><strong>Body Type</strong> : ${BodyType}</p>
-                                                            </div>
-                                                            <div class="div-car-engine">
-                                                                <p class="car-engine"><strong>Engine</strong> : ${Engine}</p>
-                                                            </div>
-                                                            <div class="div-car-technology">
-                                                                <p class="car-technology"><strong>Max Speed</strong> : ${MaxSpeed}</p>
-                                                            </div>
-                                                            <div class="div-car-handling">
-                                                                <p class="car-handling"><strong>Transmission</strong> : ${Transmission}</p>
-                                                            </div>
-                                                        </div>`;
+                        <h3 class="car-name">${TopName}</h3>
+                        <img class="car-image" src="${data2}" alt="Car Picture" />
+                        <br>
+                        <div class="div-car-body-type">
+                            <p class="car-body-type"><strong>Body Type</strong> : ${BodyType}</p>
+                        </div>
+                        <div class="div-car-engine">
+                            <p class="car-engine"><strong>Engine</strong> : ${Engine}</p>
+                        </div>
+                        <div class="div-car-technology">
+                            <p class="car-technology"><strong>Max Speed</strong> : ${MaxSpeed}</p>
+                        </div>
+                        <div class="div-car-handling">
+                            <p class="car-handling"><strong>Transmission</strong> : ${Transmission}</p>
+                        </div>
+                    </div>`;
                 }
                 else {
                     console.log("An Error Occured: " + xhr.message);
@@ -199,7 +349,7 @@ $(document).ready(function (){
         var jsonObject;
         if(JsonObject1 == undefined){
             jsonObject = {
-                "studentnum":"u20748052",
+                "studentnum":"uXXXXXXXX",
                 "apikey":"a9198b68355f78830054c31a39916b7f",
                 "type":"GetAllCars",
                 "limit":21,
@@ -214,16 +364,15 @@ $(document).ready(function (){
         else{
             jsonObject = JsonObject1;
         }
+        resetDiv("cars-listing");
         var json = JSON.stringify(jsonObject);
         $.ajax({
             url: `https://wheatley.cs.up.ac.za/api/`,
             method: "POST",
             data: json,
             success: function(response) {
-                // console.log(response);
                 for(let k = 0; k < response.data.length; k++) {
                 var tempVar = response.data[k].make.toLowerCase();
-                    //   console.log("Brand Name: "+ tempVar.toUpperCase());
                     createCars(tempVar, response.data[k]);
                 }
             },
@@ -234,18 +383,57 @@ $(document).ready(function (){
     }
     $('.seach-bar-top').click(function (event) {
         event.preventDefault();
-        var jsonData = $('.seach-bar-top').val();
-        try{
-            var json1 = JSON.parse(jsonData);
-            // var json2 = JSON.stringify(jsonData);
-            var json2 = JSON.stringify(json1);
-            console.log(json2);
-            resetDiv("cars-listing");
-            CarListingAlgorithm(json2);
+        var searchData = $('.seach-bar-top').val(); // Make Val();
+        var Array = ['AC', 'Acura', 'Alfa Romeo', 'Alpina', 'Alpine', 'Aro', 'Asia', 'Aston Martin', 'Audi', 'Beijing', 'Bentley', 'BMW', 'Borgward', 'Brilliance', 'Bristol', 'Bugatti', 'Buick', 'BYD', 'Cadillac', 'Callaway', 'Carbodies', 'Caterham', 'Changan', 'ChangFeng', 'Changhe', 'Chery', 'Chevrolet', 'Chrysler', 'Citroen', 'Cizeta', 'Coggiola', 'Dacia', 'Dadi', 'Daewoo', 'Daihatsu', 'Daimler', 'Dallas', 'Datsun', 'De Tomaso', 'Derways', 'Dodge', 'DongFeng', 'DS', 'Eagle', 'FAW', 'Ferrari', 'Fiat', 'Ford', 'Foton', 'FSO', 'Fuqi', 'GAZ', 'Geely', 'Genesis', 'Geo', 'GMC', 'Great Wall', 'Hafei', 'Haima', 'Haval', 'Hawtai', 'Hindustan', 'Holden', 'Honda', 'HuangHai', 'Hummer', 'Hyundai', 'Infiniti', 'Innocenti', 'Invicta', 'Iran Khodro', 'Isdera', 'Isuzu', 'IZH', 'JAC', 'Jaguar', 'Jeep', 'Jiangnan', 'JMC', 'Kia', 'Koenigsegg', 'Lamborghini', 'Lancia', 'Land Rover', 'Lexus', 'Lifan', 'Lincoln', 'Lotus', 'LTI', 'LuAZ', 'Mahindra', 'Marcos', 'Marlin', 'Marussia', 'Maruti', 'Maserati', 'Maybach', 'Mazda', 'Mega', 'Mercedes-Benz', 'Mercury', 'Metrocab', 'MG', 'Minelli', 'Mini', 'Mitsubishi', 'Morgan', 'Moskvich', 'Nissan', 'Noble', 'Oldsmobile', 'Opel', 'Pagani', 'Panoz', 'Perodua', 'Peugeot', 'Plymouth', 'Pontiac', 'Porsche', 'Premier', 'Proton', 'Puma', 'Qvale', 'Ravon', 'Reliant', 'Renault', 'Rolls-Royce', 'Ronart', 'Rover', 'Saab', 'Saleen', 'Samsung', 'Saturn', 'Scion', 'SEAT', 'ShuangHuan', 'Skoda', 'SMA', 'Smart', 'Soueast', 'Spectre', 'Spyker', 'SsangYong', 'Subaru', 'Suzuki', 'TagAZ', 'Talbot', 'Tata', 'Tatra', 'Tofas', 'Toyota', 'Trabant', 'TVR', 'UAZ', 'VAZ (Lada)', 'Vector', 'Venturi', 'Volkswagen', 'Volvo', 'Vortex', 'Wartburg', 'Wiesmann', 'Wuling', 'Xin Kai', 'Zastava', 'ZAZ', 'ZIL', 'Zotye', 'ZX'];
+        var validateInput = false;
+        for(var i = 0; i < Array.length; i++){
+            if(Array[i].toLowerCase() == searchData.toLowerCase()){
+                validateInput = true;
+                console.log("User Entered Valid Input!!");
+            }
         }
-        catch(err){
-            console.log('Invalid JSON:', err);
-            console.log('Please Enter Valid JSON Data');
+        if(searchData != "" && searchData != '' && searchData != undefined){
+            if(validateInput != false){
+                console.log(searchData);
+                try{
+                    var jsonObject = {
+                        "studentnum":"uXXXXXXXX",
+                        "type":"GetAllCars",
+                        "limit":21,
+                        "apikey":"a9198b68355f78830054c31a39916b7f",
+                        "search":{
+                            "make":`${searchData}`,
+                        },
+                        "fuzzy": true,
+                        "sort":"max_speed_km_per_h",
+                        "order":"DESC",
+                        "return":"*"
+                    }
+                    console.log(jsonObject);
+                    resetDiv("cars-listing");
+                    CarListingAlgorithm(jsonObject);
+                }
+                catch(err){
+                    alert("Please Enter Valid Input Data, Eg. Audi/BMW/Aston Martin/Alfa Romeo");
+                    console.log("An Error Occurred: " + err);
+                }
+            }
+            else{
+                alert("Please Enter Valid Input Data, Eg. Audi/BMW/Aston Martin/Alfa Romeo");
+                console.log('Please Enter Valid Input Data, Eg. Audi/BMW/Aston Martin/Alfa Romeo');
+                var jsonObject = {
+                    "studentnum":"uXXXXXXXX",
+                    "apikey":"a9198b68355f78830054c31a39916b7f",
+                    "type":"GetAllCars",
+                    "limit":21,
+                    "return":["make","model","body_type","engine_type","transmission","max_speed_km_per_h"],
+                    "sort":"max_speed_km_per_h",
+                    "order":"DESC",
+                    "fuzzy":false,
+                }
+                resetDiv("cars-listing");
+                CarListingAlgorithm(jsonObject);
+            }
         }
     });
 });
