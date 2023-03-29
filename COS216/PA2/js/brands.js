@@ -16,10 +16,11 @@ function createCars(data) {
           var data2 = xhr.responseText;
           var brandName = data.toUpperCase();
             element("brands-listing").innerHTML += `<div class="class-brands-listing">
-                                                      <h3 class="brand-name">${brandName}</h3>
-                                                      <img class="brand-image" src=${data2} alt="Brand Picture" />
-                                                    </div>`;
-        } else {
+              <h3 class="brand-name">${brandName}</h3>
+              <img class="brand-image" src=${data2} alt="Brand Picture" />
+            </div>`;
+        }
+        else {
           console.log("An Error Occured: " + xhr.message);
         }
       }
@@ -28,10 +29,10 @@ function createCars(data) {
     xhr.send();
 }
 jsonObject = {
-  "studentnum":"u20748052",
+  "studentnum":"uXXXXXXXX",
   "type":"GetAllMakes",
   "apikey":"a9198b68355f78830054c31a39916b7f",
-  "limit":40
+  "limit":30
 }
 var json = JSON.stringify(jsonObject);
 $.ajax({
