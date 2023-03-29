@@ -1,5 +1,7 @@
 // * Selepe Sello uXXXXXXXX
 // I used Asynchronous so that the execution of one task doesn't dependent on another. Basically tasks can run simultaneously.
+// * API Calls: JavaScript, Ajax and jQuery for Cars/Index Page
+
 var jsonObject = null;
 $(document).ready(function (){
     // Making Sure that the Div is Always Empty
