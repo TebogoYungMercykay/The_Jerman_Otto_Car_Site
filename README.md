@@ -1,7 +1,5 @@
-# Polishing: Full Stack Development From Scratch, Prep for Upcoming Portfolio Webside!!
 ____________________________________________________________________________________
-## Description And Vision
-
+# Polishing: Full Stack Development From Scratch, Prep for Upcoming Portfolio Webside!!
 - The ultimate objective is to construct exceptional web applications and mobile apps. By the end of this journey, I aspire to possess the ability to develop both client and server software proficiently. Moreover, I aim to master HTML and CSS, and to be able to program a browser using popular frameworks such as JavaScript, jQuery, Angular and many more, as well as a server using renowned technologies such as PHP, ASP, Python, or Node.
 - Some of The Topics to be Covered Include:
     - **LAMP Stack**
