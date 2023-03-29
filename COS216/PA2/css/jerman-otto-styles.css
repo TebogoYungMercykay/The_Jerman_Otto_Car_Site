@@ -1,4 +1,4 @@
-/* Selepe Sello u20748052 */
+/* Selepe Sello uXXXXXXXX */
 
 /* ------------------------------------------ CSS Code Common In All Files ------------------------------------------ */
 /* Navigation Bar */
@@ -547,7 +547,7 @@ strong {
     width: 20%;
 }
 
-#find-car-type-of-fuel .select-options {
+#find-engine-type .select-options {
     color: rgb(255, 255, 255);
     font-weight: 400;
     text-align: center;
@@ -555,7 +555,7 @@ strong {
     background-color: rgba(0, 0, 0, 0.661);
 }
 
-#find-car-type-of-fuel .select-options:hover {
+#find-engine-type .select-options:hover {
     cursor: pointer;
     color: rgba(0, 0, 0, 0.824);
     background-color: rgb(255, 255, 255);
@@ -576,7 +576,7 @@ strong {
     display: inline;
 }
 
-.main-form input[type=text] {
+.main-form input[type=text], .main-form input[type=number] {
     min-width: 60%;
     border-radius: 10px;
     box-sizing: border-box;
@@ -592,7 +592,7 @@ strong {
     padding: 12px 5px;
 }
 
-#find-car-type-of-fuel {
+#find-engine-type {
     min-width: 60%;
     height: 55px;
     border-radius: 10px;
@@ -613,7 +613,7 @@ strong {
     color: #78797c;
 }
 
-#find-car-submit, #submit-find-car{
+#find-submit, #submit-find-car{
     margin-bottom: 20px;
 }
 
