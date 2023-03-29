@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- Selepe Sello u20748052 -->
+<!-- Selepe Sello uXXXXXXXX -->
 <html lang="en">
 	<head>
 		<title>FindCar</title>
@@ -43,37 +43,40 @@
                 <hr>
             </div>
         </section>
-        <div class="logoContainer">
+        <div class="logoContainer" id="div-with-form">
             <div class="logo">
                 <form class="main-form" action="" method="post" autocomplete="off" enctype="multipart/form-data">
                     <h5 class="form-title" id="form-title-pref">Enter Your Preferences</h5>
-                    <label class="form-label"><h5>Make<label class="required">*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label></h5></label>
-                        <input type="text" class="form-input" id="find-car-name" name="find-car-name" placeholder="Audi" required/><br>
-                    <label class="form-label"><h5>Engine Type<label class="required">*</label></h5></label>
-                        <select required name="find-car-type-of-fuel" title="select-car" class="form-input" id="find-car-type-of-fuel">
+                    <label class="form-label"><h5>Make/Brand<label class="required">&nbsp;*</label>&nbsp;&nbsp;&nbsp;&nbsp;</h5></label>
+                        <input type="text" class="form-input" id="find-brand" name="find-brand" placeholder="AC" required/><br>
+                    <label class="form-label"><h5>Engine Type<label class="required">&nbsp;*</label>&nbsp;&nbsp;&nbsp;</h5></label>
+                        <select required name="find-engine-type" title="select-car" class="form-input" id="find-engine-type">
                             <option class="select-options" value="0">-- Engine Type --</option>
-                            <option class="select-options" value="1">Gasolinel</option>
-                            <option class="select-options" value="2">Diesel</option>
-                            <option class="select-options" value="3">Petrol</option>
-                            <option class="select-options" value="3">Electric</option>
-                            <option class="select-options" value="4">Hybrid</option>
+                            <option class="select-options" value="Gasoline">Gasoline</option>
+                            <option class="select-options" value="Diesel">Diesel</option>
+                            <option class="select-options" value="Hybrid">Hybrid</option>
+                            <option class="select-options" value="Gasoline, Electric">Gasoline || Electric</option>
                         </select><br>
-                    <label class="form-label"><h5>Transmission<label class="required">*</label></h5></label>
-                        <input type="text" class="form-input" id="find-car-price" name="find-car-price" placeholder="Manual" required><br>
-                    <label class="form-label"><h5>Body Type&nbsp;</h5></label>
-                        <input type="text" class="form-input" id="find-car-body-type" name="find-car-body-type" placeholder="Wagon"><br>
-                    <label class="form-label"><h5>Model&nbsp;&nbsp;</h5></label>
-                        <input type="text" class="form-input" id="find-car-handling" name="find-car-handling" placeholder="R8"><br>
+                    <label class="form-label"><h5>Transmission<label class="required">&nbsp;*</label>&nbsp;&nbsp;</h5></label>
+                        <input type="text" class="form-input" id="find-transmission" name="find-transmission" placeholder="Automatic" required><br>
+                    <label class="form-label"><h5>Body Type<label class="required">&nbsp;*</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h5></label>
+                        <input type="text" class="form-input" id="find-body-type" name="find-body-type" placeholder="Cabriolet" required><br>
+                    <label class="form-label"><h5>Model&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h5></label>
+                        <input type="text" class="form-input" id="find-model" name="find-model" placeholder="ACE"><br>
+                    <label class="form-label"><h5>Number of Seats&nbsp;</h5></label>
+                        <input type="number" class="form-input" id="find-num-of-seats" name="find-num-of-seats" placeholder="2" min="2" max="15"><br>
                     <br>
-                    <button title="Submit" type="submit" id="find-car-submit" class="btnFindCarResults">Find Car</button>
+                    <input id="submit-find-car" type="reset" name="reset" value="Reset Form" class="btnFindCarResults">
+                    <button title="Submit" type="submit" id="find-submit" class="btnFindCarResults">Find Car</button>
                 </form>
             </div>
         </div>
-        <div class="about">
-            <div id="display-cars-listing" class="class-cars-listings">
-                <div class="class-cars-listing">
-                </div>
+        <div class="about" id="div-with-cars">
+            <div id="cars-listing" class="class-cars-listings">
             </div>
+        </div>
+        <div class="div-with-button" id="div-with-button">
+            <input id="sucess-display-results" type="button" name="submit" value="Search Again" class="btnFindCarResults">
         </div>
         <br>
         <footer class="footer-bottom">
