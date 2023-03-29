@@ -29,21 +29,22 @@ ________________________________________________________________________________
   
 ____________________________________________________________________________________
 ### My Repo Directory Looks Like This So Far
-    - **README.md**
-    - **COS216**
-        - PA1
-              - css
-              - HTML
-              - img
-        - PA2
-              - css
-              - HTML
-              - img
-              - js
-        - PA3
-              - logo.jpg
-              - 36-black-and-grey-loading-icons-on-white-background-rgb-eps-10-vector-et17b4
-              - THIS IS CURRENTLY WHERE I AM AT
+
+- **README.md**
+- **COS216**
+    - PA1
+      - css
+      - HTML
+      - img
+    - PA2
+      - css
+      - HTML
+      - img
+      - js
+    - PA3
+      - logo.jpg
+      - 36-black-and-grey-loading-icons-on-white-background-rgb-eps-10-vector-et17b4
+      - THIS IS CURRENTLY WHERE I AM AT
     - **index.html**
     - **...**
 
