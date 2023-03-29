@@ -54,7 +54,7 @@ ________________________________________________________________________________
 ## Topics In Brief Per PA Sub-Folder From 1 To 5 For The Cars Site
 - #### PA1
     - Created a web page which complies to the HTML5 standards and CSS styling.
-          - http://validator.w3.org/, https://jigsaw.w3.org/css-validator/
+        - http://validator.w3.org/, https://jigsaw.w3.org/css-validator/
     - **Functionality:**
         - A navbar from where navigation to each component/part is showcased.
         - A client must be able to navigate through all the PAs from the Launch Page.
@@ -63,20 +63,20 @@ ________________________________________________________________________________
         - Layout, Backrounds, Fonts, Text, Boxes, Colours, Sizes and etc.
         - #### Workflow: Only HTML and CSS with Mock Data
             - Launch Page with Logo.
-              - Navigation Bar on all created Pages.
-              - Cars Page
-                  - Searchbar.
-                  - Filters.
-                  - Sort.
-              - Branch Page
+            - Navigation Bar on all created Pages.
+            - Cars Page
+                - Searchbar.
+                - Filters.
+                - Sort.
+            - Branch Page
                   - Brand Logo.
                   - Name.
-              - Find Me a Car Page
-                  - At least 6 Questions.
-                  - 4 Required.
-                  - 2 Optional.
-              - Comapre Cars Page.
-              - Under Construction.
+            - Find Me a Car Page
+                    - At least 6 Questions.
+                    - 4 Required.
+                    - 2 Optional.
+            - Comapre Cars Page.
+            - Under Construction.
       - Example Code
         ```css
             .class-brands-listings
@@ -91,7 +91,6 @@ ________________________________________________________________________________
                 border-radius: 15px;
                 background-color: rgba(0, 0, 0, 0.75);
             }
-
 
 - #### PA2
     - ###### I will develop this using XAMP
