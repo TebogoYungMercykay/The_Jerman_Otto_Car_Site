@@ -43,7 +43,7 @@ ________________________________________________________________________________
     - PA3
       - logo.jpg
       - 36-black-and-grey-loading-icons-on-white-background-rgb-eps-10-vector-et17b4
-      - THIS IS CURRENTLY WHERE I AM AT
+      - THIS IS WHERE I AM CURRENTLY
     - **index.html**
     - **...**
 
@@ -201,7 +201,8 @@ ________________________________________________________________________________
                     }
                 },
                 error: function(jqXHR, textStatus, errorThrown) {
-                    console.log(errorThrown);
+                    console.log("Status code: " + jqXHR.status + " Status text: " + textStatus);
+                    console.log("Error thrown: " + errorThrown);
                 }
             });
         }
