@@ -81,20 +81,19 @@ ________________________________________________________________________________
     ```html
         <!DOCTYPE html>
         <html lang="en">
-            <head>
-                <title>Title</title>
-                <meta charset="UTF-8">
-            <link rel="icon" href="../logo.jpg" type="image/icon type">
+        <head>
+            <meta charset="UTF-8">
+            <title>Title</title>
+            <meta name="author" content="Selepe Sello">
+            <meta name="description" content="Example HTML & CSS Code For My ReadMe.md">
+            <meta name="keywords" content="South Africa">
             <meta http-equiv="X-UA-Compatible" content="IE=edge">
-                <meta name="author" content="Selepe Sello">
-                <meta name="description" content="COS216 Practical Assignment 1">
-                <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                <meta name="keywords" content="South Africa">
-            <link rel="icon" href="#">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="icon" href="../logo.jpg" type="image/icon type">
             <link rel="stylesheet" type="text/css" href="#" integrity="#" crossorigin="anonymous" referrerpolicy="no-referrer"/>
             <style>
-               .Example-CSS-For-Listing-Cars
-                {
+                /* CSS for listing cars */
+                .Example-CSS-For-Listing-Cars {
                     display: grid;
                     grid-template-columns: repeat(auto-fit, minmax(210px, auto));
                     grid-gap: 50px;
@@ -106,17 +105,32 @@ ________________________________________________________________________________
                     background-color: rgba(0, 0, 0, 0.75);
                 }
             </style>
-          </head>
-            <body class="background-brands">
+        </head>
+        <body class="background-brands">
             <header>
-                <div class="topnav"> <a href="#"><i class="fa fa-home" aria-hidden="true"></i> Home</a> </div>
+                <!-- Navigation -->
+                <div class="topnav">
+                    <a href="#"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
+                </div>
             </header>
-            <section id="logo" class="mt-5">LOGO</section>
-            <div id="brands-listing" class="class-brands-listings"> <!-- Mock Data Here --> </div>
+            <section id="logo" class="mt-5">
+                <!-- Logo placeholder -->
+                <img src="COS216/PA3/Logo.jpg" alt="Logo">
+            </section>
+            <div class="Example-CSS-For-Listing-Cars">
+                <!-- Sample text for brands listing: Mock Data -->
+                <p>Brand 1</p>
+                <p>Brand 2</p>
+                <p>Brand 3</p>
+                <p>Brand 4</p>
+                <p>Brand 5</p>
+                <p>Brand 6</p>
+            </div>
             <footer class="footer-bottom">
-              <p>Jerman Auto &copy; 2023 All Rights Reserved! <i class="fa-brands fa-linkedin"> <a href="mailto:sbkskhalo.kq@gmail.com">Email</a></p>
+                <!-- Footer text and email link -->
+                <p>Jerman Auto &copy; 2023 All Rights Reserved! <i class="fab fa-linkedin"></i> <a href="mailto:sbkskhalo.kq@gmail.com">Email</a></p>
             </footer>
-            </body>
+        </body>
         </html>
 
 
