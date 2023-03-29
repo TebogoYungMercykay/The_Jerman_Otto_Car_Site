@@ -77,19 +77,19 @@ ________________________________________________________________________________
                   - 2 Optional.
               - Comapre Cars Page.
               - Under Construction.
-            ```css
-                .class-brands-listings
-                {
-                    display: grid;
-                    grid-template-columns: repeat(auto-fit, minmax(210px, auto));
-                    grid-gap: 50px;
-                    margin: 50px auto;
-                    color: rgb(203, 242, 255);
-                    max-width: 1240px;
-                    padding: 20px;
-                    border-radius: 15px;
-                    background-color: rgba(0, 0, 0, 0.75);
-                }
+                ```css
+                    .class-brands-listings
+                    {
+                        display: grid;
+                        grid-template-columns: repeat(auto-fit, minmax(210px, auto));
+                        grid-gap: 50px;
+                        margin: 50px auto;
+                        color: rgb(203, 242, 255);
+                        max-width: 1240px;
+                        padding: 20px;
+                        border-radius: 15px;
+                        background-color: rgba(0, 0, 0, 0.75);
+                    }
 
 - #### PA2
     - ###### I will develop this using XAMP
