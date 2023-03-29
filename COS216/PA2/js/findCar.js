@@ -1,3 +1,6 @@
+// * Selepe Sello uXXXXXXXX
+// I used Asynchronous so that the execution of one task doesn't dependent on another. Basically tasks can run simultaneously.
+
 var jsonObject = null;
 $(document).ready(function (){
     hide("div-with-button");
