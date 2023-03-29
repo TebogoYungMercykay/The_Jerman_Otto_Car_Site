@@ -78,19 +78,49 @@ ________________________________________________________________________________
             - Comapre Cars Page.
             - Under Construction.
       - Example Code
-        ```css
-            .class-brands-listings
-            {
-                display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(210px, auto));
-                grid-gap: 50px;
-                margin: 50px auto;
-                color: rgb(203, 242, 255);
-                max-width: 1240px;
-                padding: 20px;
-                border-radius: 15px;
-                background-color: rgba(0, 0, 0, 0.75);
-            }
+      - HTML
+            ```html
+                <!DOCTYPE html>
+                <html lang="en">
+                    <head>
+                        <title>Title</title>
+                        <meta charset="UTF-8">
+                    <link rel="icon" href="../logo.jpg" type="image/icon type">
+                    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                        <meta name="author" content="Selepe Sello">
+                        <meta name="description" content="COS216 Practical Assignment 1">
+                        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                        <meta name="keywords" content="South Africa">
+                    <link rel="icon" href="#">
+                    <link rel="stylesheet" type="text/css" href="#" integrity="#" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+                    <link rel="stylesheet" type="text/css" href="../jerman-otto-styles.css">
+                  </head>
+                    <body class="background-brands">
+                    <header>
+                        <div class="topnav"> <a href="#"><i class="fa fa-home" aria-hidden="true"></i> Home</a> </div>
+                    </header>
+                    <section id="logo" class="mt-5">LOGO</section>
+                    <div id="brands-listing" class="class-brands-listings"> <!-- Mock Data Here --> </div>
+                    <footer class="footer-bottom">
+                      <p>Jerman Auto &copy; 2023 All Rights Reserved! <i class="fa-brands fa-linkedin"> <a href="mailto:sbkskhalo.kq@gmail.com">Email</a></p>
+                    </footer>
+                    </body>
+                </html>
+      - CSS
+        
+    ```css
+        .class-brands-listings
+        {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(210px, auto));
+            grid-gap: 50px;
+            margin: 50px auto;
+            color: rgb(203, 242, 255);
+            max-width: 1240px;
+            padding: 20px;
+            border-radius: 15px;
+            background-color: rgba(0, 0, 0, 0.75);
+        }
 
 - ## PA2
     - ### I will develop this using XAMP
@@ -257,5 +287,5 @@ ________________________________________________________________________________
 - **jQuery**: jQuery is a JavaScript library that simplifies HTML document manipulation, event handling, and animation. You need to include jQuery in your HTML file by linking to it in your code.
 - **Web browser**: A web browser is necessary to render and display web pages. Popular web browsers include Google Chrome, Mozilla Firefox, Safari, Microsoft Edge, and Opera.
 ____________________________________________________________________________________
-                             ### THE END LOADING
+                                  ### THE END LOADING
 ____________________________________________________________________________________
