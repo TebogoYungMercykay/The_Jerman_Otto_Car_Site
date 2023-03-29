@@ -28,7 +28,7 @@ ________________________________________________________________________________
         - Other topics of current interest (Advanced Security, Cloud Computing, TailwindCSS).
   
 ____________________________________________________________________________________
-### My Repo Directory Looks Like This So Far
+# My Repo Directory Looks Like This So Far
 - **README.md**
 - **COS216**
     - PA1
@@ -48,10 +48,10 @@ ________________________________________________________________________________
     - **...**
 
 ____________________________________________________________________________________
-## Name of Company: Jerman Otto
+# Name of Company: Jerman Otto
 LogoImg
 ____________________________________________________________________________________
-## Topics In Brief Per PA Sub-Folder From 1 To 5 For The Cars Site
+# Topics In Brief Per PA Sub-Folder From 1 To 5 For The Cars Site
 - #### PA1
     - Created a web page which complies to the HTML5 standards and CSS styling.
         - http://validator.w3.org/, https://jigsaw.w3.org/css-validator/
@@ -171,38 +171,38 @@ ________________________________________________________________________________
   - Default login details (username and password) for a user I have on the API.
   - I will be using phpMyAdmin.
   - #### Workflow Setup:
-        - ##### READMe Specifying:
-              - How to use the website
-              - Explanations for the password requirements, choice of hashing algorithm and generation of API keys
-        - ##### Basic setup and page constructio
-              - Making use of the include function to stitch pages together.
-              - config.php, header.php, footer.php, api.php
-              - login.php, validate-login.php, logout.php
-              - signup.php, validate-signup.php
-              - Database (MySQL DB Dump)
-              - User information includes the following fields:  "id", "name", "surname", ""email", "password", "API key".
-        - ##### User Registration
-              - The goal is for the user to be able to enter in various details on a form on the signup page and register an account on the car website.
-              - A signup-validation function which checks (using JavaScript and PHP)[i.e. Both client and server-side validation] whether the information is correct or not. If it is valid, the user is added to the relevant table in the database.
-              - Making sure the user can easily register/login to the site.
-              - Signup form on the signup page (signup.php) with the following fields:  "name", "surname", "email", "password".
-              - Using JavaScript to check that all the fields are filled out correctly.
-              - Email address should have an '@' symbol and the Password should be longer than 8 Characters.
-              - The Password must also , contain Upper and Lower case Letters, at least One Digit and One Symbol (JS Regex will help).
-              - Making use of POST to submit the form information to signup-validation.
-              - Add user to DB if it doesn't exist, hash password, Add salt, If user already exist an error must be dispayed!!.
-        - ##### Creating a PHP API
-              - I will make use OOP to create the API classes. File name "api.php".
-              - API should only produce/consume structured JSON data.
-              - I will be recreating a modified version the "Get All Cars" section of the API used for PA2 (API Documentation.html).
-              - I should be able to use SQL Queries to extract data from the database dynamically.
-              - In order to make server side external requests in PHP I will use the PHP cURL library.
-              - ###### Additional Resources:
-                    - http://php.net/manual/en/curl.examples.php
-                    - https://stackoverflow.com/questions/3062324/what-is-curl-in-php
-                    - https://www.startutorial.com/articles/view/php-curl
-              - The API should should be able to cater for invalid input by returning an error back that will be handled client side.
-  - ##### EXAMPLES
+    - ##### READMe Specifying:
+      - How to use the website
+      - Explanations for the password requirements, choice of hashing algorithm and generation of API keys
+    - ##### Basic setup and page constructio
+      - Making use of the include function to stitch pages together.
+      - config.php, header.php, footer.php, api.php
+      - login.php, validate-login.php, logout.php
+      - signup.php, validate-signup.php
+      - Database (MySQL DB Dump)
+      - User information includes the following fields:  "id", "name", "surname", ""email", "password", "API key".
+    - ##### User Registration
+      - The goal is for the user to be able to enter in various details on a form on the signup page and register an account on the car website.
+      - A signup-validation function which checks (using JavaScript and PHP)[i.e. Both client and server-side validation] whether the information is correct or not. If it is valid, the user is added to the relevant table in the database.
+      - Making sure the user can easily register/login to the site.
+      - Signup form on the signup page (signup.php) with the following fields:  "name", "surname", "email", "password".
+      - Using JavaScript to check that all the fields are filled out correctly.
+      - Email address should have an '@' symbol and the Password should be longer than 8 Characters.
+      - The Password must also , contain Upper and Lower case Letters, at least One Digit and One Symbol (JS Regex will help).
+      - Making use of POST to submit the form information to signup-validation.
+      - Add user to DB if it doesn't exist, hash password, Add salt, If user already exist an error must be dispayed!!.
+    - ##### Creating a PHP API
+      - I will make use OOP to create the API classes. File name "api.php".
+      - API should only produce/consume structured JSON data.
+      - I will be recreating a modified version the "Get All Cars" section of the API used for PA2 (API Documentation.html).
+      - I should be able to use SQL Queries to extract data from the database dynamically.
+      - In order to make server side external requests in PHP I will use the PHP cURL library.
+      - ###### Additional Resources:
+            - http://php.net/manual/en/curl.examples.php
+            - https://stackoverflow.com/questions/3062324/what-is-curl-in-php
+            - https://www.startutorial.com/articles/view/php-curl
+      - The API should should be able to cater for invalid input by returning an error back that will be handled client side.
+    - ##### EXAMPLES
         - Request:
             ```json
             {
@@ -246,12 +246,12 @@ ________________________________________________________________________________
             }
 
 ## REQUIREMENTS BEFORE RUNNING THE CODES:
-      - **A text editor**: A text editor is required to create, write and edit code. There are many free and paid text editors available online such as Visual Studio Code, Sublime Text, Notepad++, and Atom.
-      - **Web server**: A web server is required to serve web pages to users. You can use an existing web server like Apache or Nginx, or you can use a package like XAMPP or WAMP which comes with an integrated web server.
-      - **HTML**: Hypertext Markup Language is used to create the structure and content of web pages. You need a text editor to create HTML files with an ".html" extension.
-      - **CSS**: Cascading Style Sheets are used to style the HTML content. You need a text editor to create CSS files with a ".css" extension.
-      - **JavaScript**: JavaScript is used to add interactivity and functionality to web pages. You need a text editor to create JavaScript files with a ".js" extension.
-      - **PHP**: PHP is a server-side scripting language used for dynamic web content. You need a web server that supports PHP to run PHP scripts.
-      - **AJAX**: Asynchronous JavaScript and XML are used to update web content without refreshing the page. You need JavaScript and a web server that supports AJAX.
-      - **jQuery**: jQuery is a JavaScript library that simplifies HTML document manipulation, event handling, and animation. You need to include jQuery in your HTML file by linking to it in your code.
-      - **Web browser**: A web browser is necessary to render and display web pages. Popular web browsers include Google Chrome, Mozilla Firefox, Safari, Microsoft Edge, and Opera.
+- **A text editor**: A text editor is required to create, write and edit code. There are many free and paid text editors available online such as Visual Studio Code, Sublime Text, Notepad++, and Atom.
+- **Web server**: A web server is required to serve web pages to users. You can use an existing web server like Apache or Nginx, or you can use a package like XAMPP or WAMP which comes with an integrated web server.
+- **HTML**: Hypertext Markup Language is used to create the structure and content of web pages. You need a text editor to create HTML files with an ".html" extension.
+- **CSS**: Cascading Style Sheets are used to style the HTML content. You need a text editor to create CSS files with a ".css" extension.
+- **JavaScript**: JavaScript is used to add interactivity and functionality to web pages. You need a text editor to create JavaScript files with a ".js" extension.
+- **PHP**: PHP is a server-side scripting language used for dynamic web content. You need a web server that supports PHP to run PHP scripts.
+- **AJAX**: Asynchronous JavaScript and XML are used to update web content without refreshing the page. You need JavaScript and a web server that supports AJAX.
+- **jQuery**: jQuery is a JavaScript library that simplifies HTML document manipulation, event handling, and animation. You need to include jQuery in your HTML file by linking to it in your code.
+- **Web browser**: A web browser is necessary to render and display web pages. Popular web browsers include Google Chrome, Mozilla Firefox, Safari, Microsoft Edge, and Opera.
