@@ -1,3 +1,5 @@
+// * Selepe Sello uXXXXXXXX
+// I used Asynchronous so that the execution of one task doesn't dependent on another. Basically tasks can run simultaneously.
 var jsonObject = null;
 $(document).ready(function (){
     $('#top-select-car-1').on('change', function(){
@@ -6,7 +8,7 @@ $(document).ready(function (){
             console.log("Compare Input Selected, And You Have Selected ", selectedVal);
             if (selectedVal == "1") {
                 jsonObject = {
-                    "studentnum":"u20748052",
+                    "studentnum":"uXXXXXXXX",
                     "type":"GetAllCars",
                     "limit":1,
                     "apikey":"a9198b68355f78830054c31a39916b7f",
@@ -19,7 +21,7 @@ $(document).ready(function (){
             }
             else if (selectedVal == "2") {
                 jsonObject = {
-                    "studentnum":"u20748052",
+                    "studentnum":"uXXXXXXXX",
                     "type":"GetAllCars",
                     "limit":1,
                     "apikey":"a9198b68355f78830054c31a39916b7f",
@@ -32,7 +34,7 @@ $(document).ready(function (){
             }
             else if (selectedVal == "3") {
                 jsonObject = {
-                    "studentnum":"u20748052",
+                    "studentnum":"uXXXXXXXX",
                     "type":"GetAllCars",
                     "limit":1,
                     "apikey":"a9198b68355f78830054c31a39916b7f",
@@ -45,7 +47,7 @@ $(document).ready(function (){
             }
             else if (selectedVal == "4") {
                 jsonObject = {
-                    "studentnum":"u20748052",
+                    "studentnum":"uXXXXXXXX",
                     "type":"GetAllCars",
                     "limit":1,
                     "apikey":"a9198b68355f78830054c31a39916b7f",
@@ -59,7 +61,7 @@ $(document).ready(function (){
         }
         else{
             jsonObject = {
-                "studentnum":"u20748052",
+                "studentnum":"uXXXXXXXX",
                 "type":"GetAllCars",
                 "limit":1,
                 "apikey":"a9198b68355f78830054c31a39916b7f",
@@ -78,7 +80,7 @@ $(document).ready(function (){
             console.log("Compare Input Selected, And You Have Selected ", selectedVal);
             if (selectedVal == "1") {
                 jsonObject = {
-                    "studentnum":"u20748052",
+                    "studentnum":"uXXXXXXXX",
                     "type":"GetAllCars",
                     "limit":1,
                     "apikey":"a9198b68355f78830054c31a39916b7f",
@@ -91,7 +93,7 @@ $(document).ready(function (){
             }
             else if (selectedVal == "2") {
                 jsonObject = {
-                    "studentnum":"u20748052",
+                    "studentnum":"uXXXXXXXX",
                     "type":"GetAllCars",
                     "limit":1,
                     "apikey":"a9198b68355f78830054c31a39916b7f",
@@ -104,7 +106,7 @@ $(document).ready(function (){
             }
             else if (selectedVal == "3") {
                 jsonObject = {
-                    "studentnum":"u20748052",
+                    "studentnum":"uXXXXXXXX",
                     "type":"GetAllCars",
                     "limit":1,
                     "apikey":"a9198b68355f78830054c31a39916b7f",
@@ -117,7 +119,7 @@ $(document).ready(function (){
             }
             else if (selectedVal == "4") {
                 jsonObject = {
-                    "studentnum":"u20748052",
+                    "studentnum":"uXXXXXXXX",
                     "type":"GetAllCars",
                     "limit":1,
                     "apikey":"a9198b68355f78830054c31a39916b7f",
@@ -131,7 +133,7 @@ $(document).ready(function (){
         }
         else{
             jsonObject = {
-                "studentnum":"u20748052",
+                "studentnum":"uXXXXXXXX",
                 "type":"GetAllCars",
                 "limit":1,
                 "apikey":"a9198b68355f78830054c31a39916b7f",
@@ -153,9 +155,6 @@ $(document).ready(function (){
     }
     function element(id) {
         return document.getElementById(id);
-    }
-    function show(id) {
-        element(id).style.display = "grid";
     }
     function ComparePopulate(data, jsonData, selectNumber) {
         var xhr = new XMLHttpRequest();
@@ -189,7 +188,7 @@ $(document).ready(function (){
         var jsonObject;
         if(JsonObject1 == undefined){
             jsonObject = {
-                "studentnum":"u20748052",
+                "studentnum":"uXXXXXXXX",
                 "type":"GetAllCars",
                 "limit":1,
                 "apikey":"a9198b68355f78830054c31a39916b7f",
