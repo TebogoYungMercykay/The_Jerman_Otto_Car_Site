@@ -1,0 +1,855 @@
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./API doc_files/doc.css">
+    <link rel="stylesheet" href="./API doc_files/font-awesome.min.css">
+
+    <title>API Documentation</title>
+  <style type="text/css">@font-face { font-family: Roboto; src: url("chrome-extension://mcgbeeipkmelnpldkobichboakdfaeon/css/Roboto-Regular.ttf"); }</style></head>
+  <body data-new-gr-c-s-check-loaded="14.1102.0" data-gr-ext-installed="">
+
+    <div class="navbar">
+      <a class="active" href="https://wheatley.cs.up.ac.za/api/doc.html#"><i class="fa fa-fw fa-home"></i> CAR API</a>
+      <a href="https://wheatley.cs.up.ac.za/api/doc.html#images"><i class="fa fa-fw fa-picture-o"></i> Car Images</a>
+      <a href="https://wheatley.cs.up.ac.za/api/doc.html#cars"><i class="fa fa-fw fa-car"></i> All Cars</a>
+      <a href="https://wheatley.cs.up.ac.za/api/doc.html#makes"><i class="fa fa-fw fa-building"></i> All Makes</a>
+    </div>
+
+    <!-- Get Car images -->
+    <br><br><br>
+    <h1 id="images"><i class="fa fa-fw fa-picture-o"></i>  Get Car Images</h1>
+    <table>
+      <tbody><tr>
+        <th>
+          <strong>URL</strong>
+        </th>
+        <td>https://wheatley.cs.up.ac.za/api/getimage</td>
+      </tr>
+      <tr>
+        <th>
+          <strong>Method</strong>
+        </th>
+        <td>GET</td>
+      </tr>
+    </tbody></table>
+
+    <h2>Parameters</h2>
+
+    <table>
+      <tbody><tr>
+        <th>
+          <strong>Parameter Name</strong>
+        </th>
+        <th>
+          <strong>Required</strong>
+        </th>
+        <th>
+          <strong>Type</strong>
+        </th>
+        <th>
+          <strong>Description</strong>
+        </th>
+      </tr>
+      <tr>
+        <td>brand</td>
+        <td class="red">*</td>
+        <td><span class="string">String</span></td>
+        <td>The brand of the vehicle</td>
+      </tr>
+      <tr>
+        <td>model</td>
+        <td></td>
+        <td><span class="string">String</span></td>
+        <td>
+          The model of the vehicle. If not included, the logo of the brand will
+          be returned
+        </td>
+      </tr>
+    </tbody></table>
+
+    <h2>Return</h2>
+
+    <table>
+      <tbody><tr>
+        <th>
+          <strong>Return type</strong>
+        </th>
+        <td>Image path</td>
+      </tr>
+      <tr>
+        <th>
+          <strong>Return description</strong>
+        </th>
+        <td>
+          If Model is present then the Vehicle image path will be returned.
+          Otherwise if only brand is present then the brand image path will be
+          returned
+        </td>
+      </tr>
+    </tbody></table>
+
+    <h2>Examples</h2>
+
+    <table>
+      <tbody><tr>
+        <th>
+          <strong>URL</strong>
+        </th>
+        <th>
+          <strong>Return</strong>
+        </th>
+      </tr>
+      <tr>
+        <td>https://wheatley.cs.up.ac.za/api/getimage?brand=audi</td>
+        <td>https://wheatley.cs.up.ac.za/api/images/brands/audi.png</td>
+      </tr>
+      <tr>
+        <td>https://wheatley.cs.up.ac.za/api/getimage?brand=audi&amp;model=R8</td>
+        <td>https://wheatley.cs.up.ac.za/api/images/models/audi_r8.jpg</td>
+      </tr>
+    </tbody></table>
+
+    <h2>Note</h2>
+    <p>If you request an image of a car/brand that does not exist in the database an error will be returned. 
+      This should not be a problem as all cars returned by the get car array will have a valid image.</p>
+
+    <!-- Get All Cars -->
+    <br>
+    <hr>
+    <h1 id="cars"><i class="fa fa-fw fa-car"></i> Get All Cars</h1>
+
+    <table>
+      <tbody><tr>
+        <th>
+          <strong>URL</strong>
+        </th>
+        <td>https://wheatley.cs.up.ac.za/api/</td>
+      </tr>
+      <tr>
+        <th>
+          <strong>Method</strong>
+        </th>
+        <td>POST</td>
+      </tr>
+    </tbody></table>
+
+    <h2>Parameters</h2>
+
+    <table>
+      <tbody><tr>
+        <th colspan="4">
+          <strong>Parameters should be passed in a JSON Objects</strong>
+        </th>
+      </tr>
+      <tr>
+        <th>
+          <strong>Parameter Name</strong>
+        </th>
+        <th>
+          <strong>Required</strong>
+        </th>
+        <th>
+          <strong>Type</strong>
+        </th>
+        <th>
+          <strong>Description</strong>
+        </th>
+      </tr>
+      <tr>
+        <td>studentnum</td>
+        <td class="red">*</td>
+        <td><span class="string">String</span></td>
+        <td>Student num in the form uXXXXXXXX</td>
+      </tr>
+      <tr>
+        <td>apikey</td>
+        <td class="red">*</td>
+        <td><span class="string">String</span></td>
+        <td>String that should be  "a9198b68355f78830054c31a39916b7f"</td>
+      </tr>
+      <tr>
+        <td>type</td>
+        <td class="red">*</td>
+        <td><span class="string">String</span></td>
+        <td>Type should be “GetAllCars”</td>
+      </tr>
+      <tr>
+        <td>return</td>
+        <td class="red">*</td>
+        <td><span class="string">String</span>/<span class="key">Array</span></td>
+        <td>
+          Either the string “*” to return all results or specify in an array
+          which details should returned. The array should only contain from any
+          of the following.
+          <br>
+          <pre style="position: relative;">['id_trim', 'make', 'model', 'generation', 'year_from', 'year_to', 'series', 'trim', 'body_type', 'number_of_seats',
+        'length_mm', 'width_mm', 'height_mm', 'number_of_cylinders', 'engine_type', 'drive_wheels', 'transmission', 'max_speed_km_per_h']<div class="open_grepper_editor" title="Edit &amp; Save To Grepper"></div></pre>
+        </td>
+      </tr>
+      <tr>
+        <td>limit</td>
+        <td></td>
+        <td><span class="number">Int</span></td>
+        <td>A number between 1 and 500 indicating how many results should be returned</td>
+      </tr>
+      <tr>
+        <td>sort</td>
+        <td></td>
+        <td><span class="string">String</span></td>
+        <td>
+          If sort is used. Sort can be any of the following: Any of the following  
+          <br>
+          <pre style="position: relative;">['id_trim', 'make', 'model', 'generation', 'year_from', 'year_to', 'series', 'trim', 'body_type', 'number_of_seats', 
+        'length_mm', 'width_mm', 'height_mm', 'number_of_cylinders', 'engine_type', 'drive_wheels', 'transmission', 'max_speed_km_per_h']
+          <div class="open_grepper_editor" title="Edit &amp; Save To Grepper"></div></pre>
+        </td>
+      </tr>
+      <tr>
+        <td>order</td>
+        <td></td>
+        <td><span class="string">String</span></td>
+        <td>If sort is used. Order can be “ASC” or “DESC” for ascending or descending respectively</td>
+      </tr>
+      <tr>
+        <td>search</td>
+        <td></td>
+        <td><span class="key">JSON Object</span></td>
+        <td>A object where the keys are columns of the data and the values are the search terms. Columns can be any of the following. 
+          <pre style="position: relative;">['id_trim', 'make', 'model', 'series', 'trim', 'body_type', 'number_of_seats', 
+        'number_of_cylinders', 'engine_type', 'drive_wheels', 'transmission']. <div class="open_grepper_editor" title="Edit &amp; Save To Grepper"></div></pre>  You can search multiple fields at a time
+        </td>
+      </tr>
+	  <tr>
+        <td>fuzzy</td>
+        <td></td>
+        <td>Boolean</td>
+        <td>Indicates if fuzzy search should be used, default value is true
+        </td>
+      </tr>
+    </tbody></table>
+
+
+	<h2>Data Values</h2>
+	<table>
+		<tbody><tr>
+			<th>Key</th>
+			<th>Values</th>
+		</tr>
+		<tr>
+			<td>make</td>
+			<td><pre style="position: relative;">['AC', 'Acura', 'Alfa Romeo', 'Alpina', 'Alpine', 'Aro', 'Asia', 'Aston Martin', 'Audi', 'Beijing', 'Bentley', 'BMW', 'Borgward', 'Brilliance', 'Bristol', 'Bugatti', 'Buick', 'BYD', 'Cadillac', 'Callaway', 'Carbodies', 'Caterham', 'Changan', 'ChangFeng', 'Changhe', 'Chery', 'Chevrolet', 'Chrysler', 'Citroen', 'Cizeta', 'Coggiola', 'Dacia', 'Dadi', 'Daewoo', 'Daihatsu', 'Daimler', 'Dallas', 'Datsun', 'De Tomaso', 'Derways', 'Dodge', 'DongFeng', 'DS', 'Eagle', 'FAW', 'Ferrari', 'Fiat', 'Ford', 'Foton', 'FSO', 'Fuqi', 'GAZ', 'Geely', 'Genesis', 'Geo', 'GMC', 'Great Wall', 'Hafei', 'Haima', 'Haval', 'Hawtai', 'Hindustan', 'Holden', 'Honda', 'HuangHai', 'Hummer', 'Hyundai', 'Infiniti', 'Innocenti', 'Invicta', 'Iran Khodro', 'Isdera', 'Isuzu', 'IZH', 'JAC', 'Jaguar', 'Jeep', 'Jiangnan', 'JMC', 'Kia', 'Koenigsegg', 'Lamborghini', 'Lancia', 'Land Rover', 'Lexus', 'Lifan', 'Lincoln', 'Lotus', 'LTI', 'LuAZ', 'Mahindra', 'Marcos', 'Marlin', 'Marussia', 'Maruti', 'Maserati', 'Maybach', 'Mazda', 'Mega', 'Mercedes-Benz', 'Mercury', 'Metrocab', 'MG', 'Minelli', 'Mini', 'Mitsubishi', 'Morgan', 'Moskvich', 'Nissan', 'Noble', 'Oldsmobile', 'Opel', 'Pagani', 'Panoz', 'Perodua', 'Peugeot', 'Plymouth', 'Pontiac', 'Porsche', 'Premier', 'Proton', 'Puma', 'Qvale', 'Ravon', 'Reliant', 'Renault', 'Rolls-Royce', 'Ronart', 'Rover', 'Saab', 'Saleen', 'Samsung', 'Saturn', 'Scion', 'SEAT', 'ShuangHuan', 'Skoda', 'SMA', 'Smart', 'Soueast', 'Spectre', 'Spyker', 'SsangYong', 'Subaru', 'Suzuki', 'TagAZ', 'Talbot', 'Tata', 'Tatra', 'Tofas', 'Toyota', 'Trabant', 'TVR', 'UAZ', 'VAZ (Lada)', 'Vector', 'Venturi', 'Volkswagen', 'Volvo', 'Vortex', 'Wartburg', 'Wiesmann', 'Wuling', 'Xin Kai', 'Zastava', 'ZAZ', 'ZIL', 'Zotye', 'ZX']<div class="open_grepper_editor" title="Edit &amp; Save To Grepper"></div></pre></td>
+		</tr>
+		<tr>
+			<td>body_type</td>
+			<td><pre style="position: relative;">['Cabriolet', 'Coupe', 'Roadster', 'Crossover', 'Sedan', 'Hatchback', 'Liftback', 'Wagon', 'Minivan', 'Fastback', 'Pickup', 'hardtop', 'Targa', 'Limousine']<div class="open_grepper_editor" title="Edit &amp; Save To Grepper"></div></pre></td>
+		</tr>
+		<tr>
+			<td>engine_type</td>
+			<td><pre style="position: relative;">['Gasoline', 'Diesel', 'Hybrid', 'Gasoline, Electric']<div class="open_grepper_editor" title="Edit &amp; Save To Grepper"></div></pre></td>
+		</tr>
+		<tr>
+			<td>transmission</td>
+			<td><pre style="position: relative;">['Automatic', 'Manual']<div class="open_grepper_editor" title="Edit &amp; Save To Grepper"></div></pre></td>
+		</tr>
+ 
+	</tbody></table>
+
+    <h2>Return</h2>
+
+    <table>
+      <tbody><tr>
+        <th>
+          <strong>Return type</strong>
+        </th>
+        <td><span class="key">JSON Object</span></td>
+      </tr>
+      <tr>
+        <th>
+          <strong>Basic Return JSON</strong>
+        </th>
+        <td>
+          <pre class="prettyprint lang-js" style="position: relative;">{
+    <span class="key">"status":</span> <span class="string">"success"</span>,
+    <span class="key">"data":</span> [
+      <span class="string">"....returned data here...."</span>
+    ]
+}<div class="open_grepper_editor" title="Edit &amp; Save To Grepper"></div></pre>
+        </td>
+      </tr>
+    </tbody></table>
+
+    <h2>Return Error</h2>
+
+    <table>
+      <tbody><tr>
+        <th>
+          <strong>Return type</strong>
+        </th>
+        <td><span class="key">JSON Object</span></td>
+      </tr>
+      <tr>
+        <th>
+          <strong>Basic Return JSON</strong>
+        </th>
+        <td>
+          <pre class="prettyprint lang-js" style="position: relative;">{
+    <span class="key">"status":</span> <span class="string">"error"</span>,
+    <span class="key">"message":</span> <span class="string">"Error message"</span>
+}<div class="open_grepper_editor" title="Edit &amp; Save To Grepper"></div></pre>
+        </td>
+      </tr>
+    </tbody></table>
+
+    <h2>Common Error</h2>
+    <p>
+      Posting to https://wheatley.cs.up.ac.za/api will not work. You need to
+      post https://wheatley.cs.up.ac.za/api/
+    </p>
+
+    <h2 id="examples">Examples</h2>
+
+    <table>
+      
+      <tbody><tr>
+        <th>
+          <strong>Parameters</strong>
+        </th>
+        <th>
+          <strong>Return</strong>
+        </th>
+      </tr>
+      <tr>
+        <td>
+          <pre class="prettyprint lang-js" style="position: relative;">{
+    <span class="key">"studentnum":</span><span class="string">"u12345678"</span>,
+    <span class="key">"type":</span><span class="string">"GetAllCars"</span>,
+    <span class="key">"limit":</span><span class="number">2</span>,
+    <span class="key">"apikey":</span><span class="string">"a9198b68355f78830054c31a39916b7f"</span>,
+    <span class="key">"search":</span>{
+        <span class="key">"make":</span><span class="string">"audi"</span>,
+        <span class="key">"model":</span><span class="string">"q3"</span>
+    },
+    <span class="key">"fuzzy":</span> <span class="boolean">true</span>,
+    <span class="key">"sort":</span><span class="string">"max_speed_km_per_h"</span>,
+    <span class="key">"order":</span> <span class="string">"DESC"</span>,
+    <span class="key">"return":</span>[
+        <span class="string">"id_trim"</span>,<span class="string">"make"</span>,<span class="string">"model"</span>,<span class="string">"max_speed_km_per_h"</span>
+    ]
+}<div class="open_grepper_editor" title="Edit &amp; Save To Grepper"></div></pre>
+        </td>
+        <td>
+          <pre class="prettyprint lang-js" style="position: relative;">{
+    <span class="key">"status":</span> <span class="string">"success"</span>,
+    <span class="key">"data":</span> [
+        {
+            <span class="key">"id_trim":</span> <span class="string">"1"</span>,
+            <span class="key">"make":</span> <span class="string">"Audi"</span>,
+            <span class="key">"model":</span> <span class="string">"Q3"</span>,
+            <span class="key">"max_speed_km_per_h":</span> <span class="string">"210"</span>
+        },
+        {
+            <span class="key">"id_trim":</span> <span class="string">"2"</span>,
+            <span class="key">"make":</span> <span class="string">"Audi"</span>,
+            <span class="key">"model":</span> <span class="string">"Q3"</span>,
+            <span class="key">"max_speed_km_per_h":</span> <span class="string">"210"</span>
+        }
+    ]
+}<div class="open_grepper_editor" title="Edit &amp; Save To Grepper"></div></pre>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <pre class="prettyprint lang-js" style="position: relative;">{
+    <span class="key">"studentnum":</span><span class="string">"u20692286"</span>,
+    <span class="key">"type":</span><span class="string">"GetAllCars"</span>,
+    <span class="key">"limit":</span><span class="number">1</span>,
+    <span class="key">"apikey":</span><span class="string">"a9198b68355f78830054c31a39916b7f"</span>,
+    <span class="key">"return":</span><span class="string">"*"</span>
+}<div class="open_grepper_editor" title="Edit &amp; Save To Grepper"></div></pre>
+        </td>
+        <td>
+          <pre class="prettyprint lang-js" style="position: relative;">{
+    <span class="key">"status":</span> <span class="string">"success"</span>,
+    <span class="key">"data":</span> [
+        {
+            <span class="key">"id_trim":</span> <span class="number">3</span>,
+            <span class="key">"make":</span> <span class="string">"AC"</span>,
+            <span class="key">"model":</span> <span class="string">"ACE"</span>,
+            <span class="key">"generation":</span> <span class="string">"1 generation"</span>,
+            <span class="key">"year_from":</span> <span class="number">1993</span>,
+            <span class="key">"year_to":</span> <span class="number">2000</span>,
+            <span class="key">"series":</span> <span class="string">"Cabriolet"</span>,
+            <span class="key">"trim":</span> <span class="string">"4.9 AT"</span>,
+            <span class="key">"body_type":</span> <span class="string">"Cabriolet"</span>,
+            <span class="key">"number_of_seats":</span> <span class="number">2</span>,
+            <span class="key">"length_mm":</span> <span class="number">4420</span>,
+            <span class="key">"width_mm":</span> <span class="number">1870</span>,
+            <span class="key">"height_mm":</span> <span class="number">1300</span>,
+            <span class="key">"number_of_cylinders":</span> <span class="number">8</span>,
+            <span class="key">"engine_type":</span> <span class="string">"Gasoline"</span>,
+            <span class="key">"drive_wheels":</span> <span class="string">"Rear wheel drive"</span>,
+            <span class="key">"transmission":</span> <span class="string">"Automatic"</span>,
+            <span class="key">"max_speed_km_per_h":</span> <span class="number">225</span>
+        }
+    ]
+}<div class="open_grepper_editor" title="Edit &amp; Save To Grepper"></div></pre>
+        </td>
+      </tr>
+    </tbody></table>
+
+    <!-- Get All Car Makes -->
+    <br>
+    <hr>
+    <h2 id="makes"><i class="fa fa-fw fa-building"></i> Get All Car Makes</h2>
+
+    <table>
+      <tbody><tr>
+        <th>
+          <strong>URL</strong>
+        </th>
+        <td>https://wheatley.cs.up.ac.za/api/</td>
+      </tr>
+      <tr>
+        <th>
+          <strong>Method</strong>
+        </th>
+        <td>POST</td>
+      </tr>
+    </tbody></table>
+
+    <h2>Parameters</h2>
+
+    <table>
+      <tbody><tr>
+        <th colspan="4">
+          <strong>Parameters should be passed in a JSON Objects</strong>
+        </th>
+      </tr>
+      <tr>
+        <th>
+          <strong>Parameter Name</strong>
+        </th>
+        <th>
+          <strong>Required</strong>
+        </th>
+        <th>
+          <strong>Type</strong>
+        </th>
+        <th>
+          <strong>Description</strong>
+        </th>
+      </tr>
+      <tr>
+        <td>studentnum</td>
+        <td class="red">*</td>
+        <td><span class="string">String</span></td>
+        <td>Student num in the form uXXXXXXXX</td>
+      </tr>
+      <tr>
+        <td>apikey</td>
+        <td class="red">*</td>
+        <td><span class="string">String</span></td>
+        <td>String that should be "a9198b68355f78830054c31a39916b7f"</td>
+      </tr>
+      <tr>
+        <td>type</td>
+        <td class="red">*</td>
+        <td><span class="string">String</span></td>
+        <td>Type should be “GetAllMakes”</td>
+      </tr>
+      <tr>
+        <td>limit</td>
+        <td></td>
+        <td><span class="number">Int</span></td>
+        <td>
+          A number between 1 and 500 indicating how many results should be
+          returned. If left blank default is 20
+        </td>
+      </tr>
+    </tbody></table>
+
+    <h2>Common Error</h2>
+    <p>
+      Posting to https://wheatley.cs.up.ac.za/api will not work. You need to
+      post https://wheatley.cs.up.ac.za/api/
+    </p>
+
+    <h2>Examples</h2>
+
+    <table>
+      <tbody><tr>
+        <th>
+          <strong>Parameters</strong>
+        </th>
+        <th>
+          <strong>Return</strong>
+        </th>
+      </tr>
+      <tr>
+        <td>
+          <pre class="prettyprint lang-js" style="position: relative;">{
+    <span class="key">"studentnum":</span><span class="string">"u12345678"</span>,
+    <span class="key">"type":</span><span class="string">"GetAllMakes"</span>,
+    <span class="key">"apikey":</span><span class="string">"a9198b68355f78830054c31a39916b7f"</span>
+}<div class="open_grepper_editor" title="Edit &amp; Save To Grepper"></div></pre>
+        </td>
+        <td>
+          <pre class="prettyprint lang-js" style="position: relative;">{
+    <span class="key">"status":</span> <span class="string">"success"</span>,
+    <span class="key">"data":</span> [
+        <span class="string">"AC"</span>,
+        <span class="string">"Acura"</span>,
+        <span class="string">"…….. (removed for space)"</span>
+        <span class="string">"ChangFeng"</span>,
+        <span class="string">"Changhe"</span>
+    ]
+}<div class="open_grepper_editor" title="Edit &amp; Save To Grepper"></div></pre>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <pre class="prettyprint lang-js" style="position: relative;">{
+    <span class="key">"studentnum":</span><span class="string">"u12345678"</span>,
+    <span class="key">"type":</span><span class="string">"GetAllMakes"</span>,
+    <span class="key">"apikey":</span><span class="string">"a9198b68355f78830054c31a39916b7f"</span>,
+    <span class="key">"limit":</span><span class="number">5</span>
+}<div class="open_grepper_editor" title="Edit &amp; Save To Grepper"></div></pre>
+        </td>
+        <td>
+          <pre class="prettyprint lang-js" style="position: relative;">{
+    <span class="key">"status":</span> <span class="string">"success"</span>,
+    <span class="key">"data":</span> [
+        <span class="string">"AC"</span>,
+        <span class="string">"Acura"</span>,
+        <span class="string">"Alfa Romeo"</span>,
+        <span class="string">"Alpina"</span>,
+        <span class="string">"Alpine"</span>
+    ]
+}<div class="open_grepper_editor" title="Edit &amp; Save To Grepper"></div></pre>
+        </td>
+      </tr>
+    </tbody></table>
+
+    <h2>Return</h2>
+    <table>
+      <tbody><tr>
+        <th>
+          <strong>Return type</strong>
+        </th>
+        <td><span class="key">JSON Object</span></td>
+      </tr>
+      <tr>
+        <th>
+          <strong>Basic Return JSON</strong>
+        </th>
+        <td>
+          <pre class="prettyprint lang-js" style="position: relative;">  {
+      <span class="key">"status":</span> <span class="string">"success"</span>,
+      <span class="key">"data":</span> [
+          <span class="string">"....returned data here...."</span>
+      ]
+  }<div class="open_grepper_editor" title="Edit &amp; Save To Grepper"></div></pre>
+        </td>
+      </tr>
+    </tbody></table>
+
+    <h2>Return Error</h2>
+
+    <table>
+      <tbody><tr>
+        <th>
+          <strong>Return type</strong>
+        </th>
+        <td><span class="key">JSON Object</span></td>
+      </tr>
+      <tr>
+        <th>
+          <strong>Basic Return JSON</strong>
+        </th>
+        <td>
+          <pre class="prettyprint lang-js" style="position: relative;">{
+    <span class="key">"status":</span> <span class="string">"error"</span>,
+    <span class="key">"message":</span> <span class="string">"Error message"</span>
+}
+        <div class="open_grepper_editor" title="Edit &amp; Save To Grepper"></div></pre>
+        </td>
+      </tr>
+    </tbody></table>
+    <script>
+
+
+function syntaxHighlight(json) {
+    json = json.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    return json.replace(/("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\\"])*"(\s*:)?|\b(true|false|null)\b|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?)/g, function (match) {
+        var cls = 'number';
+        if (/^"/.test(match)) {
+            if (/:$/.test(match)) {
+                cls = 'key';
+            } else {
+                cls = 'string';
+            }
+        } else if (/true|false/.test(match)) {
+            cls = 'boolean';
+        } else if (/null/.test(match)) {
+            cls = 'null';
+        }
+        return '<span class="' + cls + '">' + match + '</span>';
+    });
+}
+
+var format = document.getElementsByTagName("pre");
+for (var i = 0; i < format.length; i++) {
+  format[i].innerHTML = syntaxHighlight(format[i].innerHTML);
+}
+ 
+var td = document.getElementsByTagName("td");
+for (var i = 0; i < td.length; i++){
+  if (td[i].innerHTML == "Int") {
+    td[i].innerHTML = "<span class='number'>Int</span>";
+  }
+  if (td[i].innerHTML == "String") {
+    td[i].innerHTML = "<span class='string'>String</span>";
+  }
+  if (td[i].innerHTML == "Array") {
+    td[i].innerHTML = "<span class='key'>Array</span>";
+  }
+  if (td[i].innerHTML == "JSON Object") {
+    td[i].innerHTML = "<span class='key'>JSON Object</span>";
+  }
+  if (td[i].innerHTML == "String/Array") {
+    td[i].innerHTML = "<span class='string'>String</span>/<span class='key'>Array</span>";
+  }
+}
+
+
+    </script>
+  
+
+<script>
+		function returnCommentSymbol(language = "javascript") {
+			const languageObject = {
+				bat: "@REM",
+				c: "//",
+				csharp: "//",
+				cpp: "//",
+				closure: ";;",
+				coffeescript: "#",
+				dockercompose: "#",
+				css: "/*DELIMITER*/",
+				"cuda-cpp": "//",
+				dart: "//",
+				diff: "#",
+				dockerfile: "#",
+				fsharp: "//",
+				"git-commit": "//",
+				"git-rebase": "#",
+				go: "//",
+				groovy: "//",
+				handlebars: "{{!--DELIMITER--}}",
+				hlsl: "//",
+				html: "<!--DELIMITER-->",
+				ignore: "#",
+				ini: ";",
+				java: "//",
+				javascript: "//",
+				javascriptreact: "//",
+				json: "//",
+				jsonc: "//",
+				julia: "#",
+				latex: "%",
+				less: "//",
+				lua: "--",
+				makefile: "#",
+				markdown: "<!--DELIMITER-->",
+				"objective-c": "//",
+				"objective-cpp": "//",
+				perl: "#",
+				perl6: "#",
+				php: "<!--DELIMITER-->",
+				powershell: "#",
+				properties: ";",
+				jade: "//-",
+				python: "#",
+				r: "#",
+				razor: "<!--DELIMITER-->",
+				restructuredtext: "..",
+				ruby: "#",
+				rust: "//",
+				scss: "//",
+				shaderlab: "//",
+				shellscript: "#",
+				sql: "--",
+				svg: "<!--DELIMITER-->",
+				swift: "//",
+				tex: "%",
+				typescript: "//",
+				typescriptreact: "//",
+				vb: "'",
+				xml: "<!--DELIMITER-->",
+				xsl: "<!--DELIMITER-->",
+				yaml: "#"
+			}
+			return languageObject[language].split("DELIMITER")
+		}
+		var savedChPos = 0
+		var returnedSuggestion = ''
+		let editor, doc, cursor, line, pos
+		pos = {line: 0, ch: 0}
+		var suggestionsStatus = false
+		var docLang = "python"
+		var suggestionDisplayed = false
+		var isReturningSuggestion = false
+		document.addEventListener("keydown", (event) => {
+		setTimeout(()=>{
+			editor = event.target.closest('.CodeMirror');
+			if (editor){
+				const codeEditor = editor.CodeMirror
+				if(!editor.classList.contains("added-tab-function")){
+					editor.classList.add("added-tab-function")
+					codeEditor.removeKeyMap("Tab")
+					codeEditor.setOption("extraKeys", {Tab: (cm)=>{
+
+						if(returnedSuggestion){
+							acceptTab(returnedSuggestion)
+						}
+						else{
+							cm.execCommand("defaultTab")
+						}
+					}})
+				}
+				doc = editor.CodeMirror.getDoc()
+				cursor = doc.getCursor()
+				line = doc.getLine(cursor.line)
+				pos = {line: cursor.line, ch: line.length}
+
+				if(cursor.ch > 0){
+					savedChPos = cursor.ch
+				}
+
+				const fileLang = doc.getMode().name
+				docLang = fileLang
+				const commentSymbol = returnCommentSymbol(fileLang)
+				if (event.key == "?"){
+					var lastLine = line
+					lastLine = lastLine.slice(0, savedChPos - 1)
+
+					if(lastLine.trim().startsWith(commentSymbol[0])){
+						lastLine += " "+fileLang
+						lastLine = lastLine.split(commentSymbol[0])[1]
+						window.postMessage({source: 'getQuery', payload: { data: lastLine } } )
+						isReturningSuggestion = true
+						displayGrey("\nBlackbox loading...")
+					}
+				}else if(event.key === "Enter" && suggestionsStatus && !isReturningSuggestion){
+					var query = doc.getRange({ line: Math.max(0,cursor.line-10), ch: 0 }, { line: cursor.line, ch: line.length })
+					window.postMessage({source: 'getSuggestion', payload: { data: query, language: docLang } } )
+					displayGrey("Blackbox loading...")
+				}else if(event.key === "ArrowRight" && returnedSuggestion){
+					acceptTab(returnedSuggestion)
+				}else if(event.key === "Enter" && isReturningSuggestion){
+					displayGrey("\nBlackbox loading...")
+				}else if(event.key === "Escape"){
+					displayGrey("")
+				}
+			}
+		}, 0)
+		})
+
+		function acceptTab(text){
+		if (suggestionDisplayed){
+			displayGrey("")
+			doc.replaceRange(text, pos)
+			returnedSuggestion = ""
+			updateSuggestionStatus(false)
+		}
+		}
+		function acceptSuggestion(text){
+			displayGrey("")
+			doc.replaceRange(text, pos)
+			returnedSuggestion = ""
+			updateSuggestionStatus(false)
+		}
+		function displayGrey(text){
+			if(!text){
+				document.querySelector(".blackbox-suggestion").remove()
+				return
+			}
+			var el = document.querySelector(".blackbox-suggestion")
+			if(!el){
+				el = document.createElement('span')
+				el.classList.add("blackbox-suggestion")
+				el.style = 'color:grey'
+				el.innerText = text
+			}
+			else{
+				el.innerText = text
+			}
+			
+			var lineIndex = pos.line;
+			editor.getElementsByClassName('CodeMirror-line')[lineIndex].appendChild(el)
+		}
+		function updateSuggestionStatus(s){
+			suggestionDisplayed = s
+			window.postMessage({source: 'updateSuggestionStatus', status: suggestionDisplayed, suggestion: returnedSuggestion})
+		}
+		window.addEventListener('message', (event)=>{
+		if (event.source !== window ) return
+		if (event.data.source == 'return'){
+			isReturningSuggestion = false
+			const formattedCode = formatCode(event.data.payload.data)
+			returnedSuggestion = formattedCode
+			displayGrey(formattedCode)
+			updateSuggestionStatus(true)
+		}
+		if(event.data.source == 'suggestReturn'){
+			returnedSuggestion = event.data.payload.data
+			displayGrey(event.data.payload.data)
+			updateSuggestionStatus(true)
+		}
+		if(event.data.source == 'suggestionsStatus'){
+			suggestionsStatus = event.data.payload.enabled
+		}
+		if(event.data.source == 'acceptSuggestion'){
+			
+			acceptSuggestion(event.data.suggestion)
+		}
+		})
+		document.addEventListener("keyup", function(){
+			returnedSuggestion = ""
+			updateSuggestionStatus(false)
+		})
+		function formatCode(data) {
+			if (Array.isArray(data)) {
+				var finalCode = ""
+				var pairs = []
+		
+				const commentSymbol = returnCommentSymbol(docLang)
+				data.forEach((codeArr, idx) => {
+					const code = codeArr[0]
+					var desc = codeArr[1]
+					const descArr = desc.split("\n")
+					var finalDesc = ""
+					descArr.forEach((descLine, idx) => {
+						const whiteSpace = descLine.search(/\S/)
+						if (commentSymbol.length < 2 || idx === 0) {
+							finalDesc += insert(descLine, whiteSpace, commentSymbol[0])
+						}
+						if (commentSymbol.length > 1 && idx === descArr.length - 1) {
+							finalDesc = finalDesc + commentSymbol[1] + "\n"
+						}
+					})
+		
+					finalCode += finalDesc + "\n\n" + code
+					pairs.push(finalCode)
+				})
+				return "\n"+pairs.join("\n")
+			}
+		
+			return "\n"+data
+		}
+		
+		function insert(str, index, value) {
+			return str.substr(0, index) + value + str.substr(index)
+		}
+	</script></body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>
