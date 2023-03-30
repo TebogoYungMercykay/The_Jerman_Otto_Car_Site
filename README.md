@@ -73,9 +73,9 @@ ________________________________________________________________________________
                   - Brand Logo.
                   - Name.
             - Find Me a Car Page
-                    - At least 6 Questions.
-                    - 4 Required.
-                    - 2 Optional.
+                  - At least 6 Questions.
+                  - 4 Required.
+                  - 2 Optional.
             - Comapre Cars Page.
             - Under Construction.
       - Example Code HTML & CSS (Check jerman-otto-styles.css and Brands.html, Path: COS216/PA2)
@@ -351,20 +351,94 @@ ________________________________________________________________________________
 ____________________________________________________________________________________
 ## REQUIREMENTS BEFORE RUNNING THE CODES:
 - **A text editor**
-    - A text editor is required to create, write and edit code. There are many free and paid text editors available online such as Visual Studio Code, Sublime Text, Notepad++, and Atom.
+    - A text editor is required to create, write and edit code
+    - There are many free and paid text editors available online such as Visual Studio Code, Sublime Text, Notepad++, and Atom.
     - VS Code Instalation Guide: https://www.youtube.com/watch?v=4zVObKFZ6fA&ab_channel=TheCodeholic
 - **Web server**
-    - A web server is required to serve web pages to users. You can use an existing web server like Apache or Nginx, or you can use a package like XAMPP or WAMP which comes with an integrated web server.
+    - A web server is required to serve web pages to users
+    - You can use an existing web server like Apache or Nginx, or you can use a package like XAMPP or WAMP which comes with an integrated web server.
     - Xampp Instalation Guide:
         - Windows 10: https://www.youtube.com/watch?v=-f8N4FEQWyY&ab_channel=edureka%21
         - Windows 11: https://www.youtube.com/watch?v=VQpATELDSEI&ab_channel=ProgrammingKnowledge2
-- **HTML**: Hypertext Markup Language is used to create the structure and content of web pages. You need a text editor to create HTML files with an ".html" extension.
-- **CSS**: Cascading Style Sheets are used to style the HTML content. You need a text editor to create CSS files with a ".css" extension.
-- **JavaScript**: JavaScript is used to add interactivity and functionality to web pages. You need a text editor to create JavaScript files with a ".js" extension.
-- **PHP**: PHP is a server-side scripting language used for dynamic web content. You need a web server that supports PHP to run PHP scripts.
-- **AJAX**: Asynchronous JavaScript and XML are used to update web content without refreshing the page. You need JavaScript and a web server that supports AJAX.
-- **jQuery**: jQuery is a JavaScript library that simplifies HTML document manipulation, event handling, and animation. You need to include jQuery in your HTML file by linking to it in your code.
-- **Web browser**: A web browser is necessary to render and display web pages. Popular web browsers include Google Chrome, Mozilla Firefox, Safari, Microsoft Edge, and Opera.
+- **HTML**
+    - Hypertext Markup Language is used to create the structure and content of web pages
+    - You need a text editor to create HTML files with an ".html" extension.
+- **CSS**
+    - Cascading Style Sheets are used to style the HTML content
+    - You need a text editor to create CSS files with a ".css" extension.
+- **JavaScript**
+    - JavaScript is used to add interactivity and functionality to web pages
+    - You need a text editor to create JavaScript files with a ".js" extension.
+- **PHP**
+    - PHP is a server-side scripting language used for dynamic web content
+    - You need a web server that supports PHP to run PHP scripts.
+- **AJAX**
+    - Asynchronous JavaScript and XML are used to update web content without refreshing the page. You need JavaScript and a web server that supports AJAX.
+    - AJAX Example For Just Control
+        ```php
+            <!DOCTYPE html>
+            <html>
+            <head>
+                <title>AJAX Example For Control</title>
+                <script>
+                    function loadData() {
+                        var requestVariable = new XMLHttpRequest(); // Object
+                        requestVariable.onreadystatechange = function() {
+                            if (this.readyState == 4 && this.status == 200) {
+                                // DOM Manipulation
+                                document.getElementById("example_id").innerHTML = this.responseText;
+                            }
+                        };
+                        requestVariable.open("GET", "URL", true); // asynchronous
+                        requestVariable.send(); // Send the request
+                    }
+                </script>
+            </head>
+            <body>
+                <h1>AJAX Example For Control</h1>
+                <!-- Calls loadData() when the button is clicked -->
+                <button type="button" onclick="loadData()">Load Data</button>
+                <p id="example_id"></p>
+            </body>
+            </html>
+- **jQuery**
+    - jQuery is a JavaScript library that simplifies HTML document manipulation, event handling, and animation. You need to include jQuery in your HTML file by linking to it in your code.
+    - AJAX Example Using jQuery Just For Control
+        ```php
+            <!DOCTYPE html>
+            <html>
+            <head>
+                <title>AJAX Example For Control</title>
+                <!-- Including jQuery Library in out file -->
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+                <script>
+                    $(document).ready(function() {
+                        $("#exampleButton").click(function() {
+                            $.get("URL", function(data) {
+                                // DOM Manipulation
+                                $("#example_id").html(data);
+                            });
+                        });
+                    });
+                </script>
+            </head>
+            <body>
+                <h1>AJAX Example For Control</h1>
+                <button type="button" id="exampleButton">Load Data</button>
+                <p id="example_id"></p>
+            </body>
+            </html>
+- **Web browser**
+    - A web browser is necessary to render and display web pages
+    - Popular web browsers include:
+        - Google Chrome
+        - Mozilla Firefox
+        - Safari
+        - Microsoft Edge
+        - Brave
+        - Opera
+        - Not Recommended: Tor (Onion Routing)
+        
 ____________________________________________________________________________________
                                   ### THE END LOADING
 ____________________________________________________________________________________
