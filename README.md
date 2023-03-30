@@ -223,7 +223,7 @@ ________________________________________________________________________________
       - Making use of the include function to stitch pages together.
          ```php
             <?php
-                <!-- file.php -->
+                // file.php
                 echo "This is the main file.";
                 include "calculate.php";
                 // Calling a function from the included PHP(calculate.php) file
