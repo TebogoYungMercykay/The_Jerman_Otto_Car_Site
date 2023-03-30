@@ -353,7 +353,11 @@ ________________________________________________________________________________
 - **A text editor**
     - A text editor is required to create, write and edit code. There are many free and paid text editors available online such as Visual Studio Code, Sublime Text, Notepad++, and Atom.
     - VS Code Instalation Guide: https://www.youtube.com/watch?v=4zVObKFZ6fA&ab_channel=TheCodeholic
-- **Web server**: A web server is required to serve web pages to users. You can use an existing web server like Apache or Nginx, or you can use a package like XAMPP or WAMP which comes with an integrated web server.
+- **Web server**
+    - A web server is required to serve web pages to users. You can use an existing web server like Apache or Nginx, or you can use a package like XAMPP or WAMP which comes with an integrated web server.
+    - Xampp Instalation Guide:
+        - Windows 10: https://www.youtube.com/watch?v=-f8N4FEQWyY&ab_channel=edureka%21
+        - Windows 11: https://www.youtube.com/watch?v=VQpATELDSEI&ab_channel=ProgrammingKnowledge2
 - **HTML**: Hypertext Markup Language is used to create the structure and content of web pages. You need a text editor to create HTML files with an ".html" extension.
 - **CSS**: Cascading Style Sheets are used to style the HTML content. You need a text editor to create CSS files with a ".css" extension.
 - **JavaScript**: JavaScript is used to add interactivity and functionality to web pages. You need a text editor to create JavaScript files with a ".js" extension.
