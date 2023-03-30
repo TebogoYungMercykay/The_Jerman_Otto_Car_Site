@@ -351,29 +351,30 @@ ________________________________________________________________________________
 ____________________________________________________________________________________
 ## REQUIREMENTS BEFORE RUNNING THE CODES:
 - **A text editor**
-    - A text editor is required to create, write and edit code
+    - A text editor is required to create, write and edit code.
     - There are many free and paid text editors available online such as Visual Studio Code, Sublime Text, Notepad++, and Atom.
     - VS Code Instalation Guide: https://www.youtube.com/watch?v=4zVObKFZ6fA&ab_channel=TheCodeholic
 - **Web server**
-    - A web server is required to serve web pages to users
+    - A web server is required to serve web pages to users.
     - You can use an existing web server like Apache or Nginx, or you can use a package like XAMPP or WAMP which comes with an integrated web server.
     - Xampp Instalation Guide:
         - Windows 10: https://www.youtube.com/watch?v=-f8N4FEQWyY&ab_channel=edureka%21
         - Windows 11: https://www.youtube.com/watch?v=VQpATELDSEI&ab_channel=ProgrammingKnowledge2
 - **HTML**
-    - Hypertext Markup Language is used to create the structure and content of web pages
+    - Hypertext Markup Language is used to create the structure and content of web pages.
     - You need a text editor to create HTML files with an ".html" extension.
 - **CSS**
-    - Cascading Style Sheets are used to style the HTML content
+    - Cascading Style Sheets are used to style the HTML content.
     - You need a text editor to create CSS files with a ".css" extension.
 - **JavaScript**
-    - JavaScript is used to add interactivity and functionality to web pages
+    - JavaScript is used to add interactivity and functionality to web pages.
     - You need a text editor to create JavaScript files with a ".js" extension.
 - **PHP**
-    - PHP is a server-side scripting language used for dynamic web content
+    - PHP is a server-side scripting language used for dynamic web content.
     - You need a web server that supports PHP to run PHP scripts.
 - **AJAX**
-    - Asynchronous JavaScript and XML are used to update web content without refreshing the page. You need JavaScript and a web server that supports AJAX.
+    - Asynchronous JavaScript and XML are used to update web content without refreshing the page.
+    - You need JavaScript and a web server that supports AJAX.
     - AJAX Example For Just Control
         ```php
             <!DOCTYPE html>
@@ -402,8 +403,9 @@ ________________________________________________________________________________
             </body>
             </html>
 - **jQuery**
-    - jQuery is a JavaScript library that simplifies HTML document manipulation, event handling, and animation. You need to include jQuery in your HTML file by linking to it in your code.
-    - AJAX Example Using jQuery Just For Control
+    - jQuery is a JavaScript library that simplifies HTML document manipulation, event handling, and animation.
+    - You need to include jQuery in your HTML file by linking to it in your code.
+    - The Same AJAX Example Using jQuery Just For Control
         ```php
             <!DOCTYPE html>
             <html>
@@ -429,7 +431,7 @@ ________________________________________________________________________________
             </body>
             </html>
 - **Web browser**
-    - A web browser is necessary to render and display web pages
+    - A web browser is necessary to render and display web pages.
     - Popular web browsers include:
         - Google Chrome
         - Mozilla Firefox
