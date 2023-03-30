@@ -168,44 +168,44 @@ ________________________________________________________________________________
             - Car Selection works.
             - Compare Stats Show.
     - API Request Example Code (Check carListing.js, path: Path: COS216/PA2/js)
-    ```javascript
-        function carListingAlgorithm(jsonObject1) {
-            var jsonObject;
-            if (jsonObject1 === undefined) {
-                jsonObject = {
-                    "studentnum": "uXXXXXXXX",
-                    "apikey": "a9198b68355f78830054c31a39916b7f",
-                    "type": "GetAllCars",
-                    "limit": 21,
-                    "return": ["make", "model", "body_type", "engine_type", "transmission", "max_speed_km_per_h"],
-                    "sort": "max_speed_km_per_h",
-                    "order": "DESC",
-                    "fuzzy": false
-                };
-                console.log("Please enter a valid request with at least one parameter");
-                alert('Please enter a valid request with at least one parameter');
-            }
-            else {
-                jsonObject = jsonObject1;
-            }
-            resetDiv("cars-listing");
-            var json = JSON.stringify(jsonObject);
-            $.ajax({
-                url: `https://wheatley.cs.up.ac.za/api/`,
-                method: "POST",
-                data: json,
-                success: function(response) {
-                    for (let k = 0; k < response.data.length; k++) {
-                        var tempVar = response.data[k].make.toLowerCase();
-                        createCars(tempVar, response.data[k]);
-                    }
-                },
-                error: function(jqXHR, textStatus, errorThrown) {
-                    console.log("Status code: " + jqXHR.status + " Status text: " + textStatus);
-                    console.log("Error thrown: " + errorThrown);
+        ```javascript
+            function carListingAlgorithm(jsonObject1) {
+                var jsonObject;
+                if (jsonObject1 === undefined) {
+                    jsonObject = {
+                        "studentnum": "uXXXXXXXX",
+                        "apikey": "a9198b68355f78830054c31a39916b7f",
+                        "type": "GetAllCars",
+                        "limit": 21,
+                        "return": ["make", "model", "body_type", "engine_type", "transmission", "max_speed_km_per_h"],
+                        "sort": "max_speed_km_per_h",
+                        "order": "DESC",
+                        "fuzzy": false
+                    };
+                    console.log("Please enter a valid request with at least one parameter");
+                    alert('Please enter a valid request with at least one parameter');
                 }
-            });
-        }
+                else {
+                    jsonObject = jsonObject1;
+                }
+                resetDiv("cars-listing");
+                var json = JSON.stringify(jsonObject);
+                $.ajax({
+                    url: `https://wheatley.cs.up.ac.za/api/`,
+                    method: "POST",
+                    data: json,
+                    success: function(response) {
+                        for (let k = 0; k < response.data.length; k++) {
+                            var tempVar = response.data[k].make.toLowerCase();
+                            createCars(tempVar, response.data[k]);
+                        }
+                    },
+                    error: function(jqXHR, textStatus, errorThrown) {
+                        console.log("Status code: " + jqXHR.status + " Status text: " + textStatus);
+                        console.log("Error thrown: " + errorThrown);
+                    }
+                });
+            }
 
 - ## PA3
   - Using a MySQL DB with PHP.
@@ -283,6 +283,16 @@ ________________________________________________________________________________
       - Email address should have an '@' symbol and the Password should be longer than 8 Characters.
       - The Password must also , contain Upper and Lower case Letters, at least One Digit and One Symbol (JS Regex will help).
       - Making use of POST to submit the form information to signup-validation.
+        ```html
+            <form method="post" action="signup-validation.php">
+                  <label for="name">Name:</label>
+                  <input type="text" id="name" name="name"><br>
+                  <label for="email">Email:</label>
+                  <input type="email" id="email" name="email"><br>
+                  <label for="password">Password:</label>
+                  <input type="password" id="password" name="password"><br>
+                  <input type="submit" value="Sign up">
+            </form>
       - Add user to DB if it doesn't exist, hash password, Add salt, If user already exist an error must be dispayed!!.
     - #### Creating a PHP API
       - I will make use OOP to create the API classes. File name "api.php".
