@@ -221,6 +221,25 @@ ________________________________________________________________________________
       - Explanations for the password requirements, choice of hashing algorithm and generation of API keys
     - #### Basic setup and page constructio
       - Making use of the include function to stitch pages together.
+         ```php
+            <!-- file.php -->
+            <?php
+                echo "This is the main file.";
+                include "calculate.php";
+                // Calling a function from the included PHP(calculate.php) file
+                echo "The sum of 2 and 3 is " . GetSum(2, 3);
+            ?>
+            <!-- calculate.php -->
+            <?php
+                function GetSum($num1, $num2) {
+                    $sum = $num1 + $num2;
+                    return $sum;
+                }
+                function GetDifference($num1, $num2) {
+                    $diff = abs($num1 - $num2);
+                    return $diff;
+                }
+            ?>
       - config.php, header.php, footer.php, api.php
       - login.php, validate-login.php, logout.php
       - signup.php, validate-signup.php
