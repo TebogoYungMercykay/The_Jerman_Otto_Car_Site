@@ -44,8 +44,8 @@ ________________________________________________________________________________
       - logo.jpg
       - 36-black-and-grey-loading-icons-on-white-background-rgb-eps-10-vector-et17b4
       - THIS IS WHERE I AM CURRENTLY
-    - **index.html**
-    - **...**
+- **index.html**
+- **...**
 
 ____________________________________________________________________________________
 # Name of imaginary Company: Jerman Otto
@@ -225,6 +225,35 @@ ________________________________________________________________________________
       - login.php, validate-login.php, logout.php
       - signup.php, validate-signup.php
       - Database (MySQL DB Dump)
+      - Example of a database Dumb:
+             ```sql
+                CREATE DATABASE  IF NOT EXISTS `example_db`
+                USE `example_db`;
+                -- MariaDB dump 10.19  Distrib 10.7.3-MariaDB, for Win64 (AMD64)
+                -- Remember to add your student number as the database name!
+                -- Host: path/to/host    Database: example_db
+                -- Server version	10.3.31-MariaDB-0+deb10u1
+                -- Table structure for table `users`
+                DROP TABLE IF EXISTS `users`;
+                CREATE TABLE `users` (
+                  `id` int(11) NOT NULL AUTO_INCREMENT,
+                  `name` varchar(50) NOT NULL,
+                  `surname` varchar(50) NOT NULL,
+                  `email` varchar(100) NOT NULL,
+                  `password` char(30) NOT NULL,
+                  `time_created` int(11) NOT NULL,
+                  PRIMARY KEY (`id`),
+                  UNIQUE KEY `email` (`email`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4;
+                -- Dumping data for table `users`
+                LOCK TABLES `users` WRITE;
+                -- Inserting values into the DB
+                INSERT INTO `users` VALUES
+                (1,'Default','User','default@u.c','d9d8c68a295f34ad3ef590a4b683f3',1652881570);
+                -- DONE
+                UNLOCK TABLES;
+                -- Dump completed on 2022-05-19 12:15:54
+                                                             
       - User information includes the following fields:  "id", "name", "surname", ""email", "password", "API key".
     - #### User Registration
       - The goal is for the user to be able to enter in various details on a form on the signup page and register an account on the car website.
