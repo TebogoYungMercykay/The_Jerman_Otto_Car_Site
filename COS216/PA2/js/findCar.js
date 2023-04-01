@@ -1,12 +1,14 @@
-// * Selepe Sello uXXXXXXXX
 // I used Asynchronous so that the execution of one task doesn't dependent on another. Basically tasks can run simultaneously.
-// * API Calls: JavaScript, Ajax and jQuery for Find Car Page
-
+// Selepe Sello - uXXXXXXXX
 var jsonObject = null;
 $(document).ready(function (){
+    resetDiv("cars-listing-in-find");
     hide("div-with-button");
     function resetDiv(id){
-        element(id).innerHTML = '';
+        // This clearing method gives me a problem and Yoh.
+        if(element(id) !== null){
+            element(id).innerHTML = '';
+        }
     }
     function element(id){
         return document.getElementById(id);
@@ -14,17 +16,14 @@ $(document).ready(function (){
     function hide(id){
         if(id === "div-with-form" || id === 'div-with-form'){
             element(id).style.display = "none";
-            element("div-with-button").style.display = "block";
             element("div-with-cars").style.display = "block";
         }
         else if(id === "div-with-cars" || id === 'div-with-cars'){
             element(id).style.display ="none";
-            element("div-with-button").style.display = "none";
             element("div-with-form").style.display = "block";
         }
         else if(id === "div-with-button" || id === 'div-with-button'){
             element("div-with-cars").style.display ="none";
-            element(id).style.display = "none";
             element("div-with-form").style.display = "block";
         }
         else{
@@ -35,17 +34,14 @@ $(document).ready(function (){
     function show(id){
         if(id === "div-with-form" || id === 'div-with-form'){
             element(id).style.display = "block";
-            element("div-with-button").style.display = "none";
             element("div-with-cars").style.display = "none";
         }
         else if(id === "div-with-cars" || id === 'div-with-cars'){
             element(id).style.display = "block";
-            element("div-with-button").style.display = "block";
             element("div-with-form").style.display = "none";
         }
         else if(id === "div-with-button" || id === 'div-with-button'){
             element("div-with-cars").style.display ="block";
-            element(id).style.display ="block";
             element("div-with-form").style.display = "none";
         }
         else{
@@ -69,30 +65,35 @@ $(document).ready(function (){
                     var MaxSpeed = jsonData.max_speed_km_per_h;
                     var BodyType = jsonData.body_type;
                     var numSeats = jsonData.number_of_seats;
-                    element("cars-listing").innerHTML +=`<div class="class-cars-listing">
-                        <h3 class="car-name">${TopName}</h3>
-                        <img class="car-image" src="${data2}" alt="Car Picture" />
-                        <br>
-                        <div class="div-car-body-type">
-                            <p class="car-body-type"><strong>Body Type</strong> : ${BodyType}</p>
-                        </div>
-                        <div class="div-car-engine">
-                            <p class="car-engine"><strong>Engine</strong> : ${Engine}</p>
-                        </div>
-                        <div class="div-car-technology">
-                            <p class="car-technology"><strong>Max Speed</strong> : ${MaxSpeed}</p>
-                        </div>
-                        <div class="div-car-handling">
-                            <p class="car-handling"><strong>Transmission</strong> : ${Transmission}</p>
-                        </div>
-                        <div class="div-car-handling">
-                            <p class="car-handling"><strong>Number of Seats</strong> : ${numSeats}</p>
-                        </div>
-                    </div>`;
+                    try{
+                        element("cars-listing-in-find").innerHTML +=`<div class="class-cars-listing">
+                            <h3 class="car-name">${TopName}</h3>
+                            <img class="car-image" src="${data2}" alt="Car Picture" />
+                            <br>
+                            <div class="div-car-body-type">
+                                <p class="car-body-type"><strong>Body Type</strong> : ${BodyType}</p>
+                            </div>
+                            <div class="div-car-engine">
+                                <p class="car-engine"><strong>Engine</strong> : ${Engine}</p>
+                            </div>
+                            <div class="div-car-technology">
+                                <p class="car-technology"><strong>Max Speed</strong> : ${MaxSpeed}</p>
+                            </div>
+                            <div class="div-car-handling">
+                                <p class="car-handling"><strong>Transmission</strong> : ${Transmission}</p>
+                            </div>
+                            <div class="div-car-handling">
+                                <p class="car-handling"><strong>Number of Seats</strong> : ${numSeats}</p>
+                            </div>
+                        </div>`;
+                    }
+                    catch(e){
+                        console.log("Some Error Occurred: " + e.message);
+                    }
                 }
                 else {
                     console.log("An Error Occured: " + xhr.message);
-                    element("cars-listing").innerHTML = "An Error Occurred, Please Try Loading The Page. Error Message: " + xhr.message;
+                    element("cars-listing-in-find").innerHTML = "An Error Occurred, Please Try Loading The Page. Error Message: " + xhr.message;
                 }
             }
         };
@@ -149,7 +150,7 @@ $(document).ready(function (){
             if(formDataObject.model != '' && formDataObject.model != "" && formDataObject.numSeats != ''  && formDataObject.numSeats != "" && formDataObject.numSeats != 0){
                 console.log("In Here Now IF-1");
                 jsonObject = {
-                    "studentnum":"uXXXXXXXX",
+                    "studentnum":"u20748052",
                     "type":"GetAllCars",
                     "limit":21,
                     "apikey":"a9198b68355f78830054c31a39916b7f",
@@ -164,13 +165,13 @@ $(document).ready(function (){
                     "return":"*"
                 }
                 // console.log(jsonObject);
-                resetDiv("cars-listing");
+                // resetDiv("cars-listing");
                 CarListingAlgorithm(jsonObject);
             }
             else if((formDataObject.model == '' || formDataObject.model == "") && formDataObject.numSeats != ''  && formDataObject.numSeats != "" && formDataObject.numSeats != 0){
                 console.log("In Here Now IF-2");
                 jsonObject = {
-                    "studentnum":"uXXXXXXXX",
+                    "studentnum":"u20748052",
                     "type":"GetAllCars",
                     "limit":21,
                     "apikey":"a9198b68355f78830054c31a39916b7f",
@@ -184,13 +185,13 @@ $(document).ready(function (){
                     "return":"*"
                 }
                 // console.log(jsonObject);
-                resetDiv("cars-listing");
+                // resetDiv("cars-listing");
                 CarListingAlgorithm(jsonObject);
             }
             else if(formDataObject.model != '' && formDataObject.model != "" && (formDataObject.numSeats == ''  && formDataObject.numSeats == "" && formDataObject.numSeats == 0)){
                 console.log("In Here Now IF-3");
                 jsonObject = {
-                    "studentnum":"uXXXXXXXX",
+                    "studentnum":"u20748052",
                     "type":"GetAllCars",
                     "limit":21,
                     "apikey":"a9198b68355f78830054c31a39916b7f",
@@ -204,13 +205,13 @@ $(document).ready(function (){
                     "return":"*"
                 }
                 // console.log(jsonObject);
-                resetDiv("cars-listing");
+                // resetDiv("cars-listing");
                 CarListingAlgorithm(jsonObject);
             }
             else{
                 console.log("In Here Now Else");
                 jsonObject = {
-                    "studentnum":"uXXXXXXXX",
+                    "studentnum":"u20748052",
                     "type":"GetAllCars",
                     "limit":21,
                     "apikey":"a9198b68355f78830054c31a39916b7f",
@@ -223,18 +224,19 @@ $(document).ready(function (){
                     "return":"*"
                 }
                 // console.log(jsonObject);
-                resetDiv("cars-listing");
+                // resetDiv("cars-listing");
                 CarListingAlgorithm(jsonObject);
             }
         }
         else{
-            resetDiv("cars-listing");
+            // resetDiv("cars-listing");
             CarListingAlgorithm(undefined);
         }
     });
     function CarListingAlgorithm(JsonObject1){
         if(JsonObject1 != undefined){
             show("div-with-cars");
+            resetDiv("cars-listing-in-find");
             var json = JSON.stringify(JsonObject1);
             console.log(json);
             $.ajax({
@@ -248,6 +250,7 @@ $(document).ready(function (){
                     }
                     else{
                         for(let k = 0; k < response.data.length; k++){
+                            console.log(response);
                             var tempVar = response.data[k].make.toLowerCase();
                             createCars(tempVar, response.data[k]);
                         }
@@ -266,7 +269,7 @@ $(document).ready(function (){
         }
     }
     $('.btnFindCarResults').click(function (event){
-        resetDiv("div-with-cars");
+        // resetDiv("div-with-cars");
         hide("div-with-button");
     });
 });
