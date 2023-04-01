@@ -1,7 +1,5 @@
-// * Selepe Sello uXXXXXXXX
 // I used Asynchronous so that the execution of one task doesn't dependent on another. Basically tasks can run simultaneously.
-// * API Calls: JavaScript, Ajax and jQuery for Cars/Index Page
-
+// Selepe Sello - uXXXXXXXX
 var jsonObject = null;
 $(document).ready(function (){
     // Making Sure that the Div is Always Empty
@@ -13,7 +11,7 @@ $(document).ready(function (){
             console.log("Compare Input Selected, And You Have Selected ", selectedVal);
             if (selectedVal == "1") {
                 jsonObject = {
-                    "studentnum":"uXXXXXXXX",
+                    "studentnum":"u20748052",
                     "apikey":"a9198b68355f78830054c31a39916b7f",
                     "type":"GetAllCars",
                     "limit":21,
@@ -27,7 +25,7 @@ $(document).ready(function (){
             }
             else if (selectedVal == "2") {
                 jsonObject = {
-                    "studentnum":"uXXXXXXXX",
+                    "studentnum":"u20748052",
                     "apikey":"a9198b68355f78830054c31a39916b7f",
                     "type":"GetAllCars",
                     "limit":21,
@@ -41,7 +39,7 @@ $(document).ready(function (){
             }
             else if (selectedVal == "3") {
                 jsonObject = {
-                    "studentnum":"uXXXXXXXX",
+                    "studentnum":"u20748052",
                     "apikey":"a9198b68355f78830054c31a39916b7f",
                     "type":"GetAllCars",
                     "limit":21,
@@ -55,7 +53,7 @@ $(document).ready(function (){
             }
             else if (selectedVal == "4") {
                 jsonObject = {
-                    "studentnum":"uXXXXXXXX",
+                    "studentnum":"u20748052",
                     "apikey":"a9198b68355f78830054c31a39916b7f",
                     "type":"GetAllCars",
                     "limit":21,
@@ -69,7 +67,7 @@ $(document).ready(function (){
             }
             else if (selectedVal == "5") {
                 jsonObject = {
-                    "studentnum":"uXXXXXXXX",
+                    "studentnum":"u20748052",
                     "apikey":"a9198b68355f78830054c31a39916b7f",
                     "type":"GetAllCars",
                     "limit":21,
@@ -83,7 +81,7 @@ $(document).ready(function (){
             }
             else if (selectedVal == "6") {
                 jsonObject = {
-                    "studentnum":"uXXXXXXXX",
+                    "studentnum":"u20748052",
                     "apikey":"a9198b68355f78830054c31a39916b7f",
                     "type":"GetAllCars",
                     "limit":21,
@@ -97,7 +95,7 @@ $(document).ready(function (){
             }
             else if (selectedVal == "7") {
                 jsonObject = {
-                    "studentnum":"uXXXXXXXX",
+                    "studentnum":"u20748052",
                     "apikey":"a9198b68355f78830054c31a39916b7f",
                     "type":"GetAllCars",
                     "limit":21,
@@ -111,7 +109,7 @@ $(document).ready(function (){
             }
             else if (selectedVal == "8") {
                 jsonObject = {
-                    "studentnum":"uXXXXXXXX",
+                    "studentnum":"u20748052",
                     "apikey":"a9198b68355f78830054c31a39916b7f",
                     "type":"GetAllCars",
                     "limit":21,
@@ -127,7 +125,7 @@ $(document).ready(function (){
         else {
             show("cars-listing");
             jsonObject = {
-                "studentnum":"uXXXXXXXX",
+                "studentnum":"u20748052",
                 "apikey":"a9198b68355f78830054c31a39916b7f",
                 "type":"GetAllCars",
                 "limit":21,
@@ -147,7 +145,7 @@ $(document).ready(function (){
             console.log("Select value changed: And You Have Selected ", selectedVal);
             if (selectedVal == "1") {
                 jsonObject = {
-                    "studentnum":"uXXXXXXXX",
+                    "studentnum":"u20748052",
                     "type":"GetAllCars",
                     "limit":21,
                     "apikey":"a9198b68355f78830054c31a39916b7f",
@@ -163,7 +161,7 @@ $(document).ready(function (){
             }
             else if (selectedVal == "2") {
                 jsonObject = {
-                    "studentnum":"uXXXXXXXX",
+                    "studentnum":"u20748052",
                     "type":"GetAllCars",
                     "limit":21,
                     "apikey":"a9198b68355f78830054c31a39916b7f",
@@ -179,7 +177,7 @@ $(document).ready(function (){
             }
             else if (selectedVal == "3") {
                 jsonObject = {
-                    "studentnum":"uXXXXXXXX",
+                    "studentnum":"u20748052",
                     "type":"GetAllCars",
                     "limit":21,
                     "apikey":"a9198b68355f78830054c31a39916b7f",
@@ -195,7 +193,7 @@ $(document).ready(function (){
             }
             else if (selectedVal == "4") {
                 jsonObject = {
-                    "studentnum":"uXXXXXXXX",
+                    "studentnum":"u20748052",
                     "type":"GetAllCars",
                     "limit":21,
                     "apikey":"a9198b68355f78830054c31a39916b7f",
@@ -211,7 +209,7 @@ $(document).ready(function (){
             }
             else if (selectedVal == "5") {
                 jsonObject = {
-                    "studentnum":"uXXXXXXXX",
+                    "studentnum":"u20748052",
                     "type":"GetAllCars",
                     "limit":21,
                     "apikey":"a9198b68355f78830054c31a39916b7f",
@@ -227,7 +225,7 @@ $(document).ready(function (){
             }
             else if (selectedVal == "6") {
                 jsonObject = {
-                    "studentnum":"uXXXXXXXX",
+                    "studentnum":"u20748052",
                     "type":"GetAllCars",
                     "limit":21,
                     "apikey":"a9198b68355f78830054c31a39916b7f",
@@ -243,7 +241,7 @@ $(document).ready(function (){
             }
             else if (selectedVal == "7") {
                 jsonObject = {
-                    "studentnum":"uXXXXXXXX",
+                    "studentnum":"u20748052",
                     "type":"GetAllCars",
                     "limit":21,
                     "apikey":"a9198b68355f78830054c31a39916b7f",
@@ -259,7 +257,7 @@ $(document).ready(function (){
             }
             else if (selectedVal == "8") {
                 jsonObject = {
-                    "studentnum":"uXXXXXXXX",
+                    "studentnum":"u20748052",
                     "type":"GetAllCars",
                     "limit":21,
                     "apikey":"a9198b68355f78830054c31a39916b7f",
@@ -276,7 +274,7 @@ $(document).ready(function (){
         }
         else {
             jsonObject = {
-                "studentnum":"uXXXXXXXX",
+                "studentnum":"u20748052",
                 "apikey":"a9198b68355f78830054c31a39916b7f",
                 "type":"GetAllCars",
                 "limit":21,
@@ -351,7 +349,7 @@ $(document).ready(function (){
         var jsonObject;
         if(JsonObject1 == undefined){
             jsonObject = {
-                "studentnum":"uXXXXXXXX",
+                "studentnum":"u20748052",
                 "apikey":"a9198b68355f78830054c31a39916b7f",
                 "type":"GetAllCars",
                 "limit":21,
@@ -383,23 +381,22 @@ $(document).ready(function (){
             }
         });
     }
-    $('.seach-bar-top').click(function (event) {
+    $('.search-bar-top').click(function (event) {
         event.preventDefault();
-        var searchData = $('.seach-bar-top').val(); // Make Val();
-        var Array = ['AC', 'Acura', 'Alfa Romeo', 'Alpina', 'Alpine', 'Aro', 'Asia', 'Aston Martin', 'Audi', 'Beijing', 'Bentley', 'BMW', 'Borgward', 'Brilliance', 'Bristol', 'Bugatti', 'Buick', 'BYD', 'Cadillac', 'Callaway', 'Carbodies', 'Caterham', 'Changan', 'ChangFeng', 'Changhe', 'Chery', 'Chevrolet', 'Chrysler', 'Citroen', 'Cizeta', 'Coggiola', 'Dacia', 'Dadi', 'Daewoo', 'Daihatsu', 'Daimler', 'Dallas', 'Datsun', 'De Tomaso', 'Derways', 'Dodge', 'DongFeng', 'DS', 'Eagle', 'FAW', 'Ferrari', 'Fiat', 'Ford', 'Foton', 'FSO', 'Fuqi', 'GAZ', 'Geely', 'Genesis', 'Geo', 'GMC', 'Great Wall', 'Hafei', 'Haima', 'Haval', 'Hawtai', 'Hindustan', 'Holden', 'Honda', 'HuangHai', 'Hummer', 'Hyundai', 'Infiniti', 'Innocenti', 'Invicta', 'Iran Khodro', 'Isdera', 'Isuzu', 'IZH', 'JAC', 'Jaguar', 'Jeep', 'Jiangnan', 'JMC', 'Kia', 'Koenigsegg', 'Lamborghini', 'Lancia', 'Land Rover', 'Lexus', 'Lifan', 'Lincoln', 'Lotus', 'LTI', 'LuAZ', 'Mahindra', 'Marcos', 'Marlin', 'Marussia', 'Maruti', 'Maserati', 'Maybach', 'Mazda', 'Mega', 'Mercedes-Benz', 'Mercury', 'Metrocab', 'MG', 'Minelli', 'Mini', 'Mitsubishi', 'Morgan', 'Moskvich', 'Nissan', 'Noble', 'Oldsmobile', 'Opel', 'Pagani', 'Panoz', 'Perodua', 'Peugeot', 'Plymouth', 'Pontiac', 'Porsche', 'Premier', 'Proton', 'Puma', 'Qvale', 'Ravon', 'Reliant', 'Renault', 'Rolls-Royce', 'Ronart', 'Rover', 'Saab', 'Saleen', 'Samsung', 'Saturn', 'Scion', 'SEAT', 'ShuangHuan', 'Skoda', 'SMA', 'Smart', 'Soueast', 'Spectre', 'Spyker', 'SsangYong', 'Subaru', 'Suzuki', 'TagAZ', 'Talbot', 'Tata', 'Tatra', 'Tofas', 'Toyota', 'Trabant', 'TVR', 'UAZ', 'VAZ (Lada)', 'Vector', 'Venturi', 'Volkswagen', 'Volvo', 'Vortex', 'Wartburg', 'Wiesmann', 'Wuling', 'Xin Kai', 'Zastava', 'ZAZ', 'ZIL', 'Zotye', 'ZX'];
-        var validateInput = false;
-        for(var i = 0; i < Array.length; i++){
-            if(Array[i].toLowerCase() == searchData.toLowerCase()){
-                validateInput = true;
-                console.log("User Entered Valid Input!!");
-            }
-        }
+        var searchData = $('.search-bar-top').val(); // Make Val();
         if(searchData != "" && searchData != '' && searchData != undefined){
-            if(validateInput != false){
-                console.log(searchData);
-                try{
-                    var jsonObject = {
-                        "studentnum":"uXXXXXXXX",
+            var jsonObject = "The User Enterer Invalid Input";
+            var checkInput1 = false;
+            var checkInput2 = false;
+            var checkInput3 = false;
+            var checkInput4 = false;
+            var validateInput1 = ['AC', 'Acura', 'Alfa Romeo', 'Alpina', 'Alpine', 'Aro', 'Asia', 'Aston Martin', 'Audi', 'Beijing', 'Bentley', 'BMW', 'Borgward', 'Brilliance', 'Bristol', 'Bugatti', 'Buick', 'BYD', 'Cadillac', 'Callaway', 'Carbodies', 'Caterham', 'Changan', 'ChangFeng', 'Changhe', 'Chery', 'Chevrolet', 'Chrysler', 'Citroen', 'Cizeta', 'Coggiola', 'Dacia', 'Dadi', 'Daewoo', 'Daihatsu', 'Daimler', 'Dallas', 'Datsun', 'De Tomaso', 'Derways', 'Dodge', 'DongFeng', 'DS', 'Eagle', 'FAW', 'Ferrari', 'Fiat', 'Ford', 'Foton', 'FSO', 'Fuqi', 'GAZ', 'Geely', 'Genesis', 'Geo', 'GMC', 'Great Wall', 'Hafei', 'Haima', 'Haval', 'Hawtai', 'Hindustan', 'Holden', 'Honda', 'HuangHai', 'Hummer', 'Hyundai', 'Infiniti', 'Innocenti', 'Invicta', 'Iran Khodro', 'Isdera', 'Isuzu', 'IZH', 'JAC', 'Jaguar', 'Jeep', 'Jiangnan', 'JMC', 'Kia', 'Koenigsegg', 'Lamborghini', 'Lancia', 'Land Rover', 'Lexus', 'Lifan', 'Lincoln', 'Lotus', 'LTI', 'LuAZ', 'Mahindra', 'Marcos', 'Marlin', 'Marussia', 'Maruti', 'Maserati', 'Maybach', 'Mazda', 'Mega', 'Mercedes-Benz', 'Mercury', 'Metrocab', 'MG', 'Minelli', 'Mini', 'Mitsubishi', 'Morgan', 'Moskvich', 'Nissan', 'Noble', 'Oldsmobile', 'Opel', 'Pagani', 'Panoz', 'Perodua', 'Peugeot', 'Plymouth', 'Pontiac', 'Porsche', 'Premier', 'Proton', 'Puma', 'Qvale', 'Ravon', 'Reliant', 'Renault', 'Rolls-Royce', 'Ronart', 'Rover', 'Saab', 'Saleen', 'Samsung', 'Saturn', 'Scion', 'SEAT', 'ShuangHuan', 'Skoda', 'SMA', 'Smart', 'Soueast', 'Spectre', 'Spyker', 'SsangYong', 'Subaru', 'Suzuki', 'TagAZ', 'Talbot', 'Tata', 'Tatra', 'Tofas', 'Toyota', 'Trabant', 'TVR', 'UAZ', 'VAZ (Lada)', 'Vector', 'Venturi', 'Volkswagen', 'Volvo', 'Vortex', 'Wartburg', 'Wiesmann', 'Wuling', 'Xin Kai', 'Zastava', 'ZAZ', 'ZIL', 'Zotye', 'ZX'];
+            for(var i = 0; i < validateInput1.length; i++){
+                if(validateInput1[i].toLowerCase() == searchData.toLowerCase()){
+                    checkInput1 = true;
+                    console.log("User is Searching for a Brand/Make");
+                    jsonObject = {
+                        "studentnum":"u20748052",
                         "type":"GetAllCars",
                         "limit":21,
                         "apikey":"a9198b68355f78830054c31a39916b7f",
@@ -411,20 +408,102 @@ $(document).ready(function (){
                         "order":"DESC",
                         "return":"*"
                     }
-                    console.log(jsonObject);
-                    resetDiv("cars-listing");
-                    CarListingAlgorithm(jsonObject);
+                    break;
                 }
-                catch(err){
-                    alert("Please Enter Valid Input Data, Eg. Audi/BMW/Aston Martin/Alfa Romeo");
-                    console.log("An Error Occurred: " + err);
+            }
+            if(checkInput1 != true){
+                var validateInput2 = ['Gasoline', 'Diesel', 'Hybrid', 'Gasoline, Electric'];
+                for(var i = 0; i < validateInput2.length; i++){
+                    if(validateInput2[i].toLowerCase() == searchData.toLowerCase()){
+                        searchData = searchData.charAt(0).toUpperCase() + searchData.substr(1, searchData.length);
+                        checkInput2= true;
+                        console.log("User is Searching for Engine Type");
+                        jsonObject = {
+                            "studentnum":"u20748052",
+                            "type":"GetAllCars",
+                            "limit":21,
+                            "apikey":"a9198b68355f78830054c31a39916b7f",
+                            "search":{
+                                "engine_type":`${searchData}`,
+                            },
+                            "fuzzy": true,
+                            "sort":"max_speed_km_per_h",
+                            "order":"DESC",
+                            "return":"*"
+                        }
+                        break;
+                    }
+                }
+            }
+            if(checkInput1 != true && checkInput2 != true){
+                var validateInput3 = ['Automatic', 'Manual'];
+                for(var i = 0; i < validateInput3.length; i++){
+                    if(validateInput3[i].toLowerCase() == searchData.toLowerCase()){
+                        searchData = searchData.charAt(0).toUpperCase() + searchData.substr(1, searchData.length);
+                        checkInput3 = true;
+                        console.log("User is Searching for Transmission!!");
+                        jsonObject = {
+                            "studentnum":"u20748052",
+                            "type":"GetAllCars",
+                            "limit":21,
+                            "apikey":"a9198b68355f78830054c31a39916b7f",
+                            "search":{
+                                "transmission":`${searchData}`,
+                            },
+                            "fuzzy": true,
+                            "sort":"max_speed_km_per_h",
+                            "order":"DESC",
+                            "return":"*"
+                        }
+                        break;
+                    }
+                }
+            }
+            if(checkInput1 != true && checkInput2 != true && checkInput3 != true){
+                var validateInput4 = ['Cabriolet', 'Coupe', 'Roadster', 'Crossover', 'Sedan', 'Hatchback', 'Liftback', 'Wagon', 'Minivan', 'Fastback', 'Pickup', 'hardtop', 'Targa', 'Limousine'];
+                for(var i = 0; i < validateInput4.length; i++){
+                    if(validateInput4[i].toLowerCase() == searchData.toLowerCase()){
+                        searchData = searchData.charAt(0).toUpperCase() + searchData.substr(1, searchData.length);
+                        checkInput4 = true;
+                        console.log("User is Searching for Body Type!!");
+                        jsonObject = {
+                            "studentnum":"u20748052",
+                            "type":"GetAllCars",
+                            "limit":21,
+                            "apikey":"a9198b68355f78830054c31a39916b7f",
+                            "search":{
+                                "body_type":`${searchData}`,
+                            },
+                            "fuzzy": true,
+                            "sort":"max_speed_km_per_h",
+                            "order":"DESC",
+                            "return":"*"
+                        }
+                        break;
+                    }
+                }
+            }
+            // DONE SETTING UP THE REQUEST
+            if(checkInput1 === true || checkInput2 === true || checkInput3 === true || checkInput4 === true){
+                if(jsonObject !== "The User Enterer Invalid Input"){
+                    console.log(searchData);
+                    try{
+                        console.log(jsonObject);
+                        resetDiv("cars-listing");
+                        CarListingAlgorithm(jsonObject);
+                    }
+                    catch(err){
+                        alert("Please Enter Valid Input Data, Eg. Audi/BMW/Aston Martin/Alfa Romeo");
+                        console.log("An Error Occurred: " + err);
+                    }
                 }
             }
             else{
-                alert("Please Enter Valid Input Data, Eg. Audi/BMW/Aston Martin/Alfa Romeo");
-                console.log('Please Enter Valid Input Data, Eg. Audi/BMW/Aston Martin/Alfa Romeo');
+                alert("Please Enter Valid Input Data, Eg. Audi/BMW/Manual/Alfa Romeo/Coupe/Gasoline");
+                alert("Click 'OK' to continue");
+                console.log("Please Enter Valid Input Data, Eg. Audi/BMW/Manual/Alfa Romeo/Coupe/Gasoline");
                 var jsonObject = {
-                    "studentnum":"uXXXXXXXX",
+                    "studentnum":"u20748052",
                     "apikey":"a9198b68355f78830054c31a39916b7f",
                     "type":"GetAllCars",
                     "limit":21,
