@@ -45,7 +45,7 @@
         - logo.jpg
         - 36-black-and-grey-loading-icons-on-white-background-rgb-eps-10-vector-et17b4
         - DONE WITH THIS PART, TESTING IF EVERYTHING WORKS PERFECTLY (DELAYED UPLOADING JUST TO MAKE SURE EVERYTHING WORKS PERFECTLY).
-        - <img alt="PA3_FILES" src="COS216/PA3/Screenshot_20230408_033321.png" width="300" height="300">
+        - <img alt="PA3_FILES" src="COS216/PA3/Screenshot_20230408_033321.png" width="1620" height="778">
 - ### `index.html`
 - ### `...`
 ---
