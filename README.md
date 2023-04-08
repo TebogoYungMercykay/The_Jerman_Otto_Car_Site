@@ -49,7 +49,7 @@
 - ### `...`
 ---
 - # Name of imaginary Company: Jerman Otto:
-<img alt="Profile Picture (*_*)" src="COS216/PA2/logo.jpg" width="300" height="300">
+    - <img alt="Profile Picture (*_*)" src="COS216/PA2/logo.jpg" width="300" height="300">
 ---
 
 # Topics In Brief Per PA Sub-Folder From 1 To 5 For The Cars Site
