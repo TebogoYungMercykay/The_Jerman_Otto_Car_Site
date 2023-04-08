@@ -82,60 +82,60 @@
         - Under Construction.
     - Example Code HTML & CSS (Check jerman-otto-styles.css and Brands.html, Path: COS216/PA2)
         ```html
-            <!DOCTYPE html>
-            <html lang="en">
-            <head>
-                <meta charset="UTF-8">
-                <title>Title</title>
-                <meta name="author" content="Selepe Sello">
-                <meta name="description" content="Example HTML & CSS Code For My ReadMe.md">
-                <meta name="keywords" content="South Africa">
-                <meta http-equiv="X-UA-Compatible" content="IE=edge">
-                <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                <link rel="icon" href="../logo.jpg" type="image/icon type">
-                <link rel="stylesheet" type="text/css" href="#" integrity="#" crossorigin="anonymous" referrerpolicy="no-referrer"/>
-                <style>
-                    /* CSS for listing cars */
-                    .Example-CSS-For-Listing-Cars {
-                        display: grid;
-                        grid-template-columns: repeat(auto-fit, minmax(210px, auto));
-                        grid-gap: 50px;
-                        margin: 50px auto;
-                        color: rgb(203, 242, 255);
-                        max-width: 1240px;
-                        padding: 20px;
-                        border-radius: 15px;
-                        background-color: rgba(0, 0, 0, 0.75);
-                    }
-                </style>
-            </head>
-            <body class="background-brands">
-                <header>
-                    <!-- Navigation -->
-                    <div class="topnav">
-                        <a href="#"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
-                    </div>
-                </header>
-                <section id="logo" class="mt-5">
-                    <!-- Logo placeholder -->
-                    <img src="COS216/PA3/Logo.jpg" alt="Logo">
-                </section>
-                <div class="Example-CSS-For-Listing-Cars">
-                    <!-- Sample text for brands listing: Mock Data -->
-                    <p>Brand 1</p>
-                    <p>Brand 2</p>
-                    <p>Brand 3</p>
-                    <p>Brand 4</p>
-                    <p>Brand 5</p>
-                    <p>Brand 6</p>
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <title>Title</title>
+            <meta name="author" content="Selepe Sello">
+            <meta name="description" content="Example HTML & CSS Code For My ReadMe.md">
+            <meta name="keywords" content="South Africa">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="icon" href="../logo.jpg" type="image/icon type">
+            <link rel="stylesheet" type="text/css" href="#" integrity="#" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+            <style>
+                /* CSS for listing cars */
+                .Example-CSS-For-Listing-Cars {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(210px, auto));
+                    grid-gap: 50px;
+                    margin: 50px auto;
+                    color: rgb(203, 242, 255);
+                    max-width: 1240px;
+                    padding: 20px;
+                    border-radius: 15px;
+                    background-color: rgba(0, 0, 0, 0.75);
+                }
+            </style>
+        </head>
+        <body class="background-brands">
+            <header>
+                <!-- Navigation -->
+                <div class="topnav">
+                    <a href="#"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
                 </div>
-                <footer class="footer-bottom">
-                    <!-- Footer text and email link -->
-                    <p>Jerman Auto © 2023 All Rights Reserved! <i class="fab fa-linkedin"></i> <a href="mailto:sbkskhalo.kq@gmail.com">Email</a></p>
-                </footer>
-            </body>
-            </html>
-      ```
+            </header>
+            <section id="logo" class="mt-5">
+                <!-- Logo placeholder -->
+                <img src="COS216/PA3/Logo.jpg" alt="Logo">
+            </section>
+            <div class="Example-CSS-For-Listing-Cars">
+                <!-- Sample text for brands listing: Mock Data -->
+                <p>Brand 1</p>
+                <p>Brand 2</p>
+                <p>Brand 3</p>
+                <p>Brand 4</p>
+                <p>Brand 5</p>
+                <p>Brand 6</p>
+            </div>
+            <footer class="footer-bottom">
+                <!-- Footer text and email link -->
+                <p>Jerman Auto © 2023 All Rights Reserved! <i class="fab fa-linkedin"></i> <a href="mailto:sbkskhalo.kq@gmail.com">Email</a></p>
+            </footer>
+        </body>
+        </html>
+    ```
 ---
 ---
 - ## PA2
@@ -170,7 +170,7 @@
             - Car Selection works.
             - Compare Stats Show.
     - API Request Example Code (Check carListing.js, path: Path: COS216/PA2/js)
-    - ```javascript
+        ```javascript
         function carListingAlgorithm(jsonObject1) {
             var jsonObject;
             if (jsonObject1 === undefined) {
@@ -245,40 +245,40 @@
                     }
                 ?>
                 ```
-                - config.php, header.php, footer.php, api.php
-                - login.php, validate-login.php, logout.php
-                - signup.php, validate-signup.php
-                - Database (MySQL DB Dump)
-                - Example of a database Dumb:
-                - ```sql
-                    CREATE DATABASE  IF NOT EXISTS `example_db`
-                    USE `example_db`;
-                    -- MariaDB dump 10.19  Distrib 10.7.3-MariaDB, for Win64 (AMD64)
-                    -- Remember to add your student number as the database name!
-                    -- Host: path/to/host    Database: example_db
-                    -- Server version	10.3.31-MariaDB-0+deb10u1
-                    -- Table structure for table `users`
-                    DROP TABLE IF EXISTS `users`;
-                    CREATE TABLE `users` (
-                        `id` int(11) NOT NULL AUTO_INCREMENT,
-                        `name` varchar(50) NOT NULL,
-                        `surname` varchar(50) NOT NULL,
-                        `email` varchar(100) NOT NULL,
-                        `password` char(30) NOT NULL,
-                        `time_created` int(11) NOT NULL,
-                        PRIMARY KEY (`id`),
-                        UNIQUE KEY `email` (`email`)
-                    ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4;
-                    -- Dumping data for table `users`
-                    LOCK TABLES `users` WRITE;
-                    -- Inserting values into the DB
-                    INSERT INTO `users` VALUES
-                    (1,'Default','User','default@u.c','d9d8c68a295f34ad3ef590a4b683f3',1652881570);
-                    -- DONE
-                    UNLOCK TABLES;
-                    -- Dump completed on 2022-05-19 12:15:54
+            - config.php, header.php, footer.php, api.php
+            - login.php, validate-login.php, logout.php
+            - signup.php, validate-signup.php
+            - Database (MySQL DB Dump)
+            - Example of a database Dumb: `users.sql`
+                ```sql
+                CREATE DATABASE  IF NOT EXISTS `example_db`
+                USE `example_db`;
+                -- MariaDB dump 10.19  Distrib 10.7.3-MariaDB, for Win64 (AMD64)
+                -- Remember to add your student number as the database name!
+                -- Host: path/to/host    Database: example_db
+                -- Server version	10.3.31-MariaDB-0+deb10u1
+                -- Table structure for table `users`
+                DROP TABLE IF EXISTS `users`;
+                CREATE TABLE `users` (
+                    `id` int(11) NOT NULL AUTO_INCREMENT,
+                    `name` varchar(50) NOT NULL,
+                    `surname` varchar(50) NOT NULL,
+                    `email` varchar(100) NOT NULL,
+                    `password` char(30) NOT NULL,
+                    `time_created` int(11) NOT NULL,
+                    PRIMARY KEY (`id`),
+                    UNIQUE KEY `email` (`email`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4;
+                -- Dumping data for table `users`
+                LOCK TABLES `users` WRITE;
+                -- Inserting values into the DB
+                INSERT INTO `users` VALUES
+                (1,'Default','User','default@u.c','d9d8c68a295f34ad3ef590a4b683f3',1652881570);
+                -- DONE
+                UNLOCK TABLES;
+                -- Dump completed on 2022-05-19 12:15:54
 
-                    ```
+                ```
             - User information includes the following fields:  "id", "name", "surname", ""email", "password", "API key".
     - #### User Registration
         - The goal is for the user to be able to enter in various details on a form on the signup page and register an account on the car website.
@@ -332,7 +332,7 @@
             - The `studentnum` field is not being tested nor used on the API, It us just here for `fun/vibes`.
             - Please use the `API_keys` on the `database` to make requests to the REST API. They are included in `SECTION 1`
             - ##### Example 1: POST Request by User 1:
-            - ```json
+                ```json
                 {
                     "studentnum":"u12345678",
                     "type":"GetAllCars",
@@ -350,7 +350,7 @@
                     ]
                 }
             - ##### Response form API
-            - ```json
+                ```json
                 {
                     "status": "success",
                     "timestamp": 1680911562,
@@ -376,7 +376,7 @@
                     ]
                 }
             - ##### Example 2: POST Request by User 2:
-            - ```json
+                ```json
                 {
                     "limit":2,
                     "apikey":"K9yW8cGnE3qTfR7xV2sZ6bN1mJ4jL5p",
@@ -392,7 +392,7 @@
                     ]
                 }
             - ##### Response form API
-            - ```json
+                ```json
                 {
                     "status": "error",
                     "timestamp": 1680912205,
@@ -535,5 +535,6 @@
 
 ---
 <p align=center>** THE END LOADING **<p>
+
 ---
 ---
