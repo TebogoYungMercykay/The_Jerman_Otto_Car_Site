@@ -220,69 +220,66 @@
     - Default login details (username and password) for a user I have on the API.
     - I will be using phpMyAdmin.
     - ### Workflow Setup:
-
-    - #### READMe Specifying:
-
-        - How to use the website
-        - Explanations for the password requirements, choice of hashing algorithm and generation of API keys
-    - #### Basic setup and page constructio
-
-        - Making use of the include function to stitch pages together.
-            ```php
-            <?php
-                // file.php
-                echo "This is the main file.";
-                include "calculate.php";
-                // Calling a function from the included PHP(calculate.php) file
-                echo "The sum of 2 and 3 is " . GetSum(2, 3);
-            ?>
-            <!-- calculate.php -->
-            <?php
-                function GetSum($num1, $num2) {
-                    $sum = $num1 + $num2;
-                    return $sum;
-                }
-                function GetDifference($num1, $num2) {
-                    $diff = abs($num1 - $num2);
-                    return $diff;
-                }
-            ?>
-            ```
-            - config.php, header.php, footer.php, api.php
-            - login.php, validate-login.php, logout.php
-            - signup.php, validate-signup.php
-            - Database (MySQL DB Dump)
-            - Example of a database Dumb:
-            - ```sql
-                CREATE DATABASE  IF NOT EXISTS `example_db`
-                USE `example_db`;
-                -- MariaDB dump 10.19  Distrib 10.7.3-MariaDB, for Win64 (AMD64)
-                -- Remember to add your student number as the database name!
-                -- Host: path/to/host    Database: example_db
-                -- Server version	10.3.31-MariaDB-0+deb10u1
-                -- Table structure for table `users`
-                DROP TABLE IF EXISTS `users`;
-                CREATE TABLE `users` (
-                    `id` int(11) NOT NULL AUTO_INCREMENT,
-                    `name` varchar(50) NOT NULL,
-                    `surname` varchar(50) NOT NULL,
-                    `email` varchar(100) NOT NULL,
-                    `password` char(30) NOT NULL,
-                    `time_created` int(11) NOT NULL,
-                    PRIMARY KEY (`id`),
-                    UNIQUE KEY `email` (`email`)
-                ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4;
-                -- Dumping data for table `users`
-                LOCK TABLES `users` WRITE;
-                -- Inserting values into the DB
-                INSERT INTO `users` VALUES
-                (1,'Default','User','default@u.c','d9d8c68a295f34ad3ef590a4b683f3',1652881570);
-                -- DONE
-                UNLOCK TABLES;
-                -- Dump completed on 2022-05-19 12:15:54
-
+        - #### READMe Specifying:
+            - How to use the website
+            - Explanations for the password requirements, choice of hashing algorithm and generation of API keys
+        - #### Basic setup and page construction
+            - Making use of the include function to stitch pages together.
+                ```php
+                <?php
+                    // file.php
+                    echo "This is the main file.";
+                    include "calculate.php";
+                    // Calling a function from the included PHP(calculate.php) file
+                    echo "The sum of 2 and 3 is " . GetSum(2, 3);
+                ?>
+                <!-- calculate.php -->
+                <?php
+                    function GetSum($num1, $num2) {
+                        $sum = $num1 + $num2;
+                        return $sum;
+                    }
+                    function GetDifference($num1, $num2) {
+                        $diff = abs($num1 - $num2);
+                        return $diff;
+                    }
+                ?>
                 ```
-        - User information includes the following fields:  "id", "name", "surname", ""email", "password", "API key".
+                - config.php, header.php, footer.php, api.php
+                - login.php, validate-login.php, logout.php
+                - signup.php, validate-signup.php
+                - Database (MySQL DB Dump)
+                - Example of a database Dumb:
+                - ```sql
+                    CREATE DATABASE  IF NOT EXISTS `example_db`
+                    USE `example_db`;
+                    -- MariaDB dump 10.19  Distrib 10.7.3-MariaDB, for Win64 (AMD64)
+                    -- Remember to add your student number as the database name!
+                    -- Host: path/to/host    Database: example_db
+                    -- Server version	10.3.31-MariaDB-0+deb10u1
+                    -- Table structure for table `users`
+                    DROP TABLE IF EXISTS `users`;
+                    CREATE TABLE `users` (
+                        `id` int(11) NOT NULL AUTO_INCREMENT,
+                        `name` varchar(50) NOT NULL,
+                        `surname` varchar(50) NOT NULL,
+                        `email` varchar(100) NOT NULL,
+                        `password` char(30) NOT NULL,
+                        `time_created` int(11) NOT NULL,
+                        PRIMARY KEY (`id`),
+                        UNIQUE KEY `email` (`email`)
+                    ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4;
+                    -- Dumping data for table `users`
+                    LOCK TABLES `users` WRITE;
+                    -- Inserting values into the DB
+                    INSERT INTO `users` VALUES
+                    (1,'Default','User','default@u.c','d9d8c68a295f34ad3ef590a4b683f3',1652881570);
+                    -- DONE
+                    UNLOCK TABLES;
+                    -- Dump completed on 2022-05-19 12:15:54
+
+                    ```
+            - User information includes the following fields:  "id", "name", "surname", ""email", "password", "API key".
     - #### User Registration
         - The goal is for the user to be able to enter in various details on a form on the signup page and register an account on the car website.
         - A signup-validation function which checks (using JavaScript and PHP)[i.e. Both client and server-side validation] whether the information is correct or not. If it is valid, the user is added to the relevant table in the database.
