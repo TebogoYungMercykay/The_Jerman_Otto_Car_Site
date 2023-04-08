@@ -32,19 +32,19 @@
 # My Repo Directory Looks Like This So Far
 - ### `README.md`
 - ### `COS216`
-  - PA1
-    - css
-    - HTML
-    - img
-  - PA2
-    - css
-    - HTML
-    - img
-    - js
-  - PA3
-    - logo.jpg
-    - 36-black-and-grey-loading-icons-on-white-background-rgb-eps-10-vector-et17b4
-    - DONE WITH THIS PART, TESTING IF EVERYTHING WORKS PERFECTLY (DELAYED UPLOADING JUST TO MAKE SURE EVERYTHING WORKS PERFECTLY).
+    - PA1
+        - css
+        - HTML
+        - img
+    - PA2
+        - css
+        - HTML
+        - img
+        - js
+    - PA3
+        - logo.jpg
+        - 36-black-and-grey-loading-icons-on-white-background-rgb-eps-10-vector-et17b4
+        - DONE WITH THIS PART, TESTING IF EVERYTHING WORKS PERFECTLY (DELAYED UPLOADING JUST TO MAKE SURE EVERYTHING WORKS PERFECTLY).
 - ### `index.html`
 - ### `...`
 ---
@@ -58,12 +58,12 @@
 
   - Created a web page which complies to the HTML5 standards and CSS styling.
     - http://validator.w3.org/, https://jigsaw.w3.org/css-validator/
-    - `Functionality:`
-    - A navbar from where navigation to each component/part is showcased.
-    - A client must be able to navigate through all the PAs from the Launch Page.
-    - An "under construction" page which is the page displayed if the tab has not as yet been completed.
-    - Making sure that the web works in as many browsers as possible.
-    - Layout, Backrounds, Fonts, Text, Boxes, Colours, Sizes and etc.
+    - ## `Functionality:`
+        - A navbar from where navigation to each component/part is showcased.
+        - A client must be able to navigate through all the PAs from the Launch Page.
+        - An "under construction" page which is the page displayed if the tab has not as yet been completed.
+        - Making sure that the web works in as many browsers as possible.
+        - Layout, Backrounds, Fonts, Text, Boxes, Colours, Sizes and etc.
     - ### Workflow: Only HTML and CSS with Mock Data
         - Launch Page with Logo.
         - Navigation Bar on all created Pages.
