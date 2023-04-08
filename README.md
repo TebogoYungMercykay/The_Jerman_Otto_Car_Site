@@ -433,7 +433,7 @@
         - Using 1000 iterations for the hash_pbkdf2 method, and a HASH length of 32 BYTES, So that it can fit well into a column of this size => `VARCHAR(128)`.
         - Finally i Concatenate the SALT and HASH and the encode the resulting string to base 64, using `base64_encode()`.
     - ## API Key
-        - The API key is a random string of `length 32`.
+        - The API key is an `Alphanumeric` string of `length=32`.
         - It Contains these Characters: `0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ`
         - The Key is then Displayed to the User using an alert.
 ---
