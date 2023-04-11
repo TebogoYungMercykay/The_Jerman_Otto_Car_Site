@@ -545,7 +545,7 @@
             </body>
             </html>
     ```
-- ### `Web browser`
+- ### `Web browsers`
     - A web browser is necessary to render and display web pages.
     - Popular web browsers include:
         - Google Chrome
