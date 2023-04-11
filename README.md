@@ -55,7 +55,7 @@
 
 # Topics In Brief Per PA Sub-Folder From 1 To 5 For The Cars Site
 
-- ## PA1
+- # `PA1`
 
   - Created a web page which complies to the HTML5 standards and CSS styling.
     - http://validator.w3.org/, https://jigsaw.w3.org/css-validator/
@@ -139,7 +139,7 @@
     ```
 ---
 ---
-- ## PA2
+- # `PA2`
     - ### I will develop this using XAMP
         - Loading Screen.
         - JavaScript Animations.
@@ -211,7 +211,7 @@
         }
 ---
 ---
-- ## PA3
+- # `PA3`
 
     - Using a MySQL DB with PHP.
     - Create PHP API.
@@ -438,7 +438,29 @@
         - The Key is then Displayed to the User using an alert.
 ---
 ---
-
+- # `PA4`
+    - #### `ONLY REGISTERED USERS WILL HAVE ACCESS TO THE PAGES`
+    - Populating data using the API i created in PA3
+        - Adding more `filters` to the API
+        - Or modifying the Client side to work with the available filters.
+    - Cookie or Local DOM Storage
+        - Storing the `API key` in the `Local DOM Storage`.
+        - Using the API key to send `Requests` to the `API` in the `Server-Side`.
+    - Themes (`dark` and `light`)
+        - Using DOM Storage to keep the user preferences so that they are `saved` and remembered when the user `loads` the site
+        - Theme must be `dynamically` updated such that the user `doesn't` need to `reload` the page every time after the theme is loaded.
+        - The user must be able to save these `default settings` in the settings page.
+    - `UPDATE` PHP API type
+        - Allowing the user to `change` their preferences.
+        - Preferences are the filters used in the previous PAs
+        - Making sure the filters are always applied(until changes are made).
+        - Implementing the functionality for `storing` and `updating` data on the `database`.
+        - There must be a settings page for saving preferences.
+        - Using the API to `return preferences` from the database and storing them in DOM storage.
+    - Implementing the ability to `rate` cars on the Cars page.
+    - Showing the `average rating` of the cars on the cars page from all users.
+---
+---
 ## REQUIREMENTS BEFORE RUNNING THE CODES:
 
 - ### `A text editor`
