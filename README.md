@@ -42,7 +42,6 @@
     - img
     - js
   - #### `PA3` (FILES NOTE YET UPLOADED):
-    - DONE WITH THIS PART, TESTING IF EVERYTHING WORKS PERFECTLY (DELAYED UPLOADING JUST TO MAKE SURE EVERYTHING WORKS PERFECTLY).
     - css
         - jerman-otto-styles.css
         - loader.css
