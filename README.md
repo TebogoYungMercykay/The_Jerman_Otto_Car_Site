@@ -528,6 +528,46 @@
     - Using DOM Storage to keep the user preferences so that they are `saved` and remembered when the user `loads` the site
     - Theme must be `dynamically` updated such that the user `doesn't` need to `reload` the page every time after the theme is loaded.
     - The user must be able to save these `default settings` in the settings page.
+    - Example: THeme Implimentation in JS
+    - ```javascript
+        var html = document.querySelector('html');
+        var themeStyle = document.querySelector('#theme-style');
+        var toggleButton = document.querySelector('#theme-toggle');
+        var defaultTheme = localStorage.getItem('default_theme');
+
+        if (defaultTheme && defaultTheme != "N/A") {
+            html.setAttribute('data-theme', defaultTheme);
+            themeStyle.setAttribute('href', `../css/jerman-otto-styles-${defaultTheme}.css`);
+            if(defaultTheme === 'dark'){
+                toggleButton.textContent = 'Dark Mode';
+            }
+            else {
+                toggleButton.textContent = 'Light Mode';
+            }
+        }
+
+        toggleButton.addEventListener('click', () => {
+            var theme = '';
+            if(html.getAttribute('data-theme') === 'dark'){
+                theme = 'light';
+            }
+            else{
+                theme = 'dark';
+            }
+            html.setAttribute('data-theme', theme);
+            localStorage.setItem('theme', theme);
+            localStorage.setItem('default_theme', theme);
+            themeStyle.setAttribute('href', `../css/jerman-otto-styles-${theme}.css`);
+
+            // toggle button text
+            if (theme === 'dark') {
+                toggleButton.textContent = 'Dark Mode';
+            }
+            else {
+                toggleButton.textContent = 'Light Mode';
+            }
+        });
+        ```
   - `UPDATE` PHP API type
     - Allowing the user to `change` their preferences.
     - Preferences are the filters used in the previous PAs
