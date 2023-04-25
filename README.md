@@ -528,7 +528,7 @@
     - Using DOM Storage to keep the user preferences so that they are `saved` and remembered when the user `loads` the site
     - Theme must be `dynamically` updated such that the user `doesn't` need to `reload` the page every time after the theme is loaded.
     - The user must be able to save these `default settings` in the settings page.
-    - Example: THeme Implimentation in JS
+    - Example: THeme Implimentation in `javaScript`.
     - ```javascript
         var html = document.querySelector('html');
         var themeStyle = document.querySelector('#theme-style');
