@@ -41,7 +41,7 @@
     - HTML
     - img
     - js
-  - #### `PA3` (FILES NOTE YET UPLOADED):
+  - #### `PA3`
     - css
         - jerman-otto-styles.css
         - loader.css
@@ -76,9 +76,7 @@
         - validate-signup.php
     - ReadME.md
 
-    - <img alt="PA3_FILES" src="COS216/PA3/Screenshot_20230408_033321.png">
-
-  - #### `PA4`
+  - #### `PA4` (FILES NOTE YET COMMITED!!):
     - DONE WITH THIS PART, TESTING IF EVERYTHING WORKS PERFECTLY (DELAYED UPLOADING JUST TO MAKE SURE EVERYTHING WORKS PERFECTLY).
     - css
         - jerman-otto-styles-dark.css
@@ -87,13 +85,13 @@
         - settings.css
     - database_dumbs
         - carsdb.sql
-        - Usersdb.sql
         - preferences.sql
         - rating.sql
+        - Usersdb.sql
     - img
-        - >Backround_Images
-        - >Backround_Images_Light
-        - log.jpg
+        - > Backround_Images
+        - > Backround_Images_Light
+        - logo.jpg
     - js
         - brands.js
         - carListing.js
@@ -120,13 +118,16 @@
         - validate-login.php
         - validate-signup.php
     - ReadMe.md
+    
+    - <img alt="PA4_Init_Commit" src="COS216/PA4/PA4.png">
+
 - ### `index.html`
 - ### `api.php`
 - ### `...`
 ---
 - # Name of imaginary Company: Jerman Otto:
 
-    - <img alt="Profile Picture (*_*)" src="COS216/PA2/logo.jpg" width="300" height="300">
+    - <img alt="Company Logo" src="COS216/PA2/logo.jpg" width="300" height="300">
 
 ---
 
