@@ -28,6 +28,7 @@
     - Security (SQL database attacks, security, encryption, and hashing).
     - Other topics of current interest (Advanced Security, Cloud Computing, TailwindCSS).
 ---
+## The `Complete` Project(`Ionic Angular Native Mobile App`) is in a `separate` repository (Check PA5 Section Bellow for Details), The final `webside` before migrating it to a Native Mobile App is in the `PA4` folder!.. (`Thanks For The Visit!`). 
 ---
 # My Repo Directory Looks Like This So Far
 - ### `README.md`
@@ -121,9 +122,10 @@
     
     - <img alt="PA4_Init_Commit" src="COS216/PA4/PA4.png">
   - #### `PA5`
-    - The Code Will Be In A `Separate` Repository.
-    - Repository Name: `Ionic` + `Angular` `Native Mobile Application` (Will Be Created Soon).
+    - The Code for PA5 is In A `Separate` Repository.
+    - Repository Name: `Ionic` + `Angular` `Native Mobile Application` (Will Be Created Soon or it Will Be Available by the time you see this).
     - This is to make sure `this` Repo is `neat`, `manageabe` and `easy` to work with since the Files from the `Ionic Angular Native App` will be a lot. But the app will still use the same `API` and `Databases`, The `Client Side` will also be similar to that of `PA4`, And most of the Trivial `functionalities` will be implemented in the `Native app` and some `more` will bbe added.
+    - Visit PA5 Repository Here: [Ionic_Angular_Native_Mobile_Application](https://github.com/TebogoYungMercykay/Ionic_Angular_Native_Mobile_Application.git)
 - ### `index.html`
 - ### `api.php`
 - ### `...`
