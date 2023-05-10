@@ -1,5 +1,5 @@
+// Selepe Sello u20748052
 // I used Asynchronous so that the execution of one task doesn't dependent on another. Basically tasks can run simultaneously.
-// Selepe Sello - uXXXXXXXX
 var jsonObject = null;
 $(document).ready(function (){
     // Making Sure that the Div is Always Empty

@@ -1,0 +1,63 @@
+/* Selepe Sello uXXXXXXXX */
+/* <!-- Preloader CSS --> */
+#loading-screen {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(172, 172, 172);
+    z-index: 9999;
+    align-items: center;
+}
+
+.loader{
+    border: 16px solid #35333300;
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    position: fixed;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    top: calc(50% - 10%);
+    left: calc(50% - 10%);
+}
+
+#loading-screen .topnav {
+    display: none;
+}
+
+.loader:before, .loader:after{
+    content: '';
+    border: 1em solid rgb(0, 0, 0);
+    border-radius: 50%;
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: loader 2s linear infinite;
+    opacity: 0;
+}
+
+.loader:before{
+  animation-delay: .5s;
+}
+
+@keyframes loader{
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 0;
+    }
+}

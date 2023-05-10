@@ -1,5 +1,4 @@
-// I used Asynchronous so that the execution of one task doesn't dependent on another. Basically tasks can run simultaneously.
-// Selepe Sello - uXXXXXXXX
+// Selepe Sello u20748052
 var jsonObject = null;
 $(document).ready(function (){
     resetDiv("cars-listing-in-find");
@@ -245,7 +244,14 @@ $(document).ready(function (){
                 data: json,
                 success: function(response){
                     if(response.data.length == 0){
-                        element("div-with-cars").innerHTML = `<div class="class-cars-listing"><h3 class="car-name">We Couldn't Find A Car You AS OF Yey, PLEASE Try Searching For A Different One</h3></div>`;
+                        element("div-with-cars").innerHTML = `<div class="class-cars-listing">
+                            <h3 class="car-name">
+                                We Couldn't Find A Perfect Match For You AS OF Yet, PLEASE Try Searching Again Using Different Keywords Or Alternatively, Search For A Different One, We Cannot Wait To Witness Your Car Taste
+                            </h3>
+                        </div>
+                        <div class="div-with-button" id="div-with-button">
+                            <input id="sucess-display-results" type="button" name="submit" value="Search Again" class="btnFindCarResults">
+                        </div>`;
                         show("div-with-cars");
                     }
                     else{

@@ -1,0 +1,5 @@
+/* Selepe Sello uXXXXXXXX */
+input[type="radio"] {
+    display: inline-block;
+    margin-right: 20px; /* adjust as needed */
+}
