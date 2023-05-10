@@ -28,7 +28,11 @@
     - Security (SQL database attacks, security, encryption, and hashing).
     - Other topics of current interest (Advanced Security, Cloud Computing, TailwindCSS).
 ---
-## The `Complete` Project(`Ionic Angular Native Mobile App`) is in a `separate` repository (Check PA5 Section Bellow for Details), The final `webside` before migrating it to a Native Mobile App is in the `PA4` folder!.. (`Thanks For The Visit!`). 
+---
+## NOTE WELL!!!!
+---
+##### The `Complete` Project(`Ionic Angular Native Mobile App`) is in a `separate` repository (Check PA5 Section Bellow for Details), The final `webside` before migrating it to a Native Mobile App is in the `PA4` folder!.. (`Thanks For The Visit!`). 
+---
 ---
 # My Repo Directory Looks Like This So Far
 - ### `README.md`
