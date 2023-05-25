@@ -689,10 +689,10 @@
     - Microsoft Edge
     - `Brave`
     - Opera
-    - Not Recommended: `Tor (Onion Routing)`
+    - Tor `(Onion Routing)`
 ---
-
-<p align=center>** THE END LOADING **<p>
+---
+<p align=center>THE END<p>
 
 ---
 ---
