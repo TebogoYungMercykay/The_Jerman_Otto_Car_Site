@@ -1,6 +1,6 @@
 <?php
 // <!-- Selepe Sello u20748052 -->
-    include_once("COS216/PA3/php/api_config.php");
+    include_once("JermanOttoCarSite/PA3/php/api_config.php");
     // Storing the Input data in the $json_data variable
     $json_data = file_get_contents('php://input');
     // Now Executing things!!
