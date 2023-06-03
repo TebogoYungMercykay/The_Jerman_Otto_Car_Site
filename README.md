@@ -124,7 +124,7 @@
         - validate-signup.php
     - ReadMe.md
     
-    - <img alt="PA4_Init_Commit" src="COS216/PA4/PA4.png">
+    - <img alt="PA4_Init_Commit" src="JermanOttoCarSite/PA4/PA4.png">
   - #### `PA5`
     - The Code for PA5 is In A `Separate` Repository.
     - Repository Name: `Ionic` + `Angular` `Native Mobile Application` (Will Be Created Soon or it Will Be Available by the time you see this).
@@ -136,7 +136,7 @@
 ---
 - # Name of imaginary Company: Jerman Otto:
 
-    - <img alt="Company Logo" src="COS216/PA2/logo.jpg" width="300" height="300">
+    - <img alt="Company Logo" src="JermanOttoCarSite/PA2/logo.jpg" width="300" height="300">
 
 ---
 
@@ -167,7 +167,7 @@
         - 2 Optional.
       - Comapre Cars Page.
       - Under Construction.
-    - Example Code HTML & CSS (Check jerman-otto-styles.css and Brands.html, Path: COS216/PA2)
+    - Example Code HTML & CSS (Check jerman-otto-styles.css and Brands.html, Path: JermanOttoCarSite/PA2)
       ```html
       <!DOCTYPE html>
       <html lang="en">
@@ -205,7 +205,7 @@
           </header>
           <section id="logo" class="mt-5">
               <!-- Logo placeholder -->
-              <img src="COS216/PA3/Logo.jpg" alt="Logo">
+              <img src="JermanOttoCarSite/PA3/Logo.jpg" alt="Logo">
           </section>
           <div class="Example-CSS-For-Listing-Cars">
               <!-- Sample text for brands listing: Mock Data -->
@@ -256,7 +256,7 @@
     - COMPARE PAGE
       - Car Selection works.
       - Compare Stats Show.
-  - API Request Example Code (Check carListing.js, path: Path: COS216/PA2/js)
+  - API Request Example Code (Check carListing.js, path: Path: JermanOttoCarSite/PA2/js)
     ```javascript
     function carListingAlgorithm(jsonObject1) {
         var jsonObject;
