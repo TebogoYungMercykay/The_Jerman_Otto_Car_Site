@@ -36,7 +36,7 @@
 ---
 # My Repo Directory Looks Like This So Far
 - ### `README.md`
-- ### `COS216`
+- ### `JermanOttoCarSite`
   - #### `PA1`:
     - css
     - HTML
