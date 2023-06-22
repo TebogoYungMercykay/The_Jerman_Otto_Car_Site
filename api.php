@@ -1,6 +1,6 @@
 <?php
-// <!-- Selepe Sello u20748052 -->
-    include_once("COS216/PA3/php/api_config.php");
+// <!-- Selepe Sello uXXXXXXXX -->
+    include_once("JermanOttoCarSite/PA4/php/api_config.php");
     // Storing the Input data in the $json_data variable
     $json_data = file_get_contents('php://input');
     // Now Executing things!!
@@ -14,15 +14,13 @@
         if($connectionObject === true){
             return true;
         }
-        else{
+        else {
             return false;
         }
-    }
-    else{
+    } else {
         if($_SERVER['REQUEST_METHOD'] == 'POST'){
             $cars_object = new REST_API($json_data);
-        }
-        else{
+        } else {
             header("HTTP/1.1 400");
             header("Content-Type: application/json; charset=UTF-8");
             header('Access-Control-Allow-Origin: *');
@@ -63,8 +61,7 @@
                     "timestamp" => time(),
                     "data" => "Error. Post parameters are Missing"
                 ];
-            }
-            else {
+            } else {
                 $this->apikey = $data['apikey'];
                 $this->type = $data['type'];
                 if ($this->connectionObject->KeyExists($this->apikey) === false || strlen($this->apikey) > 32  || strlen($this->apikey) === 0){
@@ -74,25 +71,21 @@
                         "timestamp" => time(),
                         "data" => "Error. Invalid apikey used"
                     ];
-                }
-                else if ($this->type != "GetAllCars"){
+                } else if ($this->type != "GetAllCars"){
                     $this->finalResponse = [
                         "status" => "error",
                         "timestamp" => time(),
                         "data" => "Error. Invalid type used"
                     ];
-                }
-                else{
+                } else {
                     if (isset($data['limit'])){
                         $this->limit = $data['limit'];
-                    }
-                    else{
+                    } else {
                         $this->limit = null;
                     }
                     if (isset($data['order'])){
                         $this->order = $data['order'];
-                    }
-                    else{
+                    } else {
                         $this->order = null;
                     }
                     if (isset($data['fuzzy'])){
@@ -113,26 +106,22 @@
                                     // * Fuzzy Search
                                     if($this->fuzzySearch($key_param, $value_param) === false){
                                         $this->search_object .= "$key_param = '$value_param'";
-                                    }
-                                    else{
+                                    } else {
                                         $this->search_object .= "(" . $this->fuzzySearch($key_param, $value_param) . ")";
                                     }
-                                }
-                                else{
+                                } else {
                                     $this->search_object .= "$key_param = '$value_param'";
                                 }
                             }
                         }
-                    }
-                    else{
+                    } else {
                         $this->search_object = null;
                     }
                     if (isset($data['return'])){
                         // The 'return' property is present in the JSON object
                         if ($data['return'] === "*" || $data['return'] === '*'){
                             $this->return_array = "*";
-                        }
-                        else{
+                        } else {
                             $this->return_array = $data['return'];
                             $this->removeImageField();
                             $valid_return = ['id_trim', 'make', 'model', 'generation', 'year_from', 'year_to', 'series', 'trim', 'body_type', 'number_of_seats', 'length_mm', 'width_mm', 'height_mm', 'number_of_cylinders', 'engine_type', 'drive_wheels', 'transmission', 'max_speed_km_per_h'];
@@ -152,14 +141,12 @@
                                 $this->removeImageField();
                             }
                         }
-                    }
-                    else{
+                    } else {
                         $this->return_array = null;
                     }
                     if (isset($data['sort'])){
                         $this->sort_array = $data['sort'];
-                    }
-                    else{
+                    } else {
                         $this->sort_array = null;
                     }
                 }
@@ -174,8 +161,7 @@
                     if ($this->return_array === "*" || $this->return_array === '*'){
                         $this->return_array = ['id_trim', 'make', 'model', 'generation', 'year_from', 'year_to', 'series', 'trim', 'body_type', 'number_of_seats', 'length_mm', 'width_mm', 'height_mm', 'number_of_cylinders', 'engine_type', 'drive_wheels', 'transmission', 'max_speed_km_per_h'];
                         $temp_for_images_sake = implode(',', $this->return_array);
-                    }
-                    else{
+                    } else {
                         $temp_for_images_sake = implode(',', $this->return_array) . ',make,model';
                     }
                     $this->sql_query_builder = "SELECT $temp_for_images_sake FROM cars";
@@ -208,8 +194,7 @@
                     ];
                     $this->response($this->finalResponse);
                     die('Error executing query: ' . mysqli_error($this->connectionObject->initConnection));
-                }
-                else{
+                } else {
                     $data = $this->filterResult($result, $this->return_array);
                     $this->finalResponse = array(
                         "status" => "success",
@@ -296,8 +281,7 @@
                     $param3 = '%' . substr($search_string, $len, strlen($search_string) - 1) . '%';
                     $fuzzySearch = "$key_param LIKE '$param1' OR $key_param LIKE '$param2' OR $key_param LIKE '$param3'";
                     return $fuzzySearch;
-                }
-                else{
+                } else {
                     $param1 = '%' . $search_string . '%';
                     $param2 = '%' . substr($search_string, 0, strlen($search_string)/2) . '%';
                     $fuzzySearch = "$key_param LIKE '$param1' OR $key_param LIKE '$param2'";
